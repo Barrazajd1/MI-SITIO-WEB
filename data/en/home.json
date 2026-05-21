@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "Build faster websites with JSON content",
+    "description": "This website uses Next.js and JSON files as the main content source.",
+    "buttonText": "Get started"
+  },
+  "services": {
+    "title": "Our services",
+    "items": [
+      {
+        "title": "Website development",
+        "description": "We build fast, modern, and scalable websites."
+      },
+      {
+        "title": "Content management",
+        "description": "We organize website content using structured JSON files."
+      },
+      {
+        "title": "Localization",
+        "description": "We prepare translated content for multilingual websites."
+      }
+    ]
+  }
+}

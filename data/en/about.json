@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "About",
+    "description": "We are a small team passionate about building fast, content-driven websites."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "body": "To make web development simpler and more accessible by replacing complex CMS setups with clean, version-controlled JSON content that any team can manage."
+  },
+  "values": [
+    {
+      "title": "Speed",
+      "description": "We build for performance from day one — no bloat, no unnecessary dependencies."
+    },
+    {
+      "title": "Simplicity",
+      "description": "Content in JSON files means anyone on the team can update the site without touching code."
+    },
+    {
+      "title": "Quality",
+      "description": "Every component, every page, every line of content is crafted with care."
+    }
+  ]
+}

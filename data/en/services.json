@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "Our Services",
+    "description": "Everything you need to build a fast, modern, and multilingual website."
+  },
+  "items": [
+    {
+      "title": "Web Development",
+      "description": "We build fast, modern, and scalable websites using the latest technologies.",
+      "icon": "💻"
+    },
+    {
+      "title": "Content Management",
+      "description": "We organize your site content using structured JSON files — simple and version-controlled.",
+      "icon": "📝"
+    },
+    {
+      "title": "Localization",
+      "description": "We prepare translated content so your site reaches audiences in multiple languages.",
+      "icon": "🌍"
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "We fine-tune load times, Core Web Vitals, and SEO so your site ranks and loads fast.",
+      "icon": "⚡"
+    },
+    {
+      "title": "Design Systems",
+      "description": "Consistent, reusable UI components built with Tailwind CSS and your brand in mind.",
+      "icon": "🎨"
+    },
+    {
+      "title": "Maintenance & Support",
+      "description": "Ongoing updates, security patches, and content changes so you stay worry-free.",
+      "icon": "🛠️"
+    }
+  ]
+}

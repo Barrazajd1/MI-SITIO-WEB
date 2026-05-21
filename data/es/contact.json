@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Contacto",
+    "description": "¿Tienes un proyecto en mente? Nos encantaría escucharte."
+  },
+  "form": {
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Tu correo",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+    "submitButton": "Enviar mensaje",
+    "successMessage": "¡Gracias! Te responderemos pronto.",
+    "errorMessage": "Algo salió mal. Por favor intenta de nuevo."
+  },
+  "info": {
+    "email": "hola@misitio.com",
+    "location": "Remoto — En todo el mundo"
+  }
+}

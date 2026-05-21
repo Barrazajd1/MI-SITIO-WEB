@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "Crea sitios web más rápidos con contenido JSON",
+    "description": "Este sitio usa Next.js y archivos JSON como fuente principal de contenido.",
+    "buttonText": "Comenzar"
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "items": [
+      {
+        "title": "Desarrollo web",
+        "description": "Creamos sitios web rápidos, modernos y escalables."
+      },
+      {
+        "title": "Gestión de contenido",
+        "description": "Organizamos el contenido del sitio usando archivos JSON estructurados."
+      },
+      {
+        "title": "Localización",
+        "description": "Preparamos contenido traducido para sitios web multilingües."
+      }
+    ]
+  }
+}

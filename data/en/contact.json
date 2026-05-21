@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "description": "Have a project in mind? We'd love to hear from you."
+  },
+  "form": {
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "messagePlaceholder": "Tell us about your project...",
+    "submitButton": "Send message",
+    "successMessage": "Thanks! We'll get back to you shortly.",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "info": {
+    "email": "hello@mysite.com",
+    "location": "Remote — Worldwide"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "title": "Nosotros",
+    "description": "Somos un equipo apasionado por construir sitios web rápidos y orientados al contenido."
+  },
+  "mission": {
+    "title": "Nuestra Misión",
+    "body": "Hacer el desarrollo web más simple y accesible, reemplazando sistemas CMS complejos con contenido JSON limpio y versionado que cualquier equipo puede gestionar."
+  },
+  "values": [
+    {
+      "title": "Velocidad",
+      "description": "Construimos para el rendimiento desde el primer día: sin bloat, sin dependencias innecesarias."
+    },
+    {
+      "title": "Simplicidad",
+      "description": "El contenido en archivos JSON permite que cualquier miembro del equipo actualice el sitio sin tocar código."
+    },
+    {
+      "title": "Calidad",
+      "description": "Cada componente, cada página, cada línea de contenido está hecha con cuidado."
+    }
+  ]
+}
