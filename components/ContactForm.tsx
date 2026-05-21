@@ -5,7 +5,7 @@ import { useState } from "react";
 interface FormStrings {
   namePlaceholder: string;
   emailPlaceholder: string;
-  messagePlaceholder: string; 
+  messagePlaceholder: string;
   submitButton: string;
   successMessage: string;
   errorMessage: string;
@@ -16,9 +16,11 @@ export default function ContactForm({ form }: { form: FormStrings }) {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Placeholder: wire up to an API route or email service later
     setStatus("success");
   }
+
+  const inputClass =
+    "w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -26,33 +28,37 @@ export default function ContactForm({ form }: { form: FormStrings }) {
         type="text"
         placeholder={form.namePlaceholder}
         required
-        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+        className={inputClass}
       />
       <input
         type="email"
         placeholder={form.emailPlaceholder}
         required
-        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+        className={inputClass}
       />
       <textarea
         placeholder={form.messagePlaceholder}
         required
         rows={5}
-        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-black resize-none"
+        className={`${inputClass} resize-none`}
       />
 
       <button
         type="submit"
-        className="bg-black text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-colors duration-200"
       >
         {form.submitButton}
       </button>
 
       {status === "success" && (
-        <p className="text-green-600 text-sm text-center">{form.successMessage}</p>
+        <p className="text-emerald-600 text-sm text-center bg-emerald-50 py-3 rounded-xl">
+          {form.successMessage}
+        </p>
       )}
       {status === "error" && (
-        <p className="text-red-600 text-sm text-center">{form.errorMessage}</p>
+        <p className="text-red-600 text-sm text-center bg-red-50 py-3 rounded-xl">
+          {form.errorMessage}
+        </p>
       )}
     </form>
   );
