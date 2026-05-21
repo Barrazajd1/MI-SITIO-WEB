@@ -27,16 +27,19 @@ export default async function ServicesPage({
     <main className="min-h-screen bg-white text-gray-900">
 
       {/* Hero */}
-      <section className="py-28 px-6 text-center border-b border-gray-100">
-        <span className="inline-block text-indigo-600 text-sm font-semibold tracking-widest uppercase mb-4">
-          Services
-        </span>
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
-          {data.hero.title}
-        </h1>
-        <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
-          {data.hero.description}
-        </p>
+      <section className="relative py-28 px-6 text-center overflow-hidden border-b border-gray-100">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto">
+          <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
+            Services
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900">
+            {data.hero.title}
+          </h1>
+          <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
+            {data.hero.description}
+          </p>
+        </div>
       </section>
 
       {/* Services grid */}
@@ -45,10 +48,12 @@ export default async function ServicesPage({
           {data.items.map((item) => (
             <div
               key={item.title}
-              className="group p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-200"
+              className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-50/50 transition-all duration-300"
             >
-              <span className="text-3xl mb-5 block">{item.icon}</span>
-              <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-indigo-700 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-indigo-50 group-hover:bg-indigo-100 transition-colors flex items-center justify-center text-2xl mb-5">
+                {item.icon}
+              </div>
+              <h3 className="text-base font-bold mb-3 text-gray-900 group-hover:text-indigo-700 transition-colors">
                 {item.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">
@@ -56,6 +61,24 @@ export default async function ServicesPage({
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="px-6 pb-24">
+        <div className="max-w-2xl mx-auto text-center p-12 rounded-2xl bg-indigo-50 border border-indigo-100">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            Need something custom?
+          </h2>
+          <p className="text-gray-500 mb-6 text-sm">
+            We tailor solutions to fit your specific needs. Let&apos;s talk.
+          </p>
+          <a
+            href={`/${locale}/contact`}
+            className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors duration-200 shadow-sm"
+          >
+            Contact us
+          </a>
         </div>
       </section>
 

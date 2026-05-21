@@ -27,41 +27,59 @@ export default async function AboutPage({
     <main className="min-h-screen bg-white text-gray-900">
 
       {/* Hero */}
-      <section className="py-28 px-6 text-center border-b border-gray-100">
-        <span className="inline-block text-indigo-600 text-sm font-semibold tracking-widest uppercase mb-4">
-          About
-        </span>
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
-          {data.hero.title}
-        </h1>
-        <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
-          {data.hero.description}
-        </p>
-      </section>
-
-      {/* Mission */}
-      <section className="px-6 py-24 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <span className="block w-10 h-1 bg-indigo-600 mb-8 rounded-full" />
-          <h2 className="text-2xl font-bold mb-6 text-gray-900">
-            {data.mission.title}
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            {data.mission.body}
+      <section className="relative py-28 px-6 text-center overflow-hidden border-b border-gray-100">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
+        <div className="relative max-w-3xl mx-auto">
+          <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
+            About us
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900">
+            {data.hero.title}
+          </h1>
+          <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
+            {data.hero.description}
           </p>
         </div>
       </section>
 
-      {/* Values */}
+      {/* Mission */}
       <section className="px-6 py-24">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-start gap-8 p-10 rounded-2xl bg-gray-50 border border-gray-100">
+            <div className="shrink-0 w-1 self-stretch bg-indigo-500 rounded-full" />
+            <div>
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">
+                {data.mission.title}
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {data.mission.body}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="px-6 py-16 pb-28 bg-gray-50/50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="text-center mb-14">
+            <span className="inline-block text-indigo-600 text-xs font-semibold tracking-widest uppercase mb-3">
+              Our values
+            </span>
+            <h2 className="text-3xl font-bold text-gray-900">What drives us</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {data.values.map((value, i) => (
-              <div key={value.title}>
-                <span className="text-5xl font-bold text-indigo-100 select-none block mb-4">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+              <div
+                key={value.title}
+                className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200"
+              >
+                <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-5">
+                  <span className="text-indigo-600 font-bold text-sm">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-gray-900">
                   {value.title}
                 </h3>
                 <p className="text-gray-500 leading-relaxed text-sm">

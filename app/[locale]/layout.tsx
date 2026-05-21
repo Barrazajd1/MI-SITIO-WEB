@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getContent, isValidLocale, locales } from "../../lib/content";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -22,9 +23,10 @@ export default async function LocaleLayout({
   const nav = getContent(locale, "nav");
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar locale={locale} siteName={nav.siteName} links={nav.links} />
-      {children}
-    </>
+      <div className="flex-1">{children}</div>
+      <Footer locale={locale} siteName={nav.siteName} links={nav.links} />
+    </div>
   );
 }
