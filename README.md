@@ -1,6 +1,8 @@
 # mi-sitio-web
 
-Sitio web multilingüe (EN / ES) construido con Next.js. El contenido vive en archivos JSON locales — sin base de datos, sin CMS en producción.
+[![CI](https://github.com/davidbarraza18/mi-sitio-web/actions/workflows/ci.yml/badge.svg)](https://github.com/davidbarraza18/mi-sitio-web/actions/workflows/ci.yml)
+
+Sitio web multilingüe (EN / ES / FR) construido con Next.js. El contenido vive en archivos JSON locales — sin base de datos, sin CMS en producción.
 
 **Stack:** Next.js 16 · React 19 · Tailwind CSS 4 · TypeScript 5
 
@@ -152,6 +154,39 @@ Sale con código `0` si todo está bien y `1` si hay errores (compatible con CI)
    };
    ```
 4. Correr `npm run validate` para verificar consistencia
+
+---
+
+## CI / CD
+
+### GitHub Actions (automático)
+
+Cada `git push` a `main` dispara el workflow `.github/workflows/ci.yml` que:
+
+1. Instala dependencias (`npm ci`)
+2. Valida que los JSON de todos los idiomas tengan las mismas claves (`npm run validate`)
+3. Compila el sitio (`npm run build`)
+
+Si el build falla, GitHub lo notifica por email y Vercel **no desplegará** el código roto.
+
+### Flujo completo con Strapi (script local)
+
+Cuando actualizas contenido en Strapi, corre un solo comando:
+
+```bash
+npm run sync
+# o con mensaje personalizado:
+bash scripts/sync-and-deploy.sh "content: nueva sección de servicios"
+```
+
+El script hace automáticamente:
+1. `export-from-strapi.js` — exporta JSON desde Strapi
+2. `validate-content.js` — verifica consistencia entre idiomas
+3. `npm run build` — confirma que el sitio compila
+4. `git add data/ && git commit && git push` — sube los cambios
+5. Vercel recibe el push y despliega en ~1 minuto
+
+> **Strapi debe estar corriendo** (`http://localhost:1337`) antes de ejecutar el script.
 
 ---
 
