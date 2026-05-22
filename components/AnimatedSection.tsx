@@ -1,27 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode, CSSProperties } from "react";
 
 type Variant = "fadeUp" | "fadeIn" | "slideLeft" | "slideRight";
 
-const variants = {
-  fadeUp: {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 },
-  },
-  fadeIn: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  },
-  slideLeft: {
-    hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0 },
-  },
-  slideRight: {
-    hidden: { opacity: 0, x: 40 },
-    visible: { opacity: 1, x: 0 },
-  },
+const hiddenStyles: Record<Variant, CSSProperties> = {
+  fadeUp:    { opacity: 0, transform: "translateY(40px)" },
+  fadeIn:    { opacity: 0, transform: "none" },
+  slideLeft: { opacity: 0, transform: "translateX(-40px)" },
+  slideRight:{ opacity: 0, transform: "translateX(40px)" },
+};
+
+const visibleStyle: CSSProperties = {
+  opacity: 1,
+  transform: "none",
 };
 
 interface AnimatedSectionProps {
@@ -37,16 +30,35 @@ export default function AnimatedSection({
   variant = "fadeUp",
   delay = 0,
 }: AnimatedSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "-80px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const style: CSSProperties = {
+    transition: `opacity 0.6s cubic-bezier(0.21,0.47,0.32,0.98) ${delay}s, transform 0.6s cubic-bezier(0.21,0.47,0.32,0.98) ${delay}s`,
+    ...(visible ? visibleStyle : hiddenStyles[variant]),
+  };
+
   return (
-    <motion.div
-      className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98], delay }}
-      variants={variants[variant]}
-    >
+    <div ref={ref} className={className} style={style}>
       {children}
-    </motion.div>
+    </div>
   );
 }
