@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getContent, isValidLocale } from "../../../lib/content";
 import ContactForm from "../../../components/ContactForm";
+import AnimatedSection from "../../../components/AnimatedSection";
 
 export async function generateMetadata({
   params,
@@ -30,7 +31,7 @@ export default async function ContactPage({
       {/* Hero */}
       <section className="relative py-28 px-6 text-center overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto">
+        <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
           <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
             Contact
           </span>
@@ -40,7 +41,7 @@ export default async function ContactPage({
           <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
             {data.hero.description}
           </p>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Form + Info */}
@@ -48,7 +49,7 @@ export default async function ContactPage({
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
 
           {/* Contact info panel */}
-          <div className="md:col-span-2 flex flex-col gap-6">
+          <AnimatedSection className="md:col-span-2 flex flex-col gap-6" variant="slideLeft" delay={0.1}>
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">Get in touch</h2>
               <p className="text-sm text-gray-500 leading-relaxed">
@@ -77,12 +78,14 @@ export default async function ContactPage({
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Form */}
-          <div className="md:col-span-3 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-            <ContactForm form={data.form} />
-          </div>
+          <AnimatedSection className="md:col-span-3" variant="slideRight" delay={0.2}>
+            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+              <ContactForm form={data.form} />
+            </div>
+          </AnimatedSection>
 
         </div>
       </section>

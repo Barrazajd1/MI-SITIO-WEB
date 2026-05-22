@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getContent, isValidLocale } from "../../../lib/content";
+import AnimatedSection from "../../../components/AnimatedSection";
 
 export async function generateMetadata({
   params,
@@ -29,7 +30,7 @@ export default async function AboutPage({
       {/* Hero */}
       <section className="relative py-28 px-6 text-center overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
-        <div className="relative max-w-3xl mx-auto">
+        <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
           <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
             About us
           </span>
@@ -39,12 +40,12 @@ export default async function AboutPage({
           <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
             {data.hero.description}
           </p>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Mission */}
       <section className="px-6 py-24">
-        <div className="max-w-3xl mx-auto">
+        <AnimatedSection className="max-w-3xl mx-auto" variant="slideLeft">
           <div className="flex items-start gap-8 p-10 rounded-2xl bg-gray-50 border border-gray-100">
             <div className="shrink-0 w-1 self-stretch bg-indigo-500 rounded-full" />
             <div>
@@ -56,36 +57,36 @@ export default async function AboutPage({
               </p>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Values */}
       <section className="px-6 py-16 pb-28 bg-gray-50/50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
+          <AnimatedSection className="text-center mb-14" variant="fadeUp">
             <span className="inline-block text-indigo-600 text-xs font-semibold tracking-widest uppercase mb-3">
               Our values
             </span>
             <h2 className="text-3xl font-bold text-gray-900">What drives us</h2>
-          </div>
+          </AnimatedSection>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {data.values.map((value, i) => (
-              <div
-                key={value.title}
-                className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-5">
-                  <span className="text-indigo-600 font-bold text-sm">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+              <AnimatedSection key={value.title} variant="fadeUp" delay={i * 0.1}>
+                <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 h-full">
+                  <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center mb-5">
+                    <span className="text-indigo-600 font-bold text-sm">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-gray-900">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-500 leading-relaxed text-sm">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-gray-900">
-                  {value.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed text-sm">
-                  {value.description}
-                </p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
