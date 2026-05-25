@@ -184,7 +184,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
                       onClick={() => setLangOpen(false)}
                       className={`flex items-center justify-between px-3 py-2 transition-colors ${
                         l === locale
-                          ? "text-indigo-600 font-semibold bg-indigo-50"
+                          ? "text-red-600 font-semibold bg-red-50"
                           : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                       }`}
                     >
@@ -214,7 +214,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
           {/* CTA button — translated via nav.json */}
           <Link
             href={`/${locale}/contact`}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+            className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
           >
             {cta}
           </Link>
@@ -273,7 +273,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
                   href={switchLocale(l)}
                   className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     l === locale
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-red-600 text-white"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
                 >
@@ -286,7 +286,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
           {/* Mobile CTA */}
           <Link
             href={`/${locale}/contact`}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors text-center"
+            className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors text-center"
           >
             {cta}
           </Link>

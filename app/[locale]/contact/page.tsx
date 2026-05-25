@@ -32,7 +32,7 @@ export default async function ContactPage({
       <section className="relative py-28 px-6 text-center overflow-hidden border-b border-gray-100">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
         <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
-          <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
+          <span className="inline-block bg-red-50 text-red-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-red-100">
             Contact
           </span>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900">
