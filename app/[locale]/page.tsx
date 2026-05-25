@@ -31,59 +31,47 @@ export default async function Home({
 
       {/* Hero */}
       <section className="relative min-h-[88vh] flex items-center justify-center px-6 py-28 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-red-50/60 via-white to-white pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-red-100/40 rounded-full blur-3xl pointer-events-none" />
+        {/* Background photo */}
+        <Image
+          src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1800&q=85"
+          alt="Modern website development"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gray-950/70" />
+        {/* Red accent glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-600/20 rounded-full blur-3xl pointer-events-none" />
 
         <AnimatedSection className="relative text-center max-w-4xl mx-auto" variant="fadeUp">
           {/* Badge */}
-          <span className="inline-flex items-center gap-2 bg-white border border-red-100 text-red-600 text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full mb-8 shadow-sm">
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-red-400 text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />
             Next.js · JSON · Multilingual
           </span>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8 text-white">
             {data.hero.title}
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-500 leading-relaxed mb-12 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-12 max-w-2xl mx-auto">
             {data.hero.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`/${locale}/services`}
-              className="inline-block bg-red-600 hover:bg-red-700 text-white text-base font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-red-200"
+              className="inline-block bg-red-600 hover:bg-red-500 text-white text-base font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-red-900/40"
             >
               {data.hero.buttonText}
             </Link>
             <Link
               href={`/${locale}/about`}
-              className="inline-block bg-white hover:bg-gray-50 text-gray-700 text-base font-semibold px-8 py-4 rounded-xl border border-gray-200 transition-colors duration-200"
+              className="inline-block bg-white/10 hover:bg-white/20 text-white text-base font-semibold px-8 py-4 rounded-xl border border-white/20 transition-colors duration-200 backdrop-blur-sm"
             >
               {data.hero.learnMore}
             </Link>
-          </div>
-
-          {/* Hero showcase image */}
-          <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-red-100 border border-gray-100">
-            {/* Browser chrome bar */}
-            <div className="flex items-center gap-2 bg-gray-100 px-4 py-3 border-b border-gray-200">
-              <span className="w-3 h-3 rounded-full bg-red-400" />
-              <span className="w-3 h-3 rounded-full bg-yellow-400" />
-              <span className="w-3 h-3 rounded-full bg-green-400" />
-              <div className="flex-1 mx-4 bg-white rounded-md px-3 py-1 text-xs text-gray-400 text-left">
-                https://mi-sitio-web.vercel.app
-              </div>
-            </div>
-            <Image
-              src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1400&q=85"
-              alt="Modern website built with Next.js and JSON"
-              width={1400}
-              height={788}
-              className="w-full object-cover"
-              priority
-            />
           </div>
         </AnimatedSection>
       </section>
