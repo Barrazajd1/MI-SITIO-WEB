@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContent, isValidLocale } from "../../lib/content";
 import AnimatedSection from "../../components/AnimatedSection";
@@ -49,7 +50,7 @@ export default async function Home({
             {data.hero.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               href={`/${locale}/services`}
               className="inline-block bg-red-600 hover:bg-red-700 text-white text-base font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-red-200"
@@ -62,6 +63,27 @@ export default async function Home({
             >
               {data.hero.learnMore}
             </Link>
+          </div>
+
+          {/* Hero showcase image */}
+          <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-red-100 border border-gray-100">
+            {/* Browser chrome bar */}
+            <div className="flex items-center gap-2 bg-gray-100 px-4 py-3 border-b border-gray-200">
+              <span className="w-3 h-3 rounded-full bg-red-400" />
+              <span className="w-3 h-3 rounded-full bg-yellow-400" />
+              <span className="w-3 h-3 rounded-full bg-green-400" />
+              <div className="flex-1 mx-4 bg-white rounded-md px-3 py-1 text-xs text-gray-400 text-left">
+                https://mi-sitio-web.vercel.app
+              </div>
+            </div>
+            <Image
+              src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1400&q=85"
+              alt="Modern website built with Next.js and JSON"
+              width={1400}
+              height={788}
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </AnimatedSection>
       </section>
@@ -78,6 +100,85 @@ export default async function Home({
             ))}
           </div>
         </AnimatedSection>
+      </section>
+
+      {/* Workflow section */}
+      <section className="px-6 py-28 bg-gray-950 text-white overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection className="text-center mb-16" variant="fadeUp">
+            <span className="inline-block text-red-400 text-xs font-semibold tracking-widest uppercase mb-3">
+              {data.workflow.badge}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              {data.workflow.title}
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              {data.workflow.subtitle}
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 — Strapi */}
+            <AnimatedSection variant="fadeUp" delay={0}>
+              <div className="flex flex-col h-full">
+                <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[4/3]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                    alt="Strapi CMS admin panel"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent" />
+                  <span className="absolute bottom-3 left-4 text-4xl font-black text-white/20 leading-none select-none">
+                    {data.workflow.steps[0].number}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-white">{data.workflow.steps[0].title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{data.workflow.steps[0].description}</p>
+              </div>
+            </AnimatedSection>
+
+            {/* Step 2 — JSON */}
+            <AnimatedSection variant="fadeUp" delay={0.1}>
+              <div className="flex flex-col h-full">
+                <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[4/3]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                    alt="JSON code on screen"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent" />
+                  <span className="absolute bottom-3 left-4 text-4xl font-black text-white/20 leading-none select-none">
+                    {data.workflow.steps[1].number}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-white">{data.workflow.steps[1].title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{data.workflow.steps[1].description}</p>
+              </div>
+            </AnimatedSection>
+
+            {/* Step 3 — Deploy */}
+            <AnimatedSection variant="fadeUp" delay={0.2}>
+              <div className="flex flex-col h-full">
+                <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[4/3]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                    alt="Fast website deployed on Vercel"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent" />
+                  <span className="absolute bottom-3 left-4 text-4xl font-black text-white/20 leading-none select-none">
+                    {data.workflow.steps[2].number}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-white">{data.workflow.steps[2].title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{data.workflow.steps[2].description}</p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
       </section>
 
       {/* Services preview */}

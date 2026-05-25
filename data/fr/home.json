@@ -30,6 +30,28 @@
       }
     ]
   },
+  "workflow": {
+    "badge": "Comment ça marche",
+    "title": "Du contenu au site en ligne — en quelques minutes",
+    "subtitle": "Une stack moderne qui satisfait les éditeurs et préserve la santé des développeurs.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Éditez dans Strapi",
+        "description": "Votre équipe gère tout le contenu via le panel Strapi. Sans code ni déploiement — écrivez et publiez."
+      },
+      {
+        "number": "02",
+        "title": "Exportez du JSON propre",
+        "description": "Une commande importe le JSON structuré de Strapi dans le projet. Versionné, typé et toujours synchronisé."
+      },
+      {
+        "number": "03",
+        "title": "Déployez un site ultra-rapide",
+        "description": "Next.js génère chaque page en statique. Zéro coût serveur, chargement instantané et CDN mondial via Vercel."
+      }
+    ]
+  },
   "cta": {
     "title": "Prêt à commencer ?",
     "subtitle": "Construisons quelque chose de formidable ensemble.",
