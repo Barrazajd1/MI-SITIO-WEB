@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContent, isValidLocale } from "../../../lib/content";
 import ContactForm from "../../../components/ContactForm";
@@ -29,16 +30,24 @@ export default async function ContactPage({
     <main className="min-h-screen bg-white text-gray-900">
 
       {/* Hero */}
-      <section className="relative py-28 px-6 text-center overflow-hidden border-b border-gray-100">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
+      <section className="relative py-40 px-6 text-center overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1800&q=85"
+          alt="Person working on a laptop to get in touch"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gray-950/65" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-600/20 rounded-full blur-3xl pointer-events-none" />
         <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
-          <span className="inline-block bg-red-50 text-red-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-red-100">
-            Contact
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-red-400 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 backdrop-blur-sm">
+            {data.hero.badge}
           </span>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">
             {data.hero.title}
           </h1>
-          <p className="text-xl text-gray-500 max-w-xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-xl mx-auto leading-relaxed">
             {data.hero.description}
           </p>
         </AnimatedSection>
