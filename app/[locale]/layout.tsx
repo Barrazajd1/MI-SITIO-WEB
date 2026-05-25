@@ -29,7 +29,7 @@ export default async function LocaleLayout({
       <LocaleLang locale={locale} />
       <Navbar locale={locale} siteName={nav.siteName} cta={nav.cta} links={nav.links} />
       <div className="flex-1">{children}</div>
-      <Footer locale={locale} siteName={nav.siteName} links={nav.links} />
+      <Footer locale={locale} siteName={nav.siteName} links={nav.links} footer={nav.footer} />
     </div>
   );
 }

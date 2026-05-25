@@ -4,9 +4,15 @@ interface FooterProps {
   locale: string;
   siteName: string;
   links: { label: string; href: string }[];
+  footer: {
+    tagline: string;
+    pagesLabel: string;
+    rights: string;
+    builtWith: string;
+  };
 }
 
-export default function Footer({ locale, siteName, links }: FooterProps) {
+export default function Footer({ locale, siteName, links, footer }: FooterProps) {
   return (
     <footer className="border-t border-gray-100 bg-white">
       <div className="max-w-5xl mx-auto px-6 py-12">
@@ -17,13 +23,13 @@ export default function Footer({ locale, siteName, links }: FooterProps) {
               {siteName}
             </Link>
             <p className="text-sm text-gray-400 max-w-xs">
-              Fast, modern, multilingual websites built with Next.js and structured content.
+              {footer.tagline}
             </p>
           </div>
 
           {/* Nav links */}
           <nav className="flex flex-col gap-2">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Pages</p>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">{footer.pagesLabel}</p>
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -37,8 +43,8 @@ export default function Footer({ locale, siteName, links }: FooterProps) {
         </div>
 
         <div className="mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
-          <span>© {new Date().getFullYear()} {siteName}. All rights reserved.</span>
-          <span>Built with Next.js &amp; Tailwind CSS</span>
+          <span>© {new Date().getFullYear()} {siteName}. {footer.rights}</span>
+          <span>{footer.builtWith}</span>
         </div>
       </div>
     </footer>

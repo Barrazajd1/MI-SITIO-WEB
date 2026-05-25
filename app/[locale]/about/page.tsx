@@ -32,7 +32,7 @@ export default async function AboutPage({
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
         <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
           <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
-            About us
+            {data.hero.badge}
           </span>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900">
             {data.hero.title}
@@ -65,9 +65,9 @@ export default async function AboutPage({
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-14" variant="fadeUp">
             <span className="inline-block text-indigo-600 text-xs font-semibold tracking-widest uppercase mb-3">
-              Our values
+              {data.valuesBadge}
             </span>
-            <h2 className="text-3xl font-bold text-gray-900">What drives us</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{data.valuesSectionTitle}</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

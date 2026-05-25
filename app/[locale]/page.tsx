@@ -60,7 +60,7 @@ export default async function Home({
               href={`/${locale}/about`}
               className="inline-block bg-white hover:bg-gray-50 text-gray-700 text-base font-semibold px-8 py-4 rounded-xl border border-gray-200 transition-colors duration-200"
             >
-              Learn more →
+              {data.hero.learnMore}
             </Link>
           </div>
         </AnimatedSection>
@@ -70,12 +70,7 @@ export default async function Home({
       <section className="border-y border-gray-100 bg-gray-50/50 px-6 py-10">
         <AnimatedSection variant="fadeIn" delay={0.1}>
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "3", label: "Languages" },
-              { number: "100%", label: "Static output" },
-              { number: "0", label: "External APIs" },
-              { number: "∞", label: "Scalability" },
-            ].map((stat) => (
+            {data.stats.map((stat) => (
               <div key={stat.label}>
                 <p className="text-3xl font-bold text-indigo-600">{stat.number}</p>
                 <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
@@ -90,7 +85,7 @@ export default async function Home({
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-16" variant="fadeUp">
             <span className="inline-block text-indigo-600 text-xs font-semibold tracking-widest uppercase mb-3">
-              What we offer
+              {data.services.badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
               {data.services.title}
@@ -122,7 +117,7 @@ export default async function Home({
               href={`/${locale}/services`}
               className="inline-block text-indigo-600 hover:text-indigo-700 font-semibold text-sm border border-indigo-200 hover:border-indigo-300 bg-indigo-50 hover:bg-indigo-100 px-6 py-3 rounded-xl transition-all duration-200"
             >
-              View all services →
+              {data.services.viewAll}
             </Link>
           </AnimatedSection>
         </div>
@@ -132,16 +127,16 @@ export default async function Home({
       <AnimatedSection variant="fadeUp" delay={0.1}>
         <section className="px-6 py-20 mx-6 mb-16 rounded-3xl bg-gradient-to-br from-indigo-600 to-indigo-700 text-white text-center max-w-5xl xl:mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to get started?
+            {data.cta.title}
           </h2>
           <p className="text-indigo-200 text-lg mb-8 max-w-xl mx-auto">
-            Let&apos;s build something great together.
+            {data.cta.subtitle}
           </p>
           <Link
             href={`/${locale}/contact`}
             className="inline-block bg-white text-indigo-600 hover:bg-indigo-50 font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-md"
           >
-            Get in touch
+            {data.cta.button}
           </Link>
         </section>
       </AnimatedSection>

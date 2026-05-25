@@ -1,6 +1,12 @@
 {
   "siteName": "Mon Site",
   "cta": "Nous contacter",
+  "footer": {
+    "tagline": "Sites web rapides, modernes et multilingues construits avec Next.js et du contenu structuré.",
+    "pagesLabel": "Pages",
+    "rights": "Tous droits réservés.",
+    "builtWith": "Construit avec Next.js et Tailwind CSS"
+  },
   "links": [
     {
       "label": "Accueil",

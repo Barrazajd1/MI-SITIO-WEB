@@ -32,7 +32,7 @@ export default async function ServicesPage({
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white pointer-events-none" />
         <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
           <span className="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 border border-indigo-100">
-            Services
+            {data.hero.badge}
           </span>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900">
             {data.hero.title}
@@ -69,16 +69,16 @@ export default async function ServicesPage({
         <AnimatedSection variant="fadeUp">
           <div className="max-w-2xl mx-auto text-center p-12 rounded-2xl bg-indigo-50 border border-indigo-100">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
-              Need something custom?
+              {data.cta.title}
             </h2>
             <p className="text-gray-500 mb-6 text-sm">
-              We tailor solutions to fit your specific needs. Let&apos;s talk.
+              {data.cta.subtitle}
             </p>
             <a
               href={`/${locale}/contact`}
               className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors duration-200 shadow-sm"
             >
-              Contact us
+              {data.cta.button}
             </a>
           </div>
         </AnimatedSection>

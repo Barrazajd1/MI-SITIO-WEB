@@ -1,7 +1,13 @@
 {
   "hero": {
+    "badge": "Services",
     "title": "Nos Services",
     "description": "Tout ce dont vous avez besoin pour créer un site web rapide, moderne et multilingue."
+  },
+  "cta": {
+    "title": "Besoin de quelque chose de personnalisé ?",
+    "subtitle": "Nous adaptons les solutions à vos besoins spécifiques. Parlons-en.",
+    "button": "Nous contacter"
   },
   "items": [
     {
