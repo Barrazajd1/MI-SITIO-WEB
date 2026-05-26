@@ -1,19 +1,13 @@
 {
   "hero": {
-    "badge": "Servicios",
     "title": "Nuestros Servicios",
     "description": "Todo lo que necesitas para construir un sitio web rápido, moderno y multilingüe."
-  },
-  "cta": {
-    "title": "¿Necesitas algo personalizado?",
-    "subtitle": "Adaptamos soluciones a tus necesidades específicas. Hablemos.",
-    "button": "Contáctanos"
   },
   "items": [
     {
       "title": "Desarrollo Web",
       "description": "Creamos sitios web rápidos, modernos y escalables con las últimas tecnologías.",
-      "icon": "💻"
+      "icon": " 💻"
     },
     {
       "title": "Gestión de Contenido",
@@ -28,10 +22,10 @@
     {
       "title": "Optimización de Rendimiento",
       "description": "Ajustamos tiempos de carga, Core Web Vitals y SEO para que tu sitio posicione y cargue rápido.",
-      "icon": "⚡"
+      "icon": " ⚡"
     },
     {
-      "title": "Sistemas de Diseño",
+      "title": "Sistemas de Diseño ",
       "description": "Componentes UI consistentes y reutilizables construidos con Tailwind CSS y tu marca.",
       "icon": "🎨"
     },

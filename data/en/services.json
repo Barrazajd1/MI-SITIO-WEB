@@ -1,13 +1,7 @@
 {
   "hero": {
-    "badge": "Services",
     "title": "Our Services",
     "description": "Everything you need to build a fast, modern, and multilingual website."
-  },
-  "cta": {
-    "title": "Need something custom?",
-    "subtitle": "We tailor solutions to fit your specific needs. Let's talk.",
-    "button": "Contact us"
   },
   "items": [
     {

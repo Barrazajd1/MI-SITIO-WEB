@@ -1,20 +1,11 @@
 {
   "hero": {
-    "title": "Crea sitios web más rápidos con contenido JSON",
+    "title": "Crea sitios web más rápidos con contenido JSON - 2026",
     "description": "Este sitio usa Next.js y archivos JSON como fuente principal de contenido.",
-    "buttonText": "Comenzar",
-    "learnMore": "Saber más →"
+    "buttonText": "Comenzar"
   },
-  "stats": [
-    { "number": "3", "label": "Idiomas" },
-    { "number": "100%", "label": "Salida estática" },
-    { "number": "0", "label": "APIs externas" },
-    { "number": "∞", "label": "Escalabilidad" }
-  ],
   "services": {
-    "badge": "Lo que ofrecemos",
     "title": "Nuestros servicios",
-    "viewAll": "Ver todos los servicios →",
     "items": [
       {
         "title": "Desarrollo web",
@@ -22,39 +13,12 @@
       },
       {
         "title": "Gestión de contenido",
-        "description": "Organizamos el contenido del sitio usando archivos JSON estructurados."
+        "description": "rganizamos el contenido del sitio usando archivos JSON estructurados."
       },
       {
         "title": "Localización",
         "description": "Preparamos contenido traducido para sitios web multilingües."
       }
     ]
-  },
-  "workflow": {
-    "badge": "Cómo funciona",
-    "title": "Del contenido al sitio en vivo — en minutos",
-    "subtitle": "Un stack moderno que mantiene felices a los editores y cuerdos a los desarrolladores.",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Edita en Strapi",
-        "description": "Tu equipo gestiona todo el contenido desde el panel de Strapi. Sin código ni despliegues — solo escribe y publica."
-      },
-      {
-        "number": "02",
-        "title": "Exporta JSON limpio",
-        "description": "Un comando jala el JSON estructurado de Strapi directo al proyecto. Versionado, tipado y siempre sincronizado."
-      },
-      {
-        "number": "03",
-        "title": "Despliega un sitio ultrarrápido",
-        "description": "Next.js genera cada página de forma estática. Sin costos de servidor, carga instantánea y CDN global vía Vercel."
-      }
-    ]
-  },
-  "cta": {
-    "title": "¿Listo para comenzar?",
-    "subtitle": "Construyamos algo increíble juntos.",
-    "button": "Contáctanos"
   }
 }

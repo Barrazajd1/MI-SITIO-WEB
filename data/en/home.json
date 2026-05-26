@@ -2,19 +2,10 @@
   "hero": {
     "title": "Build faster websites with JSON content",
     "description": "This website uses Next.js and JSON files as the main content source.",
-    "buttonText": "Get started",
-    "learnMore": "Learn more →"
+    "buttonText": "Get started"
   },
-  "stats": [
-    { "number": "3", "label": "Languages" },
-    { "number": "100%", "label": "Static output" },
-    { "number": "0", "label": "External APIs" },
-    { "number": "∞", "label": "Scalability" }
-  ],
   "services": {
-    "badge": "What we offer",
     "title": "Our services",
-    "viewAll": "View all services →",
     "items": [
       {
         "title": "Website development",
@@ -29,32 +20,5 @@
         "description": "We prepare translated content for multilingual websites."
       }
     ]
-  },
-  "workflow": {
-    "badge": "How it works",
-    "title": "From content to live site — in minutes",
-    "subtitle": "A modern stack that keeps editors happy and developers sane.",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Edit content in Strapi",
-        "description": "Your team manages all content through Strapi's friendly admin panel. No code, no deployments — just write and publish."
-      },
-      {
-        "number": "02",
-        "title": "Export clean JSON",
-        "description": "One command pulls structured JSON from Strapi directly into the project. Version-controlled, typed, and always in sync."
-      },
-      {
-        "number": "03",
-        "title": "Deploy a blazing-fast site",
-        "description": "Next.js generates every page statically. Zero server costs, instant load times, and global CDN delivery via Vercel."
-      }
-    ]
-  },
-  "cta": {
-    "title": "Ready to get started?",
-    "subtitle": "Let's build something great together.",
-    "button": "Get in touch"
   }
 }
