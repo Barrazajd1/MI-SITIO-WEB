@@ -8,6 +8,8 @@
     "title": "Nuestra Misión",
     "body": "Hacer el desarrollo web más simple y accesible, reemplazando sistemas CMS complejos con contenido JSON limpio y versionado que cualquier equipo puede gestionar."
   },
+  "valuesBadge": "Nuestros principios",
+  "valuesSectionTitle": "En lo que creemos",
   "values": [
     {
       "title": "Velocidad",

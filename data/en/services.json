@@ -4,6 +4,11 @@
     "title": "Our Services",
     "description": "Everything you need to build a fast, modern, and multilingual website."
   },
+  "cta": {
+    "title": "Ready to get started?",
+    "subtitle": "Tell us about your project and we'll get back to you within one business day.",
+    "button": "Contact us"
+  },
   "items": [
     {
       "title": "Web Development",

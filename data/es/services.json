@@ -4,6 +4,11 @@
     "title": "Nuestros Servicios",
     "description": "Todo lo que necesitas para construir un sitio web rápido, moderno y multilingüe."
   },
+  "cta": {
+    "title": "¿Listo para empezar?",
+    "subtitle": "Cuéntanos sobre tu proyecto y te respondemos en menos de un día hábil.",
+    "button": "Contáctanos"
+  },
   "items": [
     {
       "title": "Desarrollo Web",

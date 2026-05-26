@@ -8,6 +8,8 @@
     "title": "Our Mission",
     "body": "To make web development simpler and more accessible by replacing complex CMS setups with clean, version-controlled JSON content that any team can manage."
   },
+  "valuesBadge": "Our principles",
+  "valuesSectionTitle": "What we believe in",
   "values": [
     {
       "title": "Speed",

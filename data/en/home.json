@@ -2,10 +2,41 @@
   "hero": {
     "title": "Build faster websites with JSON content - 2026",
     "description": "This website uses Next.js and JSON files as the main content source.",
-    "buttonText": "Get started"
+    "buttonText": "Get started",
+    "learnMore": "Learn more"
+  },
+  "stats": [
+    { "number": "10+", "label": "Projects delivered" },
+    { "number": "3", "label": "Languages supported" },
+    { "number": "100%", "label": "Static & fast" },
+    { "number": "0ms", "label": "Server wait time" }
+  ],
+  "workflow": {
+    "badge": "How it works",
+    "title": "Content to production in minutes",
+    "subtitle": "Edit in Strapi, export to JSON, deploy to Vercel — no rebuilds needed.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Edit in Strapi",
+        "description": "Use the Strapi admin panel to create and update content in any language."
+      },
+      {
+        "number": "02",
+        "title": "Export to JSON",
+        "description": "Run one command to pull all content into local JSON files, versioned with Git."
+      },
+      {
+        "number": "03",
+        "title": "Deploy to Vercel",
+        "description": "Push to GitHub and Vercel automatically rebuilds and publishes the site."
+      }
+    ]
   },
   "services": {
+    "badge": "What we do",
     "title": "Our services",
+    "viewAll": "View all services →",
     "items": [
       {
         "title": "Website development",
@@ -20,5 +51,10 @@
         "description": "We prepare translated content for multilingual websites."
       }
     ]
+  },
+  "cta": {
+    "title": "Ready to build something great?",
+    "subtitle": "Let's talk about your project and make it happen.",
+    "button": "Get in touch"
   }
 }
