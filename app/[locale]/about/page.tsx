@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContent, isValidLocale } from "../../../lib/content";
+import { buildMetadata } from "../../../lib/metadata";
 import AnimatedSection from "../../../components/AnimatedSection";
 
 export async function generateMetadata({
@@ -12,7 +13,8 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isValidLocale(locale)) return {};
   const { hero } = getContent(locale, "about");
-  return { title: hero.title, description: hero.description };
+  const nav = getContent(locale, "nav");
+  return buildMetadata(locale, "/about", hero.title, hero.description, nav.siteName);
 }
 
 export default async function AboutPage({
