@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mi Sitio Web",
   description: "Sitio web multilingüe construido con Next.js y contenido JSON.",
+  verification: {
+    google: "XxLM6fZ0VbLuXe0VNL8ZongrK9JFZJ6msP4YHu7UXfI",
+  },
 };
 
 export default function RootLayout({
