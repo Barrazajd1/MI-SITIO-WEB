@@ -1,5 +1,12 @@
 {
   "siteName": "My Site",
+  "cta": "Get in touch",
+  "footer": {
+    "tagline": "Fast, multilingual websites built with Next.js and JSON content.",
+    "pagesLabel": "Pages",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js & Vercel"
+  },
   "links": [
     {
       "label": "Home",

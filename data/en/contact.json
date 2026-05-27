@@ -1,7 +1,8 @@
 {
   "hero": {
     "title": "Contact Us",
-    "description": "Have a project in mind? We'd love to hear from you."
+    "description": "Have a project in mind? We'd love to hear from you.",
+    "badge": "Get in touch"
   },
   "form": {
     "namePlaceholder": "Your Name",

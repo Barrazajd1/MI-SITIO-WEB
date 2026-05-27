@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "Who we are",
     "title": "About",
-    "description": "We are a small team passionate about building fast, content-driven websites."
+    "description": "We are a small team passionate about building fast, content-driven websites.",
+    "badge": "Who we are"
   },
   "mission": {
     "title": "Our Mission",

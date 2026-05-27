@@ -3,7 +3,7 @@
     "title": "Créez des sites web plus rapides avec du contenu JSON",
     "description": "Ce site utilise Next.js et des fichiers JSON comme source de contenu principale.",
     "buttonText": "Commencer",
-    "learnMore": "En savoir plus"
+    "learnMore": "En savoir plus →"
   },
   "stats": [
     { "number": "10+", "label": "Projets livrés" },
@@ -34,7 +34,7 @@
     ]
   },
   "services": {
-    "badge": "Ce que nous faisons",
+    "badge": "Ce que nous offrons",
     "title": "Nos services",
     "viewAll": "Voir tous les services →",
     "items": [

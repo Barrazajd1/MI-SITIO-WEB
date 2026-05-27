@@ -3,7 +3,7 @@
     "title": "Crea sitios web más rápidos con contenido JSON - 2026",
     "description": "Este sitio usa Next.js y archivos JSON como fuente principal de contenido.",
     "buttonText": "Comenzar",
-    "learnMore": "Saber más"
+    "learnMore": "Saber más →"
   },
   "stats": [
     { "number": "10+", "label": "Proyectos entregados" },
@@ -34,7 +34,7 @@
     ]
   },
   "services": {
-    "badge": "Lo que hacemos",
+    "badge": "Lo que ofrecemos",
     "title": "Nuestros servicios",
     "viewAll": "Ver todos los servicios →",
     "items": [
