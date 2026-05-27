@@ -19,10 +19,12 @@ if (!STRAPI_URL || !STRAPI_TOKEN) {
   process.exit(1);
 }
 
-// Locales to export. Add new locales here as needed.
-// "en" is the Strapi default locale (no locale param sent).
-// All others append &locale={code} to the request.
-const LOCALES = ["en", "es", "fr"];
+// Locales to export from Strapi.
+// Strapi is English-only — no i18n configured.
+// ES, FR and other languages are generated separately by AI from the EN JSON files.
+// To add a new language: generate its JSON files with AI, add the locale to
+// lib/content.ts, and import the new JSON files there.
+const LOCALES = ["en"];
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 
