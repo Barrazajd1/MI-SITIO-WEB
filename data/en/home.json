@@ -42,6 +42,11 @@
       }
     ]
   },
+  "cta": {
+    "title": "Ready to get started?",
+    "subtitle": "Tell us about your project and we'll get back to you within one business day.",
+    "button": "Contact us"
+  },
   "workflow": {
     "badge": "How it works",
     "title": "Content to production in minutes",

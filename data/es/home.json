@@ -43,6 +43,11 @@
       {}
     ]
   },
+  "cta": {
+    "title": "¿Listo para empezar?",
+    "subtitle": "Cuéntanos sobre tu proyecto y te responderemos en un día hábil.",
+    "button": "Contáctanos"
+  },
   "workflow": {
     "badge": "Cómo funciona",
     "title": "Del contenido a producción en minutos",

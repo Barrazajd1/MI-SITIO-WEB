@@ -42,6 +42,11 @@
       }
     ]
   },
+  "cta": {
+    "title": "Prêt à commencer ?",
+    "subtitle": "Parlez-nous de votre projet et nous vous répondrons sous un jour ouvrable.",
+    "button": "Nous contacter"
+  },
   "workflow": {
     "badge": "Comment ça marche",
     "title": "Du contenu à la production en quelques minutes",
