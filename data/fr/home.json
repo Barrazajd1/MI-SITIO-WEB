@@ -23,6 +23,11 @@
       "number": "0ms"
     }
   ],
+  "cta": {
+    "title": "Prêt à construire quelque chose de grand ?",
+    "subtitle": "Parlez-nous de votre projet et nous vous répondrons sous un jour ouvrable.",
+    "button": "Nous contacter"
+  },
   "services": {
     "title": "Nos services",
     "badge": "Ce que nous offrons",
@@ -41,11 +46,6 @@
         "description": "Nous préparons du contenu traduit pour les sites multilingues."
       }
     ]
-  },
-  "cta": {
-    "title": "Prêt à commencer ?",
-    "subtitle": "Parlez-nous de votre projet et nous vous répondrons sous un jour ouvrable.",
-    "button": "Nous contacter"
   },
   "workflow": {
     "badge": "Comment ça marche",

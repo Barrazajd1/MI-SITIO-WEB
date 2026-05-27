@@ -23,6 +23,11 @@
       "number": "0ms"
     }
   ],
+  "cta": {
+    "title": "¿Listo para crear algo increíble?",
+    "subtitle": "Cuéntanos sobre tu proyecto y te responderemos en un día hábil.",
+    "button": "Contáctanos"
+  },
   "services": {
     "title": "Nuestros servicios",
     "badge": "Lo que ofrecemos",
@@ -42,11 +47,6 @@
       },
       {}
     ]
-  },
-  "cta": {
-    "title": "¿Listo para empezar?",
-    "subtitle": "Cuéntanos sobre tu proyecto y te responderemos en un día hábil.",
-    "button": "Contáctanos"
   },
   "workflow": {
     "badge": "Cómo funciona",

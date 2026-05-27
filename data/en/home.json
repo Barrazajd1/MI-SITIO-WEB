@@ -23,6 +23,11 @@
       "number": "∞"
     }
   ],
+  "cta": {
+    "title": "Ready to build something great?`",
+    "subtitle": "Tell us about your project and we'll get back to you within one business day.",
+    "button": "Get in touch"
+  },
   "services": {
     "title": "Our services",
     "badge": "What we offer",
@@ -41,11 +46,6 @@
         "description": "We prepare translated content for multilingual websites."
       }
     ]
-  },
-  "cta": {
-    "title": "Ready to get started?",
-    "subtitle": "Tell us about your project and we'll get back to you within one business day.",
-    "button": "Contact us"
   },
   "workflow": {
     "badge": "How it works",
