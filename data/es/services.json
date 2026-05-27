@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "Lo que ofrecemos",
     "title": "Nuestros Servicios",
-    "description": "Todo lo que necesitas para construir un sitio web rápido, moderno y multilingüe."
+    "description": "Todo lo que necesitas para construir un sitio web rápido, moderno y multilingüe.",
+    "badge": "Lo que ofrecemos"
   },
   "cta": {
     "title": "¿Listo para empezar?",

@@ -2,14 +2,14 @@
   "hero": {
     "title": "About",
     "description": "We are a small team passionate about building fast, content-driven websites.",
-    "badge": "Who we are"
+    "badge": "Who we are",
+    "valuesBadge": "Our principles",
+    "valuesSectionTitle": "What we believe in"
   },
   "mission": {
     "title": "Our Mission",
     "body": "To make web development simpler and more accessible by replacing complex CMS setups with clean, version-controlled JSON content that any team can manage."
   },
-  "valuesBadge": "Our principles",
-  "valuesSectionTitle": "What we believe in",
   "values": [
     {
       "title": "Speed",

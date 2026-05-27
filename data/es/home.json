@@ -6,36 +6,26 @@
     "learnMore": "Saber más →"
   },
   "stats": [
-    { "number": "10+", "label": "Proyectos entregados" },
-    { "number": "3", "label": "Idiomas soportados" },
-    { "number": "100%", "label": "Estático y rápido" },
-    { "number": "0ms", "label": "Tiempo de espera" }
+    {
+      "label": " Proyectos entregados",
+      "number": "10+"
+    },
+    {
+      "label": "Idiomas soportados",
+      "number": "3"
+    },
+    {
+      "label": "Estático y rápido",
+      "number": "100%"
+    },
+    {
+      "label": "Tiempo de espera",
+      "number": "0ms"
+    }
   ],
-  "workflow": {
-    "badge": "Cómo funciona",
-    "title": "Del contenido a producción en minutos",
-    "subtitle": "Edita en Strapi, exporta a JSON, despliega en Vercel — sin reconstrucciones.",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Edita en Strapi",
-        "description": "Usa el panel de administración de Strapi para crear y actualizar contenido en cualquier idioma."
-      },
-      {
-        "number": "02",
-        "title": "Exporta a JSON",
-        "description": "Ejecuta un comando para obtener todo el contenido en archivos JSON locales, versionados con Git."
-      },
-      {
-        "number": "03",
-        "title": "Despliega en Vercel",
-        "description": "Haz push a GitHub y Vercel reconstruye y publica el sitio automáticamente."
-      }
-    ]
-  },
   "services": {
-    "badge": "Lo que ofrecemos",
     "title": "Nuestros servicios",
+    "badge": "Lo que ofrecemos",
     "viewAll": "Ver todos los servicios →",
     "items": [
       {
@@ -44,17 +34,35 @@
       },
       {
         "title": "Gestión de contenido",
-        "description": "Organizamos el contenido del sitio usando archivos JSON estructurados."
+        "description": "rganizamos el contenido del sitio usando archivos JSON estructurados."
       },
       {
         "title": "Localización",
         "description": "Preparamos contenido traducido para sitios web multilingües."
-      }
+      },
+      {}
     ]
   },
-  "cta": {
-    "title": "¿Listo para construir algo increíble?",
-    "subtitle": "Hablemos de tu proyecto y hagámoslo realidad.",
-    "button": "Contáctanos"
+  "workflow": {
+    "badge": "Cómo funciona",
+    "title": "Del contenido a producción en minutos",
+    "subtitle": "Edita en Strapi, exporta a JSON, despliega en Vercel — sin reconstrucciones.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Edita en Strapi",
+        "description": "sa el panel de administración de Strapi para crear y actualizar contenido en cualquier idioma."
+      },
+      {
+        "number": "02",
+        "title": "Exporta a JSON",
+        "description": "Ejecuta un comando para obtener todo el contenido en archivos JSON locales, versionados con Git."
+      },
+      {
+        "number": "03",
+        "title": "Despliega en Vercel ",
+        "description": "Haz push a GitHub y Vercel reconstruye y publica el sitio automáticamente."
+      }
+    ]
   }
 }

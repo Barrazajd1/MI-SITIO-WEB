@@ -76,9 +76,9 @@ export default async function AboutPage({
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-14" variant="fadeUp">
             <span className="inline-block text-red-600 text-xs font-semibold tracking-widest uppercase mb-3">
-              {data.valuesBadge}
+              {data.hero.valuesBadge}
             </span>
-            <h2 className="text-3xl font-bold text-gray-900">{data.valuesSectionTitle}</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{data.hero.valuesSectionTitle}</h2>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

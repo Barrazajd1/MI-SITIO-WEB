@@ -1,15 +1,15 @@
 {
   "hero": {
-    "badge": "Qui nous sommes",
     "title": "À propos",
-    "description": "Nous sommes une petite équipe passionnée par la création de sites web rapides et axés sur le contenu."
+    "description": "Nous sommes une petite équipe passionnée par la création de sites web rapides et axés sur le contenu.",
+    "badge": "Qui nous sommes",
+    "valuesBadge": "Nos principes",
+    "valuesSectionTitle": "Ce en quoi nous croyons"
   },
   "mission": {
     "title": "Notre Mission",
     "body": "Rendre le développement web plus simple et accessible en remplaçant les CMS complexes par du contenu JSON propre et versionné que toute l'équipe peut gérer."
   },
-  "valuesBadge": "Nos principes",
-  "valuesSectionTitle": "Ce en quoi nous croyons",
   "values": [
     {
       "title": "Rapidité",

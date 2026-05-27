@@ -42,8 +42,14 @@ const DATA_DIR = path.join(__dirname, "..", "data");
 const ENDPOINTS = /** @type {Record<string, { slug: string; populate: string }>} */ ({
   "home.json": {
     slug: "home-page",
-    // home.services.items is a nested repeatable component — needs deep populate.
-    populate: "populate[hero]=*&populate[services][populate][items]=*",
+    // Note: "worflow" is the actual Strapi field name (typo in content type).
+    // The export script renames it to "workflow" automatically.
+    populate:
+      "populate[hero]=*" +
+      "&populate[stats]=*" +
+      "&populate[worflow][populate][steps]=*" +
+      "&populate[services][populate][items]=*" +
+      "&populate[cta]=*",
   },
   "about.json": {
     slug: "about-page",
@@ -51,7 +57,7 @@ const ENDPOINTS = /** @type {Record<string, { slug: string; populate: string }>}
   },
   "services.json": {
     slug: "services-page",
-    populate: "populate[hero]=*&populate[items]=*",
+    populate: "populate[hero]=*&populate[cta]=*&populate[items]=*",
   },
   "contact.json": {
     slug: "contact-page",
@@ -59,7 +65,7 @@ const ENDPOINTS = /** @type {Record<string, { slug: string; populate: string }>}
   },
   "nav.json": {
     slug: "nav",
-    populate: "populate[links]=*",
+    populate: "populate[links]=*&populate[footer]=*",
   },
 });
 
@@ -143,7 +149,12 @@ async function main() {
     console.log(`[${locale}]`);
     for (const [filename, { slug, populate }] of Object.entries(ENDPOINTS)) {
       try {
-        const raw = await fetchSingleType(slug, populate, locale);
+        let raw = await fetchSingleType(slug, populate, locale);
+        // Rename Strapi typo "worflow" → "workflow" in home.json
+        if (filename === "home.json" && raw.worflow !== undefined) {
+          raw = { ...raw, workflow: raw.worflow };
+          delete raw.worflow;
+        }
         writeJson(locale, filename, stripIds(raw));
         console.log(`  ✓ ${filename}`);
       } catch (err) {

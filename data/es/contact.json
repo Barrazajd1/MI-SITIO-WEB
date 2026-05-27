@@ -1,8 +1,8 @@
 {
   "hero": {
-    "badge": "Contáctanos",
     "title": "Contacto",
-    "description": "¿Tienes un proyecto en mente? Nos encantaría escucharte."
+    "description": "¿Tienes un proyecto en mente? Nos encantaría escucharte.",
+    "badge": "Contáctanos"
   },
   "form": {
     "namePlaceholder": "Tu nombre",
