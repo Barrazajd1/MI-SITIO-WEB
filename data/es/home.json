@@ -1,26 +1,26 @@
 {
   "hero": {
-    "title": "Crea sitios web más rápidos con contenido JSON - 2026",
+    "title": "Crea sitios web más rápidos con contenido JSON",
     "description": "Este sitio usa Next.js y archivos JSON como fuente principal de contenido.",
     "buttonText": "Comenzar",
     "learnMore": "Saber más →"
   },
   "stats": [
     {
-      "label": " Proyectos entregados",
-      "number": "10+"
-    },
-    {
-      "label": "Idiomas soportados",
+      "label": "Idiomas",
       "number": "3"
     },
     {
-      "label": "Estático y rápido",
+      "label": "Salida estática",
       "number": "100%"
     },
     {
-      "label": "Tiempo de espera",
-      "number": "0ms"
+      "label": "APIs externas",
+      "number": "0"
+    },
+    {
+      "label": "Escalabilidad",
+      "number": "∞"
     }
   ],
   "cta": {
@@ -39,13 +39,12 @@
       },
       {
         "title": "Gestión de contenido",
-        "description": "rganizamos el contenido del sitio usando archivos JSON estructurados."
+        "description": "Organizamos el contenido del sitio usando archivos JSON estructurados."
       },
       {
         "title": "Localización",
         "description": "Preparamos contenido traducido para sitios web multilingües."
-      },
-      {}
+      }
     ]
   },
   "workflow": {
@@ -55,17 +54,17 @@
     "steps": [
       {
         "number": "01",
-        "title": "Edita en Strapi",
-        "description": "sa el panel de administración de Strapi para crear y actualizar contenido en cualquier idioma."
+        "title": "Edita el contenido en Strapi",
+        "description": "Usa el panel de administración de Strapi para crear y actualizar contenido en cualquier idioma."
       },
       {
         "number": "02",
-        "title": "Exporta a JSON",
+        "title": "Exporta JSON limpio",
         "description": "Ejecuta un comando para obtener todo el contenido en archivos JSON locales, versionados con Git."
       },
       {
         "number": "03",
-        "title": "Despliega en Vercel ",
+        "title": "Despliega en Vercel",
         "description": "Haz push a GitHub y Vercel reconstruye y publica el sitio automáticamente."
       }
     ]

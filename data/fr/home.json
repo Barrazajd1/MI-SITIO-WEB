@@ -7,20 +7,20 @@
   },
   "stats": [
     {
-      "label": " Projets livrés",
-      "number": "10+"
+      "label": "Langues",
+      "number": "3"
     },
     {
-      "label": "Langues supportées",
-      "number": "03"
-    },
-    {
-      "label": "Statique et rapide",
+      "label": "Sortie statique",
       "number": "100%"
     },
     {
-      "label": "Temps d'attente",
-      "number": "0ms"
+      "label": "API externes",
+      "number": "0"
+    },
+    {
+      "label": "Évolutivité",
+      "number": "∞"
     }
   ],
   "cta": {
@@ -54,12 +54,12 @@
     "steps": [
       {
         "number": "01",
-        "title": "Éditez dans Strapi ",
+        "title": "Éditez le contenu dans Strapi",
         "description": "Utilisez le panneau d'administration Strapi pour créer et mettre à jour du contenu dans n'importe quelle langue."
       },
       {
         "number": "02",
-        "title": "Exportez en JSON",
+        "title": "Exportez en JSON propre",
         "description": "Exécutez une commande pour récupérer tout le contenu dans des fichiers JSON locaux, versionnés avec Git."
       },
       {
