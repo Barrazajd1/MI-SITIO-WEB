@@ -5,6 +5,7 @@ import { BASE_URL } from "../../lib/metadata";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import LocaleLang from "../../components/LocaleLang";
+import FloatingContact from "../../components/FloatingContact";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
       <Navbar locale={locale} siteName={nav.siteName} cta={nav.cta} links={nav.links} />
       <div className="flex-1">{children}</div>
       <Footer locale={locale} siteName={nav.siteName} links={nav.links} footer={nav.footer} />
+      <FloatingContact locale={locale} cta={nav.cta} />
     </div>
   );
 }

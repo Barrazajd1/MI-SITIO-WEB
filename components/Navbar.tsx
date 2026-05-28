@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Locale, locales } from "../lib/content";
 
+// Sinc.business brand palette
+// #009fe1 — primary cyan-blue  (CTAs, active states, accents)
+// #007cb5 — darker blue        (hover on CTA)
+// #2e435e — dark navy          (logo, strong text)
+// #cae4f2 — light blue         (subtle highlights)
+
 interface NavLink {
   label: string;
   href: string;
@@ -17,7 +23,6 @@ interface NavbarProps {
   links: NavLink[];
 }
 
-/** Globe icon (inline SVG — no extra dependency) */
 function GlobeIcon() {
   return (
     <svg
@@ -39,7 +44,6 @@ function GlobeIcon() {
   );
 }
 
-/** Chevron-down icon */
 function ChevronDown({ open }: { open: boolean }) {
   return (
     <svg
@@ -78,12 +82,10 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on navigation
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
-  // Close dropdowns on Escape
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
@@ -95,7 +97,6 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  // Close language dropdown when clicking outside
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
       if (langRef.current && !langRef.current.contains(e.target as Node)) {
@@ -107,12 +108,11 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
   }, []);
 
   function switchLocale(next: string) {
-    const segments = pathname.split("/"); // ["", "pt", "services"] ó ["", "pt"]
+    const segments = pathname.split("/");
     segments[1] = next;
     return segments.join("/");
   }
 
-  // Human-readable locale names
   const localeLabels: Record<string, string> = {
     en: "English",
     es: "Español",
@@ -123,20 +123,21 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
   return (
     <header
       className={`sticky top-0 z-50 w-full bg-white transition-all duration-200 ${
-        scrolled ? "shadow-md" : "border-b border-gray-100"
+        scrolled ? "shadow-md shadow-[#009fe1]/10" : "border-b border-[#cae4f2]"
       }`}
     >
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+
         {/* Logo */}
         <Link
           href={`/${locale}`}
-          className="text-xl font-bold tracking-tight text-gray-900"
+          className="text-xl font-bold tracking-tight text-[#2e435e] hover:text-[#009fe1] transition-colors duration-200"
         >
           {siteName}
         </Link>
 
         {/* Desktop: nav links */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-500">
+        <ul className="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
           {links.map((link) => {
             const href = `/${locale}${link.href === "/" ? "" : link.href}`;
             const isActive =
@@ -146,10 +147,10 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
               <li key={link.href}>
                 <Link
                   href={href}
-                  className={`transition-colors ${
+                  className={`relative pb-0.5 transition-colors duration-200 ${
                     isActive
-                      ? "text-gray-900 font-semibold"
-                      : "hover:text-gray-900"
+                      ? "text-[#009fe1] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#009fe1] after:rounded-full"
+                      : "hover:text-[#009fe1]"
                   }`}
                 >
                   {link.label}
@@ -161,11 +162,12 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
 
         {/* Desktop: language dropdown + CTA */}
         <div className="hidden md:flex items-center gap-3">
+
           {/* Language dropdown */}
           <div className="relative" ref={langRef}>
             <button
               onClick={() => setLangOpen((prev) => !prev)}
-              className="flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors px-2 py-1.5 rounded-md hover:bg-gray-50"
+              className="flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-[#009fe1] transition-colors duration-200 px-2 py-1.5 rounded-md hover:bg-[#cae4f2]/30"
               aria-haspopup="listbox"
               aria-expanded={langOpen}
               aria-label="Select language"
@@ -178,17 +180,17 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
             {langOpen && (
               <ul
                 role="listbox"
-                className="absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-lg shadow-lg py-1 text-sm"
+                className="absolute right-0 mt-1 w-36 bg-white border border-[#cae4f2] rounded-lg shadow-lg shadow-[#009fe1]/10 py-1 text-sm"
               >
                 {locales.map((l) => (
                   <li key={l} role="option" aria-selected={l === locale}>
                     <Link
                       href={switchLocale(l)}
                       onClick={() => setLangOpen(false)}
-                      className={`flex items-center justify-between px-3 py-2 transition-colors ${
+                      className={`flex items-center justify-between px-3 py-2 transition-colors duration-150 ${
                         l === locale
-                          ? "text-red-600 font-semibold bg-red-50"
-                          : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                          ? "text-[#009fe1] font-semibold bg-[#cae4f2]/30"
+                          : "text-gray-600 hover:bg-[#cae4f2]/20 hover:text-[#2e435e]"
                       }`}
                     >
                       <span>{localeLabels[l]}</span>
@@ -214,16 +216,16 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
             )}
           </div>
 
-          {/* CTA button — translated via nav.json */}
+          {/* CTA button */}
           <Link
             href={`/${locale}/contact`}
-            className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+            className="bg-[#009fe1] hover:bg-[#007cb5] text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors duration-200"
           >
             {cta}
           </Link>
         </div>
 
-        {/* Mobile: hamburger button */}
+        {/* Mobile: hamburger */}
         <button
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -231,17 +233,17 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
           aria-expanded={menuOpen}
         >
           <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-transform duration-200 origin-center ${
+            className={`block w-5 h-0.5 bg-[#2e435e] transition-transform duration-200 origin-center ${
               menuOpen ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-opacity duration-200 ${
+            className={`block w-5 h-0.5 bg-[#2e435e] transition-opacity duration-200 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-transform duration-200 origin-center ${
+            className={`block w-5 h-0.5 bg-[#2e435e] transition-transform duration-200 origin-center ${
               menuOpen ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
@@ -250,34 +252,42 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
 
       {/* Mobile: dropdown menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4 shadow-lg">
+        <div className="md:hidden border-t border-[#cae4f2] bg-white px-6 py-4 flex flex-col gap-4 shadow-lg shadow-[#009fe1]/10">
           <ul className="flex flex-col gap-4 text-sm font-medium text-gray-600">
-            {links.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={`/${locale}${link.href === "/" ? "" : link.href}`}
-                  className="hover:text-gray-900 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {links.map((link) => {
+              const href = `/${locale}${link.href === "/" ? "" : link.href}`;
+              const isActive =
+                pathname === href ||
+                (link.href !== "/" && pathname.startsWith(href));
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={href}
+                    className={`transition-colors duration-200 ${
+                      isActive ? "text-[#009fe1] font-semibold" : "hover:text-[#009fe1]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Mobile language switcher */}
-          <div className="pt-3 border-t border-gray-100">
+          <div className="pt-3 border-t border-[#cae4f2]">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
               <GlobeIcon /> Language
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {locales.map((l) => (
                 <Link
                   key={l}
                   href={switchLocale(l)}
-                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-200 ${
                     l === locale
-                      ? "bg-red-600 text-white"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      ? "bg-[#009fe1] text-white"
+                      : "bg-[#cae4f2]/40 text-[#2e435e] hover:bg-[#cae4f2]"
                   }`}
                 >
                   {l.toUpperCase()}
@@ -289,7 +299,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
           {/* Mobile CTA */}
           <Link
             href={`/${locale}/contact`}
-            className="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors text-center"
+            className="bg-[#009fe1] hover:bg-[#007cb5] text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors duration-200 text-center"
           >
             {cta}
           </Link>
