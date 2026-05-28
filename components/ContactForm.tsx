@@ -5,6 +5,7 @@ import { useState } from "react";
 interface FormStrings {
   namePlaceholder: string;
   emailPlaceholder: string;
+  phonePlaceholder: string;
   messagePlaceholder: string;
   submitButton: string;
   successMessage: string;
@@ -25,6 +26,7 @@ export default function ContactForm({ form }: { form: FormStrings }) {
       body: JSON.stringify({
         name: data.get("name"),
         email: data.get("email"),
+        phone: data.get("phone"),
         message: data.get("message"),
       }),
     });
@@ -49,6 +51,12 @@ export default function ContactForm({ form }: { form: FormStrings }) {
         name="email"
         placeholder={form.emailPlaceholder}
         required
+        className={inputClass}
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder={form.phonePlaceholder}
         className={inputClass}
       />
       <textarea

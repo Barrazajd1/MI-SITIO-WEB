@@ -7,6 +7,7 @@
   "form": {
     "namePlaceholder": "Your Name",
     "emailPlaceholder": "Your Email",
+    "phonePlaceholder": "Your Phone Number",
     "messagePlaceholder": "Tell us about your project...",
     "submitButton": "Send message",
     "successMessage": "Thanks! We'll get back to you shortly.",

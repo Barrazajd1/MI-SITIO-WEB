@@ -16,6 +16,7 @@ const COPY: Record<string, {
   back: string;
   name: string;
   email: string;
+  phone: string;
   message: string;
   send: string;
   sent: string;
@@ -28,6 +29,7 @@ const COPY: Record<string, {
     back:     "Back",
     name:     "Your name",
     email:    "Your email",
+    phone:    "Your phone number",
     message:  "Tell us about your project...",
     send:     "Send message",
     sent:     "Message sent! ✓",
@@ -40,6 +42,7 @@ const COPY: Record<string, {
     back:     "Volver",
     name:     "Tu nombre",
     email:    "Tu email",
+    phone:    "Tu número de teléfono",
     message:  "Cuéntanos sobre tu proyecto...",
     send:     "Enviar mensaje",
     sent:     "¡Mensaje enviado! ✓",
@@ -52,6 +55,7 @@ const COPY: Record<string, {
     back:     "Retour",
     name:     "Votre nom",
     email:    "Votre e-mail",
+    phone:    "Votre numéro de téléphone",
     message:  "Parlez-nous de votre projet...",
     send:     "Envoyer le message",
     sent:     "Message envoyé ! ✓",
@@ -64,6 +68,7 @@ const COPY: Record<string, {
     back:     "Voltar",
     name:     "Seu nome",
     email:    "Seu e-mail",
+    phone:    "Seu número de telefone",
     message:  "Fale sobre o seu projeto...",
     send:     "Enviar mensagem",
     sent:     "Mensagem enviada! ✓",
@@ -76,6 +81,7 @@ const COPY: Record<string, {
     back:     "Indietro",
     name:     "Il tuo nome",
     email:    "La tua email",
+    phone:    "Il tuo numero di telefono",
     message:  "Raccontaci del tuo progetto...",
     send:     "Invia messaggio",
     sent:     "Messaggio inviato! ✓",
@@ -103,6 +109,7 @@ export default function FloatingContact({ locale }: FloatingContactProps) {
       body: JSON.stringify({
         name: data.get("name"),
         email: data.get("email"),
+        phone: data.get("phone"),
         message: data.get("message"),
       }),
     });
@@ -201,6 +208,12 @@ export default function FloatingContact({ locale }: FloatingContactProps) {
                   name="email"
                   placeholder={copy.email}
                   required
+                  className={inputClass}
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder={copy.phone}
                   className={inputClass}
                 />
                 <textarea
