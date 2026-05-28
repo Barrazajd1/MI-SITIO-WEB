@@ -69,6 +69,18 @@ const COPY: Record<string, {
     sent:     "Mensagem enviada! ✓",
     sentSub:  "Retornaremos em breve.",
   },
+  it: {
+    greeting: "Ciao 👋",
+    subtitle: "Come possiamo aiutarti?",
+    action:   "Inviaci un messaggio",
+    back:     "Indietro",
+    name:     "Il tuo nome",
+    email:    "La tua email",
+    message:  "Raccontaci del tuo progetto...",
+    send:     "Invia messaggio",
+    sent:     "Messaggio inviato! ✓",
+    sentSub:  "Ti risponderemo al più presto.",
+  },
 };
 
 export default function FloatingContact({ locale }: FloatingContactProps) {

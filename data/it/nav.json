@@ -1,0 +1,28 @@
+{
+  "siteName": "My Site",
+  "cta": "Contattaci",
+  "links": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Servizi",
+      "href": "/services"
+    },
+    {
+      "label": "Chi siamo",
+      "href": "/about"
+    },
+    {
+      "label": "Contatti",
+      "href": "/contact"
+    }
+  ],
+  "footer": {
+    "tagline": "Siti web veloci e multilingue realizzati con Next.js e contenuti JSON.",
+    "pagesLabel": "Pagine",
+    "rights": "Tutti i diritti riservati",
+    "builtWith": "Realizzato con Next.js & Vercel"
+  }
+}

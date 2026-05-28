@@ -118,6 +118,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
     es: "Español",
     fr: "Français",
     pt: "Português",
+    it: "Italiano",
   };
 
   return (

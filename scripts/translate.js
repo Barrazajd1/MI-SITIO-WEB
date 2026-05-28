@@ -6,12 +6,12 @@
 //   npm run translate -- --lang=es
 //   npm run translate -- --lang=fr
 //
-// Requires ANTHROPIC_API_KEY in .env.local (loaded via --env-file in npm script).
+// Requires GEMINI_API_KEY in .env.local (loaded via --env-file in npm script).
 // ---------------------------------------------------------------------------
 
 const fs = require("fs");
 const path = require("path");
-const Anthropic = require("@anthropic-ai/sdk");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 const MARKERS = require("./translation-markers.js");
 
 // ── Config ───────────────────────────────────────────────────────────────────
@@ -20,9 +20,10 @@ const SUPPORTED_LANGS = /** @type {Record<string, string>} */ ({
   es: "Spanish (Latin America)",
   fr: "French",
   pt: "Portuguese (Brazil)",
+  it: "Italian",
 });
 
-const MODEL = "claude-sonnet-4-6";
+const MODEL = "gemini-2.0-flash";
 
 const EN_DIR  = path.join(__dirname, "..", "data", "en");
 const DATA_DIR = path.join(__dirname, "..", "data");
@@ -45,15 +46,15 @@ if (!SUPPORTED_LANGS[LANG]) {
 }
 const LANG_NAME = SUPPORTED_LANGS[LANG];
 
-// ── Anthropic client ──────────────────────────────────────────────────────────
+// ── Gemini client ─────────────────────────────────────────────────────────────
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.error("Error: ANTHROPIC_API_KEY is not set.");
+if (!process.env.GEMINI_API_KEY) {
+  console.error("Error: GEMINI_API_KEY is not set.");
   console.error("  Run via: npm run translate -- --lang=" + LANG);
   console.error("  (npm script passes --env-file=.env.local automatically)");
   process.exit(1);
 }
-const client = new Anthropic();
+const genAI = new GoogleGenerativeAI(/** @type {string} */ (process.env.GEMINI_API_KEY));
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -120,13 +121,11 @@ function buildTypeGuide(fileName, enData) {
 // ── Prompts ───────────────────────────────────────────────────────────────────
 
 /**
- * System prompt — marked ephemeral so Anthropic caches it across the
- * sequential file calls, saving tokens on files 2–6.
- *
- * @returns {import("@anthropic-ai/sdk").MessageParam["content"]}
+ * System instruction passed to Gemini at model-initialization time,
+ * shared across all sequential file calls.
  */
-function buildSystemBlocks() {
-  const text = `You are a professional content translator for a multilingual business website.
+function buildSystemInstruction() {
+  return `You are a professional content translator for a multilingual business website.
 Translate JSON content from English to ${LANG_NAME}.
 
 Content type rules:
@@ -142,14 +141,18 @@ Output rules:
   2. Preserve the exact structure: same keys, same nesting depth, same array lengths.
   3. For "skip" fields: return the exact original value unchanged.
   4. For booleans and numbers: always return the original value unchanged.`;
-
-  return [{ type: /** @type {"text"} */ ("text"), text, cache_control: { type: "ephemeral" } }];
 }
 
 // ── Translation ───────────────────────────────────────────────────────────────
 
+// Build the model once — system instruction is fixed for all files in this run.
+const geminiModel = genAI.getGenerativeModel({
+  model: MODEL,
+  systemInstruction: buildSystemInstruction(),
+});
+
 /**
- * Call Claude to translate one JSON file.
+ * Call Gemini to translate one JSON file.
  *
  * @param {string} fileName
  * @param {unknown} enData
@@ -166,15 +169,8 @@ ${typeGuide}
 === JSON to translate ===
 ${JSON.stringify(enData, null, 2)}`;
 
-  const response = await client.messages.create({
-    model: MODEL,
-    max_tokens: 8192,
-    system: buildSystemBlocks(),
-    messages: [{ role: "user", content: userMessage }],
-  });
-
-  const raw =
-    response.content[0].type === "text" ? response.content[0].text.trim() : "";
+  const result = await geminiModel.generateContent(userMessage);
+  const raw = result.response.text().trim();
 
   // Strip accidental markdown fences
   const cleaned = raw
@@ -187,7 +183,7 @@ ${JSON.stringify(enData, null, 2)}`;
     translated = JSON.parse(cleaned);
   } catch {
     throw new Error(
-      `Claude returned invalid JSON for ${fileName}:\n${cleaned.slice(0, 300)}`
+      `Gemini returned invalid JSON for ${fileName}:\n${cleaned.slice(0, 300)}`
     );
   }
 

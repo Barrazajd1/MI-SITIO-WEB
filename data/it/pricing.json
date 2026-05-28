@@ -1,0 +1,152 @@
+{
+  "mostPopular": "Più popolare",
+  "hero": {
+    "title": "Prezzi semplici e trasparenti",
+    "description": "Scegli il piano adatto al tuo progetto. Nessuna tariffa nascosta, nessuna sorpresa.",
+    "badge": "Prezzi"
+  },
+  "toggle": {
+    "monthly": "Mensile",
+    "yearly": "Annuale",
+    "saveBadge": "Risparmia il 20%"
+  },
+  "cta": {
+    "title": "Non sai quale piano fa per te?",
+    "subtitle": "Prenota una chiamata gratuita di 30 minuti e ti aiuteremo a trovare la soluzione migliore per il tuo progetto.",
+    "button": "Prenota una chiamata gratuita"
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "description": "Perfetto per piccole aziende e landing page.",
+      "monthlyPrice": "499",
+      "yearlyPrice": "399",
+      "currency": "$",
+      "period": "/ mese",
+      "cta": "Inizia ora",
+      "highlight": false,
+      "features": [
+        {
+          "text": "Fino a 5 pagine",
+          "included": true
+        },
+        {
+          "text": "Gestione contenuti JSON",
+          "included": true
+        },
+        {
+          "text": "1 lingua",
+          "included": true
+        },
+        {
+          "text": "Configurazione SEO base",
+          "included": true
+        },
+        {
+          "text": "Modulo di contatto",
+          "included": true
+        },
+        {
+          "text": "Supporto multilingue",
+          "included": false
+        },
+        {
+          "text": "Integrazioni personalizzate",
+          "included": false
+        },
+        {
+          "text": "Supporto prioritario",
+          "included": false
+        }
+      ]
+    },
+    {
+      "name": "Professional",
+      "description": "Per aziende in crescita che hanno bisogno di una presenza web potente.",
+      "monthlyPrice": "999",
+      "yearlyPrice": "799",
+      "currency": "$",
+      "period": "/ mese",
+      "cta": "Inizia ora",
+      "highlight": true,
+      "features": [
+        {
+          "text": "Fino a 15 pagine",
+          "included": true
+        },
+        {
+          "text": "Gestione contenuti JSON",
+          "included": true
+        },
+        {
+          "text": "3 lingue",
+          "included": true
+        },
+        {
+          "text": "Configurazione SEO avanzata",
+          "included": true
+        },
+        {
+          "text": "Modulo di contatto",
+          "included": true
+        },
+        {
+          "text": "Supporto multilingue",
+          "included": true
+        },
+        {
+          "text": "Integrazioni personalizzate",
+          "included": false
+        },
+        {
+          "text": "Supporto prioritario",
+          "included": false
+        }
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Soluzioni personalizzate per grandi organizzazioni e progetti complessi.",
+      "monthlyPrice": "Su misura",
+      "yearlyPrice": "Su misura",
+      "currency": "",
+      "period": "",
+      "cta": "Contattaci",
+      "highlight": false,
+      "features": [
+        {
+          "text": "Pagine illimitate",
+          "included": true
+        },
+        {
+          "text": "Gestione contenuti JSON",
+          "included": true
+        },
+        {
+          "text": "Lingue illimitate",
+          "included": true
+        },
+        {
+          "text": "Configurazione SEO avanzata",
+          "included": true
+        },
+        {
+          "text": "Modulo di contatto",
+          "included": true
+        },
+        {
+          "text": "Supporto multilingue",
+          "included": true
+        },
+        {
+          "text": "Integrazioni personalizzate",
+          "included": true
+        },
+        {
+          "text": "Supporto prioritario",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

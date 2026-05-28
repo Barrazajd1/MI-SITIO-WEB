@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Crea siti web più veloci con contenuti JSON",
+    "description": "Questo sito utilizza Next.js e file JSON come principale fonte di contenuti.",
+    "buttonText": "Inizia ora",
+    "learnMore": "Scopri di più →"
+  },
+  "stats": [
+    {
+      "label": "Lingue",
+      "number": "3"
+    },
+    {
+      "label": "Output statico",
+      "number": "100%"
+    },
+    {
+      "label": "API esterne",
+      "number": "0"
+    },
+    {
+      "label": "Scalabilità",
+      "number": "∞"
+    }
+  ],
+  "cta": {
+    "title": "Pronto a costruire qualcosa di grande?",
+    "subtitle": "Raccontaci del tuo progetto e ti risponderemo entro un giorno lavorativo.",
+    "button": "Mettiti in contatto"
+  },
+  "services": {
+    "title": "I nostri servizi",
+    "badge": "Cosa offriamo",
+    "viewAll": "Vedi tutti i servizi →",
+    "items": [
+      {
+        "title": "Sviluppo web",
+        "description": "Realizziamo siti web veloci, moderni e scalabili."
+      },
+      {
+        "title": "Gestione dei contenuti",
+        "description": "Organizziamo i contenuti del sito usando file JSON strutturati."
+      },
+      {
+        "title": "Localizzazione",
+        "description": "Prepariamo contenuti tradotti per siti web multilingue."
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "Come funziona",
+    "title": "Dal contenuto alla produzione in pochi minuti",
+    "subtitle": "Modifica in Strapi, esporta in JSON, pubblica su Vercel — senza bisogno di rebuild.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Modifica i contenuti in Strapi",
+        "description": "Usa il pannello di amministrazione di Strapi per creare e aggiornare i contenuti in qualsiasi lingua."
+      },
+      {
+        "number": "02",
+        "title": "Esporta JSON pulito",
+        "description": "Esegui un comando per scaricare tutti i contenuti in file JSON locali, versionati con Git."
+      },
+      {
+        "number": "03",
+        "title": "Pubblica su Vercel",
+        "description": "Fai push su GitHub e Vercel ricostruisce e pubblica automaticamente il sito."
+      }
+    ]
+  }
+}

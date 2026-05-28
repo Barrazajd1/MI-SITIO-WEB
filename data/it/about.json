@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Chi siamo",
+    "description": "Siamo un piccolo team appassionato di creare siti web veloci e basati sui contenuti.",
+    "badge": "Chi siamo",
+    "valuesBadge": "I nostri principi",
+    "valuesSectionTitle": "In cosa crediamo"
+  },
+  "mission": {
+    "title": "La nostra missione",
+    "body": "Rendere lo sviluppo web più semplice e accessibile, sostituendo configurazioni CMS complesse con contenuti JSON puliti e versionati che qualsiasi team può gestire."
+  },
+  "values": [
+    {
+      "title": "Velocità",
+      "description": "Costruiamo pensando alle prestazioni fin dal primo giorno — nessun bloat, nessuna dipendenza inutile."
+    },
+    {
+      "title": "Semplicità",
+      "description": "I contenuti in file JSON permettono a chiunque nel team di aggiornare il sito senza toccare il codice."
+    },
+    {
+      "title": "Qualità",
+      "description": "Ogni componente, ogni pagina, ogni riga di contenuto è realizzata con cura."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Contattaci",
+    "description": "Hai un progetto in mente? Saremo felici di sentirti.",
+    "badge": "Mettiti in contatto"
+  },
+  "form": {
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "La tua email",
+    "messagePlaceholder": "Raccontaci del tuo progetto...",
+    "submitButton": "Invia messaggio",
+    "successMessage": "Grazie! Ti risponderemo al più presto.",
+    "errorMessage": "Qualcosa è andato storto. Riprova."
+  },
+  "info": {
+    "email": "hello@mysite.com",
+    "location": "Da remoto — In tutto il mondo"
+  }
+}

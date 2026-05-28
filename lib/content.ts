@@ -22,8 +22,14 @@ import ptServices from "../data/pt/services.json";
 import ptAbout from "../data/pt/about.json";
 import ptContact from "../data/pt/contact.json";
 import ptPricing from "../data/pt/pricing.json";
+import itHome from "../data/it/home.json";
+import itNav from "../data/it/nav.json";
+import itServices from "../data/it/services.json";
+import itAbout from "../data/it/about.json";
+import itContact from "../data/it/contact.json";
+import itPricing from "../data/it/pricing.json";
 
-export const locales = ["en", "es", "fr", "pt"] as const;
+export const locales = ["en", "es", "fr", "pt", "it"] as const;
 export type Locale = (typeof locales)[number];
 
 export function isValidLocale(value: string): value is Locale {
@@ -35,6 +41,7 @@ const content = {
   es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing },
   fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing },
   pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing },
+  it: { home: itHome, nav: itNav, services: itServices, about: itAbout, contact: itContact, pricing: itPricing },
 };
 
 type Page = keyof typeof content.en;
