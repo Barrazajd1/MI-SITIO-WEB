@@ -7,7 +7,7 @@ interface FloatingContactProps {
   cta: string;
 }
 
-type Screen = "home" | "form" | "success";
+type Screen = "home" | "form" | "sending" | "success" | "error";
 
 const COPY: Record<string, {
   greeting: string;
@@ -93,9 +93,20 @@ export default function FloatingContact({ locale }: FloatingContactProps) {
     setTimeout(() => setScreen("home"), 300);
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setScreen("success");
+    setScreen("sending");
+    const data = new FormData(e.currentTarget);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: data.get("name"),
+        email: data.get("email"),
+        message: data.get("message"),
+      }),
+    });
+    setScreen(res.ok ? "success" : "error");
   }
 
   const inputClass =
@@ -151,7 +162,7 @@ export default function FloatingContact({ locale }: FloatingContactProps) {
           )}
 
           {/* ── Screen 2: form ── */}
-          {screen === "form" && (
+          {(screen === "form" || screen === "sending") && (
             <div className="bg-white">
               {/* Mini header */}
               <div className="flex items-center gap-2 px-4 py-3 border-b border-[#cae4f2]">
@@ -180,17 +191,20 @@ export default function FloatingContact({ locale }: FloatingContactProps) {
               <form onSubmit={handleSubmit} className="flex flex-col gap-3 px-4 py-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder={copy.name}
                   required
                   className={inputClass}
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder={copy.email}
                   required
                   className={inputClass}
                 />
                 <textarea
+                  name="message"
                   placeholder={copy.message}
                   required
                   rows={3}
@@ -198,18 +212,35 @@ export default function FloatingContact({ locale }: FloatingContactProps) {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-[#009fe1] hover:bg-[#007cb5] text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                  disabled={screen === "sending"}
+                  className="w-full bg-[#009fe1] hover:bg-[#007cb5] disabled:opacity-60 text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
                 >
-                  {copy.send}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
+                  {screen === "sending" ? "..." : copy.send}
+                  {screen !== "sending" && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                      <path d="M9 5l7 7-7 7" />
+                    </svg>
+                  )}
                 </button>
               </form>
             </div>
           )}
 
-          {/* ── Screen 3: success ── */}
+          {/* ── Screen 3: error ── */}
+          {screen === "error" && (
+            <div className="px-5 py-8 text-center flex flex-col items-center gap-3 bg-white">
+              <p className="text-[#2e435e] font-bold text-base">Error al enviar</p>
+              <p className="text-gray-400 text-sm">Algo salió mal. Intenta de nuevo.</p>
+              <button
+                onClick={() => setScreen("form")}
+                className="mt-2 text-sm text-[#009fe1] underline"
+              >
+                Intentar de nuevo
+              </button>
+            </div>
+          )}
+
+          {/* ── Screen 4: success ── */}
           {screen === "success" && (
             <div
               className="px-5 py-8 text-center flex flex-col items-center gap-3"

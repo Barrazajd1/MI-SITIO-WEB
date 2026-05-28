@@ -12,11 +12,24 @@ interface FormStrings {
 }
 
 export default function ContactForm({ form }: { form: FormStrings }) {
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("success");
+    setStatus("loading");
+
+    const data = new FormData(e.currentTarget);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: data.get("name"),
+        email: data.get("email"),
+        message: data.get("message"),
+      }),
+    });
+
+    setStatus(res.ok ? "success" : "error");
   }
 
   const inputClass =
@@ -26,17 +39,20 @@ export default function ContactForm({ form }: { form: FormStrings }) {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <input
         type="text"
+        name="name"
         placeholder={form.namePlaceholder}
         required
         className={inputClass}
       />
       <input
         type="email"
+        name="email"
         placeholder={form.emailPlaceholder}
         required
         className={inputClass}
       />
       <textarea
+        name="message"
         placeholder={form.messagePlaceholder}
         required
         rows={5}
@@ -45,9 +61,10 @@ export default function ContactForm({ form }: { form: FormStrings }) {
 
       <button
         type="submit"
-        className="w-full bg-[#009fe1] hover:bg-[#007cb5] text-white px-6 py-3 rounded-xl text-sm font-semibold transition-colors duration-200"
+        disabled={status === "loading" || status === "success"}
+        className="w-full bg-[#009fe1] hover:bg-[#007cb5] disabled:opacity-60 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-colors duration-200"
       >
-        {form.submitButton}
+        {status === "loading" ? "..." : form.submitButton}
       </button>
 
       {status === "success" && (
