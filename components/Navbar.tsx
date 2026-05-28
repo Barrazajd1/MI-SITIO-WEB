@@ -107,7 +107,9 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
   }, []);
 
   function switchLocale(next: string) {
-    return pathname.replace(/^\/(en|es|fr)/, `/${next}`);
+    const segments = pathname.split("/"); // ["", "pt", "services"] ó ["", "pt"]
+    segments[1] = next;
+    return segments.join("/");
   }
 
   // Human-readable locale names
@@ -115,6 +117,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
     en: "English",
     es: "Español",
     fr: "Français",
+    pt: "Português",
   };
 
   return (
