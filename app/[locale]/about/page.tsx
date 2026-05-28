@@ -40,9 +40,9 @@ export default async function AboutPage({
           priority
         />
         <div className="absolute inset-0 bg-gray-950/65" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-600/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#009fe1]/20 rounded-full blur-3xl pointer-events-none" />
         <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
-          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-red-400 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-[#009fe1] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 backdrop-blur-sm">
             {data.hero.badge}
           </span>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">
@@ -58,7 +58,7 @@ export default async function AboutPage({
       <section className="px-6 py-24">
         <AnimatedSection className="max-w-3xl mx-auto" variant="slideLeft">
           <div className="flex items-start gap-8 p-10 rounded-2xl bg-gray-50 border border-gray-100">
-            <div className="shrink-0 w-1 self-stretch bg-red-500 rounded-full" />
+            <div className="shrink-0 w-1 self-stretch bg-[#009fe1] rounded-full" />
             <div>
               <h2 className="text-2xl font-bold mb-4 text-gray-900">
                 {data.mission.title}
@@ -75,7 +75,7 @@ export default async function AboutPage({
       <section className="px-6 py-16 pb-28 bg-gray-50/50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-14" variant="fadeUp">
-            <span className="inline-block text-red-600 text-xs font-semibold tracking-widest uppercase mb-3">
+            <span className="inline-block text-[#009fe1] text-xs font-semibold tracking-widest uppercase mb-3">
               {data.hero.valuesBadge}
             </span>
             <h2 className="text-3xl font-bold text-gray-900">{data.hero.valuesSectionTitle}</h2>
@@ -85,8 +85,8 @@ export default async function AboutPage({
             {data.values.map((value, i) => (
               <AnimatedSection key={value.title} variant="fadeUp" delay={i * 0.1}>
                 <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 h-full">
-                  <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center mb-5">
-                    <span className="text-red-600 font-bold text-sm">
+                  <div className="w-10 h-10 rounded-lg bg-[#e8f4fb] flex items-center justify-center mb-5">
+                    <span className="text-[#009fe1] font-bold text-sm">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>

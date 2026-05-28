@@ -41,9 +41,9 @@ export default async function ContactPage({
           priority
         />
         <div className="absolute inset-0 bg-gray-950/65" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-600/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#009fe1]/20 rounded-full blur-3xl pointer-events-none" />
         <AnimatedSection className="relative max-w-3xl mx-auto" variant="fadeUp">
-          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-red-400 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-[#009fe1] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5 backdrop-blur-sm">
             {data.hero.badge}
           </span>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white">

@@ -45,7 +45,7 @@ export default function PricingCards({
         <button
           onClick={() => setYearly(!yearly)}
           className={`relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none ${
-            yearly ? "bg-red-600" : "bg-gray-200"
+            yearly ? "bg-[#009fe1]" : "bg-gray-200"
           }`}
           aria-label="Toggle billing period"
         >
@@ -59,7 +59,7 @@ export default function PricingCards({
           className={`text-sm font-medium flex items-center gap-2 ${yearly ? "text-gray-900" : "text-gray-400"}`}
         >
           {data.toggle.yearly}
-          <span className="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+          <span className="inline-block bg-[#cae4f2]/40 text-[#007cb5] text-xs font-semibold px-2 py-0.5 rounded-full">
             {data.toggle.saveBadge}
           </span>
         </span>
@@ -72,12 +72,12 @@ export default function PricingCards({
             key={plan.name}
             className={`relative rounded-2xl p-8 flex flex-col transition-all duration-300 ${
               plan.highlight
-                ? "bg-red-600 text-white shadow-2xl shadow-red-200 scale-105"
-                : "bg-white border border-gray-100 text-gray-900 hover:border-red-100 hover:shadow-xl hover:shadow-red-50/50"
+                ? "bg-[#2e435e] text-white shadow-2xl shadow-[#2e435e]/25 scale-105"
+                : "bg-white border border-gray-100 text-gray-900 hover:border-[#cae4f2] hover:shadow-xl hover:shadow-[#009fe1]/10"
             }`}
           >
             {plan.highlight && (
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-red-600 text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-[#009fe1] text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
                 {data.mostPopular}
               </span>
             )}
@@ -90,7 +90,7 @@ export default function PricingCards({
                 {plan.name}
               </h3>
               <p
-                className={`text-sm leading-relaxed ${plan.highlight ? "text-red-100" : "text-gray-500"}`}
+                className={`text-sm leading-relaxed ${plan.highlight ? "text-white/80" : "text-gray-500"}`}
               >
                 {plan.description}
               </p>
@@ -114,7 +114,7 @@ export default function PricingCards({
               </div>
               {plan.period && (
                 <p
-                  className={`text-sm mt-1 ${plan.highlight ? "text-red-200" : "text-gray-400"}`}
+                  className={`text-sm mt-1 ${plan.highlight ? "text-white/60" : "text-gray-400"}`}
                 >
                   {plan.period}
                 </p>
@@ -128,11 +128,11 @@ export default function PricingCards({
                   {feature.included ? (
                     <span
                       className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                        plan.highlight ? "bg-white/20" : "bg-red-50"
+                        plan.highlight ? "bg-white/20" : "bg-[#e8f4fb]"
                       }`}
                     >
                       <svg
-                        className={`w-3 h-3 ${plan.highlight ? "text-white" : "text-red-600"}`}
+                        className={`w-3 h-3 ${plan.highlight ? "text-white" : "text-[#009fe1]"}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -182,8 +182,8 @@ export default function PricingCards({
               href={`/${locale}/contact`}
               className={`block text-center py-3.5 px-6 rounded-xl font-semibold text-sm transition-all duration-200 ${
                 plan.highlight
-                  ? "bg-white text-red-600 hover:bg-red-50 shadow-md"
-                  : "bg-red-600 text-white hover:bg-red-700 shadow-sm"
+                  ? "bg-white text-[#009fe1] hover:bg-[#e8f4fb] shadow-md"
+                  : "bg-[#009fe1] text-white hover:bg-[#007cb5] shadow-sm"
               }`}
             >
               {plan.cta}
@@ -198,7 +198,7 @@ export default function PricingCards({
         <p className="text-gray-500 text-sm mb-6">{data.cta.subtitle}</p>
         <Link
           href={`/${locale}/contact`}
-          className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-sm"
+          className="inline-block bg-[#009fe1] hover:bg-[#007cb5] text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-sm"
         >
           {data.cta.button}
         </Link>

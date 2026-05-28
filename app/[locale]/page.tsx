@@ -44,12 +44,12 @@ export default async function Home({
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gray-950/70" />
         {/* Red accent glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-600/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#009fe1]/20 rounded-full blur-3xl pointer-events-none" />
 
         <AnimatedSection className="relative text-center max-w-4xl mx-auto" variant="fadeUp">
           {/* Badge */}
-          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-red-400 text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse" />
+          <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-[#009fe1] text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full mb-8 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 bg-[#009fe1] rounded-full animate-pulse" />
             Next.js · JSON · Multilingual
           </span>
 
@@ -64,7 +64,7 @@ export default async function Home({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`/${locale}/services`}
-              className="inline-block bg-red-600 hover:bg-red-500 text-white text-base font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-red-900/40"
+              className="inline-block bg-[#009fe1] hover:bg-[#e8f4fb]0 text-white text-base font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-[#009fe1]/30"
             >
               {data.hero.buttonText}
             </Link>
@@ -84,7 +84,7 @@ export default async function Home({
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {data.stats.map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl font-bold text-red-600">{stat.number}</p>
+                <p className="text-3xl font-bold text-[#009fe1]">{stat.number}</p>
                 <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
               </div>
             ))}
@@ -96,7 +96,7 @@ export default async function Home({
       <section className="px-6 py-28 bg-gray-950 text-white overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-16" variant="fadeUp">
-            <span className="inline-block text-red-400 text-xs font-semibold tracking-widest uppercase mb-3">
+            <span className="inline-block text-[#009fe1] text-xs font-semibold tracking-widest uppercase mb-3">
               {data.workflow.badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
@@ -175,7 +175,7 @@ export default async function Home({
       <section className="px-6 py-24">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-16" variant="fadeUp">
-            <span className="inline-block text-red-600 text-xs font-semibold tracking-widest uppercase mb-3">
+            <span className="inline-block text-[#009fe1] text-xs font-semibold tracking-widest uppercase mb-3">
               {data.services.badge}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
@@ -186,13 +186,13 @@ export default async function Home({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {data.services.items.map((service, i) => (
               <AnimatedSection key={service.title} variant="fadeUp" delay={i * 0.1}>
-                <div className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-red-100 hover:shadow-lg hover:shadow-red-50 transition-all duration-300 h-full">
-                  <div className="w-10 h-10 rounded-lg bg-red-50 group-hover:bg-red-100 transition-colors flex items-center justify-center mb-5">
-                    <span className="text-red-600 font-bold text-sm">
+                <div className="group p-8 rounded-2xl border border-gray-100 bg-white hover:border-[#cae4f2] hover:shadow-lg hover:shadow-[#009fe1]/10 transition-all duration-300 h-full">
+                  <div className="w-10 h-10 rounded-lg bg-[#e8f4fb] group-hover:bg-[#cae4f2]/40 transition-colors flex items-center justify-center mb-5">
+                    <span className="text-[#009fe1] font-bold text-sm">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold mb-3 text-gray-900 group-hover:text-red-700 transition-colors">
+                  <h3 className="text-base font-bold mb-3 text-gray-900 group-hover:text-[#007cb5] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed">
@@ -206,7 +206,7 @@ export default async function Home({
           <AnimatedSection className="text-center mt-12" variant="fadeUp" delay={0.3}>
             <Link
               href={`/${locale}/services`}
-              className="inline-block text-red-600 hover:text-red-700 font-semibold text-sm border border-red-200 hover:border-red-300 bg-red-50 hover:bg-red-100 px-6 py-3 rounded-xl transition-all duration-200"
+              className="inline-block text-[#009fe1] hover:text-[#007cb5] font-semibold text-sm border border-[#cae4f2] hover:border-[#009fe1] bg-[#e8f4fb] hover:bg-[#cae4f2]/40 px-6 py-3 rounded-xl transition-all duration-200"
             >
               {data.services.viewAll}
             </Link>
@@ -216,16 +216,16 @@ export default async function Home({
 
       {/* CTA banner */}
       <AnimatedSection variant="fadeUp" delay={0.1}>
-        <section className="px-6 py-20 mx-6 mb-16 rounded-3xl bg-gradient-to-br from-red-600 to-red-700 text-white text-center max-w-5xl xl:mx-auto">
+        <section className="px-6 py-20 mx-6 mb-16 rounded-3xl bg-gradient-to-br from-[#009fe1] to-[#007cb5] text-white text-center max-w-5xl xl:mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {data.cta.title}
           </h2>
-          <p className="text-red-200 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
             {data.cta.subtitle}
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="inline-block bg-white text-red-600 hover:bg-red-50 font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-md"
+            className="inline-block bg-white text-[#009fe1] hover:bg-[#e8f4fb] font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-md"
           >
             {data.cta.button}
           </Link>

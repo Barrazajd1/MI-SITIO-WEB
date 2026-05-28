@@ -20,7 +20,7 @@ export default function ContactForm({ form }: { form: FormStrings }) {
   }
 
   const inputClass =
-    "w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition";
+    "w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#009fe1] focus:border-transparent transition";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -45,7 +45,7 @@ export default function ContactForm({ form }: { form: FormStrings }) {
 
       <button
         type="submit"
-        className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-colors duration-200"
+        className="w-full bg-[#009fe1] hover:bg-[#007cb5] text-white px-6 py-3 rounded-xl text-sm font-semibold transition-colors duration-200"
       >
         {form.submitButton}
       </button>
@@ -56,7 +56,7 @@ export default function ContactForm({ form }: { form: FormStrings }) {
         </p>
       )}
       {status === "error" && (
-        <p className="text-red-600 text-sm text-center bg-red-50 py-3 rounded-xl">
+        <p className="text-[#009fe1] text-sm text-center bg-[#e8f4fb] py-3 rounded-xl">
           {form.errorMessage}
         </p>
       )}
