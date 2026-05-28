@@ -176,7 +176,17 @@ async function main() {
             ...raw,
             plans: /** @type {any[]} */ (raw.Plan).map((plan) => {
               const { PlanFeature, ...planFields } = /** @type {any} */ (plan);
-              return { ...planFields, features: PlanFeature ?? [] };
+              return {
+                ...planFields,
+                // Strapi stores "" as null for optional text fields — normalise
+                // before stripIds() removes them, so the TypeScript types stay valid.
+                currency: planFields.currency ?? "",
+                period:   planFields.period   ?? "",
+                features: (PlanFeature ?? []).map((/** @type {any} */ f) => ({
+                  ...f,
+                  included: f.included ?? false, // null → false
+                })),
+              };
             }),
           };
           delete raw.Plan;

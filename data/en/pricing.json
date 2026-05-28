@@ -24,11 +24,11 @@
       "currency": "$",
       "period": "/ month",
       "cta": "Get started",
-      "highlight": true,
+      "highlight": false,
       "features": [
         {
           "text": "Up to 5 pages",
-          "included": false
+          "included": true
         },
         {
           "text": "JSON content management",
@@ -51,10 +51,12 @@
           "included": false
         },
         {
-          "text": "Custom integrations"
+          "text": "Custom integrations",
+          "included": false
         },
         {
-          "text": "Priority support"
+          "text": "Priority support",
+          "included": false
         }
       ]
     },
@@ -93,10 +95,12 @@
           "included": true
         },
         {
-          "text": "Custom integrations"
+          "text": "Custom integrations",
+          "included": false
         },
         {
-          "text": "Priority support"
+          "text": "Priority support",
+          "included": false
         }
       ]
     },
@@ -105,6 +109,8 @@
       "description": "Custom solutions for large organizations and complex projects.",
       "monthlyPrice": "Custom",
       "yearlyPrice": "Custom",
+      "currency": "",
+      "period": "",
       "cta": "Contact us",
       "highlight": false,
       "features": [
