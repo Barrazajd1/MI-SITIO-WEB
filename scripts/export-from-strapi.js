@@ -69,6 +69,17 @@ const ENDPOINTS = /** @type {Record<string, { slug: string; populate: string }>}
     slug: "nav",
     populate: "populate[links]=*&populate[footer]=*",
   },
+  "pricing.json": {
+    slug: "pricing-page",
+    // Strapi named the repeatable components "Plan" and "PlanFeature" (capitalized).
+    // The renaming to plans/features happens in main() after fetching.
+    // mostPopular is a plain text field — no populate needed.
+    populate:
+      "populate[hero]=*" +
+      "&populate[toggle]=*" +
+      "&populate[Plan][populate][PlanFeature]=*" +
+      "&populate[cta]=*",
+  },
 });
 
 // ---------------------------------------------------------------------------
@@ -156,6 +167,19 @@ async function main() {
         if (filename === "home.json" && raw.worflow !== undefined) {
           raw = { ...raw, workflow: raw.worflow };
           delete raw.worflow;
+        }
+        // Rename Strapi capitalized component names → lowercase to match data/en/pricing.json:
+        //   Plan       → plans
+        //   PlanFeature → features  (nested inside each plan)
+        if (filename === "pricing.json" && raw.Plan !== undefined) {
+          raw = {
+            ...raw,
+            plans: /** @type {any[]} */ (raw.Plan).map((plan) => {
+              const { PlanFeature, ...planFields } = /** @type {any} */ (plan);
+              return { ...planFields, features: PlanFeature ?? [] };
+            }),
+          };
+          delete raw.Plan;
         }
         writeJson(locale, filename, stripIds(raw));
         console.log(`  ✓ ${filename}`);

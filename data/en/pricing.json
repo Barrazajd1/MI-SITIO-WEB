@@ -1,4 +1,5 @@
 {
+  "mostPopular": "Most Popular",
   "hero": {
     "title": "Simple, Transparent Pricing",
     "description": "Choose the plan that fits your project. No hidden fees, no surprises.",
@@ -9,7 +10,11 @@
     "yearly": "Yearly",
     "saveBadge": "Save 20%"
   },
-  "mostPopular": "Most Popular",
+  "cta": {
+    "title": "Not sure which plan is right for you?",
+    "subtitle": "Book a free 30-minute call and we'll help you find the best fit for your project.",
+    "button": "Book a free call"
+  },
   "plans": [
     {
       "name": "Starter",
@@ -19,16 +24,38 @@
       "currency": "$",
       "period": "/ month",
       "cta": "Get started",
-      "highlight": false,
+      "highlight": true,
       "features": [
-        { "text": "Up to 5 pages", "included": true },
-        { "text": "JSON content management", "included": true },
-        { "text": "1 language", "included": true },
-        { "text": "Basic SEO setup", "included": true },
-        { "text": "Contact form", "included": true },
-        { "text": "Multilingual support", "included": false },
-        { "text": "Custom integrations", "included": false },
-        { "text": "Priority support", "included": false }
+        {
+          "text": "Up to 5 pages",
+          "included": false
+        },
+        {
+          "text": "JSON content management",
+          "included": true
+        },
+        {
+          "text": "1 language",
+          "included": true
+        },
+        {
+          "text": "Basic SEO setup",
+          "included": true
+        },
+        {
+          "text": "Contact form",
+          "included": true
+        },
+        {
+          "text": "Multilingual support",
+          "included": false
+        },
+        {
+          "text": "Custom integrations"
+        },
+        {
+          "text": "Priority support"
+        }
       ]
     },
     {
@@ -41,14 +68,36 @@
       "cta": "Get started",
       "highlight": true,
       "features": [
-        { "text": "Up to 15 pages", "included": true },
-        { "text": "JSON content management", "included": true },
-        { "text": "3 languages", "included": true },
-        { "text": "Advanced SEO setup", "included": true },
-        { "text": "Contact form", "included": true },
-        { "text": "Multilingual support", "included": true },
-        { "text": "Custom integrations", "included": false },
-        { "text": "Priority support", "included": false }
+        {
+          "text": "Up to 15 pages",
+          "included": true
+        },
+        {
+          "text": "JSON content management",
+          "included": true
+        },
+        {
+          "text": "3 languages",
+          "included": true
+        },
+        {
+          "text": "Advanced SEO setup",
+          "included": true
+        },
+        {
+          "text": "Contact form",
+          "included": true
+        },
+        {
+          "text": "Multilingual support",
+          "included": true
+        },
+        {
+          "text": "Custom integrations"
+        },
+        {
+          "text": "Priority support"
+        }
       ]
     },
     {
@@ -56,25 +105,42 @@
       "description": "Custom solutions for large organizations and complex projects.",
       "monthlyPrice": "Custom",
       "yearlyPrice": "Custom",
-      "currency": "",
-      "period": "",
       "cta": "Contact us",
       "highlight": false,
       "features": [
-        { "text": "Unlimited pages", "included": true },
-        { "text": "JSON content management", "included": true },
-        { "text": "Unlimited languages", "included": true },
-        { "text": "Advanced SEO setup", "included": true },
-        { "text": "Contact form", "included": true },
-        { "text": "Multilingual support", "included": true },
-        { "text": "Custom integrations", "included": true },
-        { "text": "Priority support", "included": true }
+        {
+          "text": "Unlimited pages",
+          "included": true
+        },
+        {
+          "text": "JSON content management",
+          "included": true
+        },
+        {
+          "text": "Unlimited languages",
+          "included": true
+        },
+        {
+          "text": "Advanced SEO setup",
+          "included": true
+        },
+        {
+          "text": "Contact form",
+          "included": true
+        },
+        {
+          "text": "Multilingual support",
+          "included": true
+        },
+        {
+          "text": "Custom integrations",
+          "included": true
+        },
+        {
+          "text": "Priority support",
+          "included": true
+        }
       ]
     }
-  ],
-  "cta": {
-    "title": "Not sure which plan is right for you?",
-    "subtitle": "Book a free 30-minute call and we'll help you find the best fit for your project.",
-    "button": "Book a free call"
-  }
+  ]
 }
