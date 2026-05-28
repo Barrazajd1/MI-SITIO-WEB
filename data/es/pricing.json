@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "Precios Simples y Transparentes",
+    "description": "Elige el plan que mejor se adapte a tu proyecto. Sin costos ocultos ni sorpresas.",
+    "badge": "Precios"
+  },
+  "toggle": {
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "saveBadge": "Ahorra 20%"
+  },
+  "mostPopular": "Más Popular",
+  "plans": [
+    {
+      "name": "Starter",
+      "description": "Perfecto para pequeñas empresas y landing pages.",
+      "monthlyPrice": "499",
+      "yearlyPrice": "399",
+      "currency": "$",
+      "period": "/ mes",
+      "cta": "Comenzar",
+      "highlight": false,
+      "features": [
+        { "text": "Hasta 5 páginas", "included": true },
+        { "text": "Gestión de contenido JSON", "included": true },
+        { "text": "1 idioma", "included": true },
+        { "text": "SEO básico", "included": true },
+        { "text": "Formulario de contacto", "included": true },
+        { "text": "Soporte multilingüe", "included": false },
+        { "text": "Integraciones personalizadas", "included": false },
+        { "text": "Soporte prioritario", "included": false }
+      ]
+    },
+    {
+      "name": "Professional",
+      "description": "Para empresas en crecimiento que necesitan una presencia web poderosa.",
+      "monthlyPrice": "999",
+      "yearlyPrice": "799",
+      "currency": "$",
+      "period": "/ mes",
+      "cta": "Comenzar",
+      "highlight": true,
+      "features": [
+        { "text": "Hasta 15 páginas", "included": true },
+        { "text": "Gestión de contenido JSON", "included": true },
+        { "text": "3 idiomas", "included": true },
+        { "text": "SEO avanzado", "included": true },
+        { "text": "Formulario de contacto", "included": true },
+        { "text": "Soporte multilingüe", "included": true },
+        { "text": "Integraciones personalizadas", "included": false },
+        { "text": "Soporte prioritario", "included": false }
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Soluciones personalizadas para organizaciones grandes y proyectos complejos.",
+      "monthlyPrice": "A medida",
+      "yearlyPrice": "A medida",
+      "currency": "",
+      "period": "",
+      "cta": "Contáctanos",
+      "highlight": false,
+      "features": [
+        { "text": "Páginas ilimitadas", "included": true },
+        { "text": "Gestión de contenido JSON", "included": true },
+        { "text": "Idiomas ilimitados", "included": true },
+        { "text": "SEO avanzado", "included": true },
+        { "text": "Formulario de contacto", "included": true },
+        { "text": "Soporte multilingüe", "included": true },
+        { "text": "Integraciones personalizadas", "included": true },
+        { "text": "Soporte prioritario", "included": true }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "¿No sabes qué plan elegir?",
+    "subtitle": "Agenda una llamada gratuita de 30 minutos y te ayudamos a encontrar la mejor opción.",
+    "button": "Agendar llamada gratuita"
+  }
+}

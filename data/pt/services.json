@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Nossos Serviços",
+    "description": "Tudo o que você precisa para criar um site rápido, moderno e multilíngue.",
+    "badge": "O que oferecemos"
+  },
+  "cta": {
+    "title": "Pronto para começar?",
+    "subtitle": "Fale sobre o seu projeto e retornaremos em até um dia útil.",
+    "button": "Fale conosco"
+  },
+  "items": [
+    {
+      "title": "Desenvolvimento Web",
+      "description": "Criamos sites rápidos, modernos e escaláveis usando as tecnologias mais recentes.",
+      "icon": "💻"
+    },
+    {
+      "title": "Gestão de Conteúdo",
+      "description": "Organizamos o conteúdo do seu site com arquivos JSON estruturados — simples e versionados.",
+      "icon": "📝"
+    },
+    {
+      "title": "Localização",
+      "description": "Preparamos conteúdo traduzido para que seu site alcance públicos em vários idiomas.",
+      "icon": "🌍"
+    },
+    {
+      "title": "Otimização de Performance",
+      "description": "Ajustamos tempos de carregamento, Core Web Vitals e SEO para que seu site ranqueie e carregue rápido.",
+      "icon": "⚡"
+    },
+    {
+      "title": "Design Systems",
+      "description": "Componentes de UI consistentes e reutilizáveis criados com Tailwind CSS e a identidade da sua marca.",
+      "icon": "🎨"
+    },
+    {
+      "title": "Manutenção & Suporte",
+      "description": "Atualizações contínuas, correções de segurança e alterações de conteúdo para você ficar tranquilo.",
+      "icon": "🛠️"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "Preços Simples e Transparentes",
+    "description": "Escolha o plano ideal para o seu projeto. Sem taxas ocultas, sem surpresas.",
+    "badge": "Preços"
+  },
+  "toggle": {
+    "monthly": "Mensal",
+    "yearly": "Anual",
+    "saveBadge": "Economize 20%"
+  },
+  "mostPopular": "Mais Popular",
+  "plans": [
+    {
+      "name": "Inicial",
+      "description": "Perfeito para pequenas empresas e landing pages.",
+      "monthlyPrice": "499",
+      "yearlyPrice": "399",
+      "currency": "$",
+      "period": "/ mês",
+      "cta": "Começar agora",
+      "highlight": false,
+      "features": [
+        { "text": "Até 5 páginas", "included": true },
+        { "text": "Gestão de conteúdo JSON", "included": true },
+        { "text": "1 idioma", "included": true },
+        { "text": "SEO básico", "included": true },
+        { "text": "Formulário de contato", "included": true },
+        { "text": "Suporte multilíngue", "included": false },
+        { "text": "Integrações personalizadas", "included": false },
+        { "text": "Suporte prioritário", "included": false }
+      ]
+    },
+    {
+      "name": "Profissional",
+      "description": "Para empresas em crescimento que precisam de uma presença web poderosa.",
+      "monthlyPrice": "999",
+      "yearlyPrice": "799",
+      "currency": "$",
+      "period": "/ mês",
+      "cta": "Começar agora",
+      "highlight": true,
+      "features": [
+        { "text": "Até 15 páginas", "included": true },
+        { "text": "Gestão de conteúdo JSON", "included": true },
+        { "text": "3 idiomas", "included": true },
+        { "text": "SEO avançado", "included": true },
+        { "text": "Formulário de contato", "included": true },
+        { "text": "Suporte multilíngue", "included": true },
+        { "text": "Integrações personalizadas", "included": false },
+        { "text": "Suporte prioritário", "included": false }
+      ]
+    },
+    {
+      "name": "Empresarial",
+      "description": "Soluções personalizadas para grandes organizações e projetos complexos.",
+      "monthlyPrice": "Custom",
+      "yearlyPrice": "Custom",
+      "currency": "",
+      "period": "",
+      "cta": "Fale conosco",
+      "highlight": false,
+      "features": [
+        { "text": "Páginas ilimitadas", "included": true },
+        { "text": "Gestão de conteúdo JSON", "included": true },
+        { "text": "Idiomas ilimitados", "included": true },
+        { "text": "SEO avançado", "included": true },
+        { "text": "Formulário de contato", "included": true },
+        { "text": "Suporte multilíngue", "included": true },
+        { "text": "Integrações personalizadas", "included": true },
+        { "text": "Suporte prioritário", "included": true }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Não sabe qual plano é o ideal para você?",
+    "subtitle": "Agende uma chamada gratuita de 30 minutos e ajudaremos você a encontrar o melhor encaixe para o seu projeto.",
+    "button": "Agendar chamada gratuita"
+  }
+}

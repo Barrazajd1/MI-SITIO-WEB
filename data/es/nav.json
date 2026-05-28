@@ -11,6 +11,10 @@
       "href": "/services"
     },
     {
+      "label": "Precios",
+      "href": "/pricing"
+    },
+    {
       "label": "Nosotros",
       "href": "/about"
     },

@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Fale Conosco",
+    "description": "Tem um projeto em mente? Adoraríamos ouvir você.",
+    "badge": "Entre em contato"
+  },
+  "form": {
+    "namePlaceholder": "Seu nome",
+    "emailPlaceholder": "Seu e-mail",
+    "messagePlaceholder": "Fale sobre o seu projeto...",
+    "submitButton": "Enviar mensagem",
+    "successMessage": "Obrigado! Retornaremos em breve.",
+    "errorMessage": "Algo deu errado. Por favor, tente novamente."
+  },
+  "info": {
+    "email": "hello@mysite.com",
+    "location": "Remoto — Em todo o mundo"
+  }
+}

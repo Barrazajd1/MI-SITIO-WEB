@@ -1,0 +1,32 @@
+{
+  "siteName": "Meu Site",
+  "cta": "Fale Conosco",
+  "links": [
+    {
+      "label": "Início",
+      "href": "/"
+    },
+    {
+      "label": "Serviços",
+      "href": "/services"
+    },
+    {
+      "label": "Preços",
+      "href": "/pricing"
+    },
+    {
+      "label": "Sobre",
+      "href": "/about"
+    },
+    {
+      "label": "Contato",
+      "href": "/contact"
+    }
+  ],
+  "footer": {
+    "tagline": "Sites rápidos e multilíngues criados com Next.js e conteúdo em JSON.",
+    "pagesLabel": "Páginas",
+    "rights": "Todos os direitos reservados",
+    "builtWith": "Desenvolvido com Next.js & Vercel"
+  }
+}

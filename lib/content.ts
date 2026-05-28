@@ -13,8 +13,17 @@ import frAbout from "../data/fr/about.json";
 import enContact from "../data/en/contact.json";
 import esContact from "../data/es/contact.json";
 import frContact from "../data/fr/contact.json";
+import enPricing from "../data/en/pricing.json";
+import esPricing from "../data/es/pricing.json";
+import frPricing from "../data/fr/pricing.json";
+import ptHome from "../data/pt/home.json";
+import ptNav from "../data/pt/nav.json";
+import ptServices from "../data/pt/services.json";
+import ptAbout from "../data/pt/about.json";
+import ptContact from "../data/pt/contact.json";
+import ptPricing from "../data/pt/pricing.json";
 
-export const locales = ["en", "es", "fr"] as const;
+export const locales = ["en", "es", "fr", "pt"] as const;
 export type Locale = (typeof locales)[number];
 
 export function isValidLocale(value: string): value is Locale {
@@ -22,9 +31,10 @@ export function isValidLocale(value: string): value is Locale {
 }
 
 const content = {
-  en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact },
-  es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact },
-  fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact },
+  en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact, pricing: enPricing },
+  es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing },
+  fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing },
+  pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing },
 };
 
 type Page = keyof typeof content.en;

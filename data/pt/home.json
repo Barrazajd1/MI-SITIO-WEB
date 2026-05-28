@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Crie sites mais rápidos com conteúdo JSON - 2026",
+    "description": "Este site usa Next.js e arquivos JSON como fonte principal de conteúdo.",
+    "buttonText": "Começar agora",
+    "learnMore": "Saiba mais →"
+  },
+  "stats": [
+    {
+      "label": "Idiomas",
+      "number": "3"
+    },
+    {
+      "label": "Saída estática",
+      "number": "100%"
+    },
+    {
+      "label": "APIs externas",
+      "number": "0"
+    },
+    {
+      "label": "Escalabilidade",
+      "number": "∞"
+    }
+  ],
+  "cta": {
+    "title": "Pronto para construir algo incrível?",
+    "subtitle": "Fale sobre o seu projeto e retornaremos em até um dia útil.",
+    "button": "Entre em contato"
+  },
+  "services": {
+    "title": "Nossos serviços",
+    "badge": "O que oferecemos",
+    "viewAll": "Ver todos os serviços →",
+    "items": [
+      {
+        "title": "Desenvolvimento de sites",
+        "description": "Criamos sites rápidos, modernos e escaláveis."
+      },
+      {
+        "title": "Gestão de conteúdo",
+        "description": "Organizamos o conteúdo do site usando arquivos JSON estruturados."
+      },
+      {
+        "title": "Localização",
+        "description": "Preparamos conteúdo traduzido para sites multilíngues."
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "Como funciona",
+    "title": "Do conteúdo à produção em minutos",
+    "subtitle": "Edite no Strapi, exporte para JSON, publique no Vercel — sem recompilações.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Edite o conteúdo no Strapi",
+        "description": "Use o painel do Strapi para criar e atualizar conteúdo em qualquer idioma."
+      },
+      {
+        "number": "02",
+        "title": "Exporte JSON limpo",
+        "description": "Execute um comando para extrair todo o conteúdo para arquivos JSON locais, versionados com Git."
+      },
+      {
+        "number": "03",
+        "title": "Publique no Vercel",
+        "description": "Faça push para o GitHub e o Vercel recompila e publica o site automaticamente."
+      }
+    ]
+  }
+}
