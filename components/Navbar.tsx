@@ -4,7 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Locale, locales } from "../lib/content";
-import { useAuth, UserButton } from "@clerk/nextjs";
+import dynamic from "next/dynamic";
+
+const NavAuth = dynamic(() => import("./NavAuth"), { ssr: false });
 
 // Sinc.business brand palette
 // #009fe1 — primary cyan-blue  (CTAs, active states, accents)
@@ -70,7 +72,6 @@ function ChevronDown({ open }: { open: boolean }) {
 
 export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
   const pathname = usePathname();
-  const { isSignedIn } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
@@ -228,16 +229,7 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
           </Link>
 
           {/* Auth */}
-          {!isSignedIn ? (
-            <Link
-              href="/sign-in"
-              className="text-sm font-semibold text-[#2e435e] hover:text-[#009fe1] transition-colors duration-200 px-3 py-2 rounded-lg border border-[#cae4f2] hover:border-[#009fe1]"
-            >
-              Login
-            </Link>
-          ) : (
-            <UserButton />
-          )}
+          <NavAuth />
         </div>
 
         {/* Mobile: hamburger */}
