@@ -14,6 +14,7 @@
     "sync": "bash scripts/sync-and-deploy.sh"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.4.2",
     "@vercel/analytics": "^1",
     "next": "16.2.6",
     "react": "19.2.4",

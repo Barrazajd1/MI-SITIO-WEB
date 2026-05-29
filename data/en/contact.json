@@ -15,6 +15,7 @@
   },
   "info": {
     "email": "hello@mysite.com",
-    "location": "Remote — Worldwide"
+    "location": "Remote — Worldwide",
+    "Telephone": "+1 234567890"
   }
 }
