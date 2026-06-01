@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Über uns",
+    "description": "Wir sind ein kleines Team, das leidenschaftlich schnelle, inhaltsgetriebene Websites entwickelt.",
+    "badge": "Wer wir sind",
+    "valuesBadge": "Unsere Grundsätze",
+    "valuesSectionTitle": "Woran wir glauben"
+  },
+  "mission": {
+    "title": "Unsere Mission",
+    "body": "Webentwicklung einfacher und zugänglicher zu machen, indem wir komplexe CMS-Setups durch saubere, versionskontrollierte JSON-Inhalte ersetzen, die jedes Team verwalten kann."
+  },
+  "values": [
+    {
+      "title": "Geschwindigkeit",
+      "description": "Wir entwickeln von Tag eins für Performance — kein Ballast, keine unnötigen Abhängigkeiten."
+    },
+    {
+      "title": "Einfachheit",
+      "description": "Inhalte in JSON-Dateien ermöglichen es jedem im Team, die Website zu aktualisieren, ohne Code anzufassen."
+    },
+    {
+      "title": "Qualität",
+      "description": "Jede Komponente, jede Seite, jede Zeile Inhalt wird mit Sorgfalt entwickelt."
+    }
+  ]
+}

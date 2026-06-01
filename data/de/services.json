@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Unsere Leistungen",
+    "description": "Alles, was Sie brauchen, um eine schnelle, moderne und mehrsprachige Website zu erstellen.",
+    "badge": "Was wir anbieten"
+  },
+  "cta": {
+    "title": "Bereit anzufangen?",
+    "subtitle": "Erzählen Sie uns von Ihrem Projekt und wir melden uns innerhalb eines Werktages bei Ihnen.",
+    "button": "Kontaktieren Sie uns"
+  },
+  "items": [
+    {
+      "title": "Webentwicklung",
+      "description": "Wir entwickeln schnelle, moderne und skalierbare Websites mit den neuesten Technologien.",
+      "icon": "💻"
+    },
+    {
+      "title": "Content-Management",
+      "description": "Wir organisieren Ihre Website-Inhalte mit strukturierten JSON-Dateien — einfach und versionskontrolliert.",
+      "icon": "📝"
+    },
+    {
+      "title": "Lokalisierung",
+      "description": "Wir bereiten übersetzte Inhalte vor, damit Ihre Website ein mehrsprachiges Publikum erreicht.",
+      "icon": "🌍"
+    },
+    {
+      "title": "Performance-Optimierung",
+      "description": "Wir optimieren Ladezeiten, Core Web Vitals und SEO, damit Ihre Website gut rankt und schnell lädt.",
+      "icon": "⚡"
+    },
+    {
+      "title": "Design-Systeme",
+      "description": "Konsistente, wiederverwendbare UI-Komponenten, entwickelt mit Tailwind CSS und Ihrer Marke im Fokus.",
+      "icon": "🎨"
+    },
+    {
+      "title": "Wartung & Support",
+      "description": "Laufende Updates, Sicherheits-Patches und Inhaltsänderungen, damit Sie sich keine Sorgen machen müssen.",
+      "icon": "🛠️"
+    }
+  ]
+}

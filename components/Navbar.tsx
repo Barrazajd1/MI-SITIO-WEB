@@ -122,6 +122,8 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
     fr: "Français",
     pt: "Português",
     it: "Italiano",
+    de: "Deutsch",
+    id: "Indonesia",
   };
 
   return (

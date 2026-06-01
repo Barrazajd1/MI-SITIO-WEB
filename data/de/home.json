@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Schnellere Websites mit JSON-Inhalten erstellen",
+    "description": "Diese Website verwendet Next.js und JSON-Dateien als Hauptinhaltsquelle.",
+    "buttonText": "Loslegen",
+    "learnMore": "Mehr erfahren →"
+  },
+  "stats": [
+    {
+      "label": "Sprachen",
+      "number": "+6"
+    },
+    {
+      "label": "Statische Ausgabe",
+      "number": "100%"
+    },
+    {
+      "label": "Externe APIs",
+      "number": "0"
+    },
+    {
+      "label": "Skalierbarkeit",
+      "number": "∞"
+    }
+  ],
+  "cta": {
+    "title": "Bereit, etwas Großartiges zu bauen?",
+    "subtitle": "Erzählen Sie uns von Ihrem Projekt und wir melden uns innerhalb eines Werktages bei Ihnen.",
+    "button": "Kontakt aufnehmen"
+  },
+  "services": {
+    "title": "Unsere Leistungen",
+    "badge": "Was wir anbieten",
+    "viewAll": "Alle Leistungen ansehen →",
+    "items": [
+      {
+        "title": "Webentwicklung",
+        "description": "Wir entwickeln schnelle, moderne und skalierbare Websites."
+      },
+      {
+        "title": "Content-Management",
+        "description": "Wir organisieren Website-Inhalte mit strukturierten JSON-Dateien."
+      },
+      {
+        "title": "Lokalisierung",
+        "description": "Wir bereiten übersetzte Inhalte für mehrsprachige Websites vor."
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "So funktioniert es",
+    "title": "Vom Inhalt zur Produktion in Minuten",
+    "subtitle": "In Strapi bearbeiten, als JSON exportieren, auf Vercel deployen — kein Rebuild erforderlich.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Inhalte in Strapi bearbeiten",
+        "description": "Verwenden Sie das Strapi-Admin-Panel, um Inhalte in beliebigen Sprachen zu erstellen und zu aktualisieren."
+      },
+      {
+        "number": "02",
+        "title": "Sauberes JSON exportieren",
+        "description": "Führen Sie einen Befehl aus, um alle Inhalte in lokale JSON-Dateien zu übertragen, versioniert mit Git."
+      },
+      {
+        "number": "03",
+        "title": "Auf Vercel deployen",
+        "description": "Pushen Sie zu GitHub und Vercel erstellt und veröffentlicht die Website automatisch."
+      }
+    ]
+  }
+}

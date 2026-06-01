@@ -1,0 +1,152 @@
+{
+  "mostPopular": "Paling populer",
+  "hero": {
+    "title": "Harga yang sederhana dan transparan",
+    "description": "Pilih paket yang sesuai dengan proyek Anda. Tidak ada biaya tersembunyi, tidak ada kejutan.",
+    "badge": "Harga"
+  },
+  "toggle": {
+    "monthly": "Bulanan",
+    "yearly": "Tahunan",
+    "saveBadge": "Hemat 20%"
+  },
+  "cta": {
+    "title": "Tidak yakin paket mana yang tepat untuk Anda?",
+    "subtitle": "Pesan panggilan gratis 30 menit dan kami akan membantu Anda menemukan pilihan terbaik untuk proyek Anda.",
+    "button": "Pesan panggilan gratis"
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "description": "Sempurna untuk bisnis kecil dan landing page.",
+      "monthlyPrice": "499",
+      "yearlyPrice": "399",
+      "currency": "$",
+      "period": "/ bulan",
+      "cta": "Mulai sekarang",
+      "highlight": false,
+      "features": [
+        {
+          "text": "Hingga 5 halaman",
+          "included": true
+        },
+        {
+          "text": "Manajemen konten JSON",
+          "included": true
+        },
+        {
+          "text": "1 bahasa",
+          "included": true
+        },
+        {
+          "text": "Pengaturan SEO dasar",
+          "included": true
+        },
+        {
+          "text": "Formulir kontak",
+          "included": true
+        },
+        {
+          "text": "Dukungan multibahasa",
+          "included": false
+        },
+        {
+          "text": "Integrasi kustom",
+          "included": false
+        },
+        {
+          "text": "Dukungan prioritas",
+          "included": false
+        }
+      ]
+    },
+    {
+      "name": "Professional",
+      "description": "Untuk bisnis yang berkembang dan membutuhkan kehadiran web yang kuat.",
+      "monthlyPrice": "999",
+      "yearlyPrice": "799",
+      "currency": "$",
+      "period": "/ bulan",
+      "cta": "Mulai sekarang",
+      "highlight": true,
+      "features": [
+        {
+          "text": "Hingga 15 halaman",
+          "included": true
+        },
+        {
+          "text": "Manajemen konten JSON",
+          "included": true
+        },
+        {
+          "text": "3 bahasa",
+          "included": true
+        },
+        {
+          "text": "Pengaturan SEO lanjutan",
+          "included": true
+        },
+        {
+          "text": "Formulir kontak",
+          "included": true
+        },
+        {
+          "text": "Dukungan multibahasa",
+          "included": true
+        },
+        {
+          "text": "Integrasi kustom",
+          "included": false
+        },
+        {
+          "text": "Dukungan prioritas",
+          "included": false
+        }
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Solusi kustom untuk organisasi besar dan proyek kompleks.",
+      "monthlyPrice": "Kustom",
+      "yearlyPrice": "Kustom",
+      "currency": "",
+      "period": "",
+      "cta": "Hubungi kami",
+      "highlight": false,
+      "features": [
+        {
+          "text": "Halaman tak terbatas",
+          "included": true
+        },
+        {
+          "text": "Manajemen konten JSON",
+          "included": true
+        },
+        {
+          "text": "Bahasa tak terbatas",
+          "included": true
+        },
+        {
+          "text": "Pengaturan SEO lanjutan",
+          "included": true
+        },
+        {
+          "text": "Formulir kontak",
+          "included": true
+        },
+        {
+          "text": "Dukungan multibahasa",
+          "included": true
+        },
+        {
+          "text": "Integrasi kustom",
+          "included": true
+        },
+        {
+          "text": "Dukungan prioritas",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

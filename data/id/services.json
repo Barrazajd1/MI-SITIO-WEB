@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Layanan kami",
+    "description": "Semua yang Anda butuhkan untuk membangun website yang cepat, modern, dan multibahasa.",
+    "badge": "Apa yang kami tawarkan"
+  },
+  "cta": {
+    "title": "Siap untuk memulai?",
+    "subtitle": "Ceritakan proyek Anda dan kami akan menghubungi Anda dalam satu hari kerja.",
+    "button": "Hubungi kami"
+  },
+  "items": [
+    {
+      "title": "Pengembangan web",
+      "description": "Kami membangun website yang cepat, modern, dan skalabel menggunakan teknologi terkini.",
+      "icon": "💻"
+    },
+    {
+      "title": "Manajemen konten",
+      "description": "Kami mengelola konten situs Anda menggunakan file JSON terstruktur — sederhana dan terkontrol versi.",
+      "icon": "📝"
+    },
+    {
+      "title": "Lokalisasi",
+      "description": "Kami menyiapkan konten terjemahan agar situs Anda menjangkau audiens dalam berbagai bahasa.",
+      "icon": "🌍"
+    },
+    {
+      "title": "Optimasi performa",
+      "description": "Kami mengoptimalkan waktu muat, Core Web Vitals, dan SEO agar situs Anda cepat dan mudah ditemukan.",
+      "icon": "⚡"
+    },
+    {
+      "title": "Sistem desain",
+      "description": "Komponen UI yang konsisten dan dapat digunakan kembali, dibangun dengan Tailwind CSS sesuai brand Anda.",
+      "icon": "🎨"
+    },
+    {
+      "title": "Pemeliharaan & dukungan",
+      "description": "Pembaruan rutin, patch keamanan, dan perubahan konten agar Anda tetap tenang.",
+      "icon": "🛠️"
+    }
+  ]
+}

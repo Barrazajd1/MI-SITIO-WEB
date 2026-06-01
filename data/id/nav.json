@@ -1,0 +1,32 @@
+{
+  "siteName": "My Site",
+  "cta": "Hubungi kami",
+  "links": [
+    {
+      "label": "Beranda",
+      "href": "/"
+    },
+    {
+      "label": "Layanan",
+      "href": "/services"
+    },
+    {
+      "label": "Harga",
+      "href": "/pricing"
+    },
+    {
+      "label": "Tentang kami",
+      "href": "/about"
+    },
+    {
+      "label": "Kontak",
+      "href": "/contact"
+    }
+  ],
+  "footer": {
+    "tagline": "Website cepat dan multibahasa yang dibangun dengan Next.js dan konten JSON.",
+    "pagesLabel": "Halaman",
+    "rights": "Semua hak dilindungi",
+    "builtWith": "Dibangun dengan Next.js & Vercel"
+  }
+}

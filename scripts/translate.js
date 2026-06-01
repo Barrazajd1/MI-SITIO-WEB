@@ -21,9 +21,11 @@ const SUPPORTED_LANGS = /** @type {Record<string, string>} */ ({
   fr: "French",
   pt: "Portuguese (Brazil)",
   it: "Italian",
+  de: "German",
+  id: "Indonesian",
 });
 
-const MODEL = "gemini-2.0-flash";
+const MODEL = "gemini-1.5-flash";
 
 const EN_DIR  = path.join(__dirname, "..", "data", "en");
 const DATA_DIR = path.join(__dirname, "..", "data");

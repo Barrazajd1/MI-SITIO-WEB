@@ -87,6 +87,32 @@ const COPY: Record<string, {
     sent:     "Messaggio inviato! ✓",
     sentSub:  "Ti risponderemo al più presto.",
   },
+  de: {
+    greeting: "Hallo 👋",
+    subtitle: "Wie können wir Ihnen helfen?",
+    action:   "Schreiben Sie uns",
+    back:     "Zurück",
+    name:     "Ihr Name",
+    email:    "Ihre E-Mail",
+    phone:    "Ihre Telefonnummer",
+    message:  "Erzählen Sie uns von Ihrem Projekt...",
+    send:     "Nachricht senden",
+    sent:     "Nachricht gesendet! ✓",
+    sentSub:  "Wir melden uns in Kürze bei Ihnen.",
+  },
+  id: {
+    greeting: "Halo 👋",
+    subtitle: "Bagaimana kami bisa membantu Anda?",
+    action:   "Kirim pesan kepada kami",
+    back:     "Kembali",
+    name:     "Nama Anda",
+    email:    "Email Anda",
+    phone:    "Nomor telepon Anda",
+    message:  "Ceritakan tentang proyek Anda...",
+    send:     "Kirim pesan",
+    sent:     "Pesan terkirim! ✓",
+    sentSub:  "Kami akan segera menghubungi Anda.",
+  },
 };
 
 export default function FloatingContact({ locale }: FloatingContactProps) {

@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Haben Sie ein Projekt im Sinn? Wir freuen uns, von Ihnen zu hören.",
+    "badge": "Kontakt aufnehmen"
+  },
+  "form": {
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "Ihre E-Mail",
+    "phonePlaceholder": "Ihre Telefonnummer",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt...",
+    "submitButton": "Nachricht senden",
+    "successMessage": "Danke! Wir melden uns in Kürze bei Ihnen.",
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "info": {
+    "email": "hello@mysite.com",
+    "location": "Remote — Weltweit",
+    "Telephone": "+1 234567890"
+  }
+}

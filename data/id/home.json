@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Buat website lebih cepat dengan konten JSON",
+    "description": "Website ini menggunakan Next.js dan file JSON sebagai sumber konten utama.",
+    "buttonText": "Mulai sekarang",
+    "learnMore": "Pelajari lebih lanjut →"
+  },
+  "stats": [
+    {
+      "label": "Bahasa",
+      "number": "+6"
+    },
+    {
+      "label": "Output statis",
+      "number": "100%"
+    },
+    {
+      "label": "API eksternal",
+      "number": "0"
+    },
+    {
+      "label": "Skalabilitas",
+      "number": "∞"
+    }
+  ],
+  "cta": {
+    "title": "Siap membangun sesuatu yang luar biasa?",
+    "subtitle": "Ceritakan proyek Anda dan kami akan menghubungi Anda dalam satu hari kerja.",
+    "button": "Hubungi kami"
+  },
+  "services": {
+    "title": "Layanan kami",
+    "badge": "Apa yang kami tawarkan",
+    "viewAll": "Lihat semua layanan →",
+    "items": [
+      {
+        "title": "Pengembangan website",
+        "description": "Kami membangun website yang cepat, modern, dan skalabel."
+      },
+      {
+        "title": "Manajemen konten",
+        "description": "Kami mengelola konten website menggunakan file JSON terstruktur."
+      },
+      {
+        "title": "Lokalisasi",
+        "description": "Kami menyiapkan konten terjemahan untuk website multibahasa."
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "Cara kerjanya",
+    "title": "Dari konten ke produksi dalam hitungan menit",
+    "subtitle": "Edit di Strapi, ekspor ke JSON, deploy ke Vercel — tanpa rebuild.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Edit konten di Strapi",
+        "description": "Gunakan panel admin Strapi untuk membuat dan memperbarui konten dalam bahasa apa pun."
+      },
+      {
+        "number": "02",
+        "title": "Ekspor JSON bersih",
+        "description": "Jalankan satu perintah untuk mengambil semua konten ke file JSON lokal, dikelola dengan Git."
+      },
+      {
+        "number": "03",
+        "title": "Deploy ke Vercel",
+        "description": "Push ke GitHub dan Vercel akan otomatis membangun serta menerbitkan situs."
+      }
+    ]
+  }
+}

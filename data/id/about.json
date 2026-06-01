@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Tentang kami",
+    "description": "Kami adalah tim kecil yang bersemangat membangun website cepat dan berbasis konten.",
+    "badge": "Siapa kami",
+    "valuesBadge": "Prinsip kami",
+    "valuesSectionTitle": "Yang kami percayai"
+  },
+  "mission": {
+    "title": "Misi kami",
+    "body": "Membuat pengembangan web lebih sederhana dan mudah diakses dengan menggantikan pengaturan CMS yang kompleks menggunakan konten JSON yang bersih dan terkontrol versi, yang dapat dikelola oleh tim mana pun."
+  },
+  "values": [
+    {
+      "title": "Kecepatan",
+      "description": "Kami membangun untuk performa sejak hari pertama — tanpa bloat, tanpa dependensi yang tidak perlu."
+    },
+    {
+      "title": "Kesederhanaan",
+      "description": "Konten dalam file JSON memungkinkan siapa pun di tim memperbarui situs tanpa menyentuh kode."
+    },
+    {
+      "title": "Kualitas",
+      "description": "Setiap komponen, setiap halaman, setiap baris konten dibuat dengan penuh perhatian."
+    }
+  ]
+}
