@@ -310,6 +310,11 @@ export default function Navbar({ locale, siteName, cta, links }: NavbarProps) {
           >
             {cta}
           </Link>
+
+          {/* Mobile Auth */}
+          <div className="pt-3 border-t border-[#cae4f2]">
+            <NavAuth />
+          </div>
         </div>
       )}
     </header>
