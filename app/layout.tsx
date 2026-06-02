@@ -44,7 +44,7 @@ export default async function RootLayout({
   const localization = clerkLocalizations[locale] ?? enUS;
 
   return (
-    <ClerkProvider localization={localization}>
+    <ClerkProvider localization={localization} afterSignOutUrl="/en">
       <html
         lang={locale}
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}

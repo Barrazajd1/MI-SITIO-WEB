@@ -23,7 +23,7 @@ export default function NavAuth() {
       >
         Dashboard
       </Link>
-      <UserButton afterSignOutUrl="/en" />
+      <UserButton />
     </div>
   );
 }
