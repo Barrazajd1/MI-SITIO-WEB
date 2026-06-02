@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase";
 import NewProjectForm from "@/components/NewProjectForm";
+import ProjectCard from "@/components/ProjectCard";
 
 export default async function DashboardPage() {
   const user = await currentUser();
@@ -52,17 +53,13 @@ export default async function DashboardPage() {
             ) : (
               <div className="flex flex-col gap-3">
                 {projects.map((project) => (
-                  <div key={project.id} className="bg-white border border-[#cae4f2] rounded-xl p-5 hover:border-[#009fe1] transition-colors">
-                    <p className="font-semibold text-[#2e435e] mb-1">{project.name}</p>
-                    {project.description && (
-                      <p className="text-sm text-gray-400">{project.description}</p>
-                    )}
-                    <p className="text-xs text-gray-300 mt-2">
-                      {new Date(project.created_at).toLocaleDateString("es-ES", {
-                        day: "numeric", month: "long", year: "numeric"
-                      })}
-                    </p>
-                  </div>
+                  <ProjectCard
+                    key={project.id}
+                    id={project.id}
+                    name={project.name}
+                    description={project.description}
+                    createdAt={project.created_at}
+                  />
                 ))}
               </div>
             )}
