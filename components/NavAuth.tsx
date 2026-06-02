@@ -16,6 +16,14 @@ export default function NavAuth() {
       Login
     </Link>
   ) : (
-    <UserButton />
+    <div className="flex items-center gap-3">
+      <Link
+        href="/dashboard"
+        className="text-sm font-semibold text-[#009fe1] hover:text-[#007cb5] transition-colors duration-200 px-3 py-2 rounded-lg border border-[#009fe1] hover:border-[#007cb5]"
+      >
+        Dashboard
+      </Link>
+      <UserButton afterSignOutUrl="/en" />
+    </div>
   );
 }
