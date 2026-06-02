@@ -32,7 +32,11 @@ export default async function SignInPage() {
       <SignIn />
 
       {/* Language switcher */}
-      <div className="flex flex-wrap justify-center gap-1.5 pb-6">
+      <div className="flex flex-col items-center gap-2 pb-6">
+        <p className="text-xs text-gray-400 font-medium tracking-wide uppercase">
+          Select language
+        </p>
+        <div className="flex flex-wrap justify-center gap-1.5">
         {LOCALES.map(({ code, label, name }) => (
           <form key={code} action={switchLocale}>
             <input type="hidden" name="locale" value={code} />
@@ -49,6 +53,7 @@ export default async function SignInPage() {
             </button>
           </form>
         ))}
+        </div>
       </div>
     </main>
   );
