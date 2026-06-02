@@ -1,57 +1,76 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { supabaseAdmin } from "@/lib/supabase";
+import NewProjectForm from "@/components/NewProjectForm";
 
 export default async function DashboardPage() {
   const user = await currentUser();
-
   if (!user) redirect("/sign-in");
 
   const firstName = user.firstName ?? user.emailAddresses[0]?.emailAddress ?? "Usuario";
 
+  const { data: projects, error } = await supabaseAdmin
+    .from("projects")
+    .select("*")
+    .eq("user_id", user.id)
+    .order("created_at", { ascending: false });
+
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white border-b border-[#cae4f2] px-6 py-4 flex items-center justify-between max-w-5xl mx-auto">
-        <Link
-          href="/en"
-          className="text-xl font-bold text-[#2e435e] hover:text-[#009fe1] transition-colors"
-        >
+        <Link href="/en" className="text-xl font-bold text-[#2e435e] hover:text-[#009fe1] transition-colors">
           mi-sitio-web
         </Link>
-        <span className="text-sm text-gray-500">
-          {user.emailAddresses[0]?.emailAddress}
-        </span>
+        <span className="text-sm text-gray-500">{user.emailAddresses[0]?.emailAddress}</span>
       </header>
 
-      {/* Content */}
-      <div className="max-w-5xl mx-auto px-6 py-16">
-        <div className="bg-white rounded-2xl border border-[#cae4f2] shadow-sm p-10">
-          <p className="text-sm font-semibold text-[#009fe1] uppercase tracking-widest mb-2">
-            Dashboard
-          </p>
-          <h1 className="text-3xl font-bold text-[#2e435e] mb-4">
-            Bienvenido, {firstName} 👋
-          </h1>
-          <p className="text-gray-500 mb-8">
-            Has iniciado sesión correctamente. Desde aquí podrás acceder a tu área privada.
-          </p>
+      <div className="max-w-5xl mx-auto px-6 py-12">
+        <div className="mb-8">
+          <p className="text-sm font-semibold text-[#009fe1] uppercase tracking-widest mb-1">Dashboard</p>
+          <h1 className="text-3xl font-bold text-[#2e435e]">Bienvenido, {firstName}</h1>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { label: "Mi perfil", desc: "Ver y editar tu información", href: "#" },
-              { label: "Mis proyectos", desc: "Administra tus proyectos activos", href: "#" },
-              { label: "Soporte", desc: "Contacta con nuestro equipo", href: "/en/contact" },
-            ].map((card) => (
-              <Link
-                key={card.label}
-                href={card.href}
-                className="block p-5 rounded-xl border border-[#cae4f2] hover:border-[#009fe1] hover:shadow-md transition-all duration-200"
-              >
-                <p className="font-semibold text-[#2e435e] mb-1">{card.label}</p>
-                <p className="text-sm text-gray-400">{card.desc}</p>
-              </Link>
-            ))}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold text-[#2e435e]">Mis proyectos</h2>
+              <span className="text-sm text-gray-400">{projects?.length ?? 0} proyecto{projects?.length !== 1 ? "s" : ""}</span>
+            </div>
+
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-600 mb-4">
+                Error al cargar proyectos: {error.message}
+              </div>
+            )}
+
+            {!projects || projects.length === 0 ? (
+              <div className="bg-white border border-[#cae4f2] rounded-2xl p-10 text-center">
+                <p className="text-gray-400 text-sm">No tienes proyectos aún.</p>
+                <p className="text-gray-400 text-sm">Crea tu primer proyecto desde el formulario.</p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-3">
+                {projects.map((project) => (
+                  <div key={project.id} className="bg-white border border-[#cae4f2] rounded-xl p-5 hover:border-[#009fe1] transition-colors">
+                    <p className="font-semibold text-[#2e435e] mb-1">{project.name}</p>
+                    {project.description && (
+                      <p className="text-sm text-gray-400">{project.description}</p>
+                    )}
+                    <p className="text-xs text-gray-300 mt-2">
+                      {new Date(project.created_at).toLocaleDateString("es-ES", {
+                        day: "numeric", month: "long", year: "numeric"
+                      })}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-[#2e435e] mb-4">Nuevo proyecto</h2>
+            <NewProjectForm userId={user.id} />
           </div>
         </div>
       </div>
