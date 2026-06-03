@@ -1,6 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import ProjectCard from "@/components/ProjectCard";
+import { getDashT } from "@/lib/dashboard-i18n";
+
+const t = getDashT("es");
 
 // Mock Next.js router
 vi.mock("next/navigation", () => ({
@@ -16,6 +19,7 @@ describe("ProjectCard", () => {
     id: "abc-123",
     name: "Mi proyecto",
     description: "Descripción del proyecto",
+    t,
     createdAt: "2025-01-15T10:00:00Z",
   };
 

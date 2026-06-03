@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
-const STATUS_OPTIONS = [
-  { value: "draft",       label: "Borrador" },
-  { value: "pending",     label: "Pendiente" },
-  { value: "in_progress", label: "En progreso" },
-  { value: "review",      label: "En revisión" },
-  { value: "done",        label: "Completado" },
-];
+import type { DashT } from "@/lib/dashboard-i18n";
 
 interface Props {
   project: {
@@ -18,10 +11,11 @@ interface Props {
     phone?: string | null; budget?: string | null;
     deadline?: string | null; status?: string | null;
   };
+  t: DashT;
   onClose: () => void;
 }
 
-export default function EditProjectModal({ project, onClose }: Props) {
+export default function EditProjectModal({ project, t, onClose }: Props) {
   const router  = useRouter();
   const [saving, setSaving] = useState(false);
   const [form, setForm] = useState({
@@ -31,8 +25,8 @@ export default function EditProjectModal({ project, onClose }: Props) {
     client_email: project.client_email ?? "",
     phone:        project.phone        ?? "",
     budget:       project.budget       ?? "",
-    deadline:     project.deadline     ? project.deadline.slice(0, 10) : "",
-    status:       project.status       ?? "pending",
+    deadline:     project.deadline ? project.deadline.slice(0, 10) : "",
+    status:       project.status  ?? "pending",
   });
 
   function set(field: string, value: string) {
@@ -51,76 +45,77 @@ export default function EditProjectModal({ project, onClose }: Props) {
     onClose();
   }
 
-  const inputClass = "w-full border border-[#cae4f2] rounded-lg px-3 py-2 text-sm text-[#2e435e] focus:outline-none focus:border-[#009fe1] transition-colors bg-white";
-  const labelClass = "block text-xs font-semibold text-[#2e435e] mb-1";
+  const inp = "w-full border border-[#cae4f2] rounded-lg px-3 py-2 text-sm text-[#2e435e] focus:outline-none focus:border-[#009fe1] transition-colors bg-white";
+  const lbl = "block text-xs font-semibold text-[#2e435e] mb-1";
+
+  const STATUS_OPTS = [
+    { value: "draft",       label: t.status.draft },
+    { value: "pending",     label: t.status.pending },
+    { value: "in_progress", label: t.status.in_progress },
+    { value: "review",      label: t.status.review },
+    { value: "done",        label: t.status.done },
+  ];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-
-        {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#cae4f2]">
-          <h2 className="font-bold text-[#2e435e]">Editar proyecto</h2>
+          <h2 className="font-bold text-[#2e435e]">{t.modal.title}</h2>
           <button onClick={onClose} className="text-gray-400 hover:text-[#2e435e] transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
           </button>
         </div>
-
-        {/* Form */}
         <div className="px-6 py-5 flex flex-col gap-4">
           <div className="grid grid-cols-2 gap-3">
             <div className="col-span-2 sm:col-span-1">
-              <label className={labelClass}>Nombre *</label>
-              <input type="text" value={form.name} onChange={e => set("name", e.target.value)} required className={inputClass} />
+              <label className={lbl}>{t.form.nameReq}</label>
+              <input type="text" value={form.name} onChange={e => set("name", e.target.value)} required className={inp} />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <label className={labelClass}>Estado</label>
-              <select value={form.status} onChange={e => set("status", e.target.value)} className={inputClass}>
-                {STATUS_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+              <label className={lbl}>{t.form.status}</label>
+              <select value={form.status} onChange={e => set("status", e.target.value)} className={inp}>
+                {STATUS_OPTS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
               </select>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div className="col-span-2 sm:col-span-1">
-              <label className={labelClass}>Cliente</label>
-              <input type="text" value={form.client_name} onChange={e => set("client_name", e.target.value)} className={inputClass} />
+              <label className={lbl}>{t.form.clientName}</label>
+              <input type="text" value={form.client_name} onChange={e => set("client_name", e.target.value)} className={inp} />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <label className={labelClass}>Email cliente</label>
-              <input type="email" value={form.client_email} onChange={e => set("client_email", e.target.value)} className={inputClass} />
+              <label className={lbl}>{t.form.clientEmail}</label>
+              <input type="email" value={form.client_email} onChange={e => set("client_email", e.target.value)} className={inp} />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <div className="col-span-2 sm:col-span-1">
-              <label className={labelClass}>Teléfono</label>
-              <input type="tel" value={form.phone} onChange={e => set("phone", e.target.value)} className={inputClass} />
+              <label className={lbl}>{t.form.phone}</label>
+              <input type="tel" value={form.phone} onChange={e => set("phone", e.target.value)} className={inp} />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <label className={labelClass}>Presupuesto</label>
-              <input type="text" value={form.budget} onChange={e => set("budget", e.target.value)} className={inputClass} />
+              <label className={lbl}>{t.form.budget}</label>
+              <input type="text" value={form.budget} onChange={e => set("budget", e.target.value)} className={inp} />
             </div>
           </div>
           <div>
-            <label className={labelClass}>Fecha límite</label>
-            <input type="date" value={form.deadline} onChange={e => set("deadline", e.target.value)} className={inputClass} />
+            <label className={lbl}>{t.form.deadline}</label>
+            <input type="date" value={form.deadline} onChange={e => set("deadline", e.target.value)} className={inp} />
           </div>
           <div>
-            <label className={labelClass}>Descripción <span className="text-gray-300 font-normal">(opcional)</span></label>
-            <textarea value={form.description} onChange={e => set("description", e.target.value)}
-              rows={3} className={`${inputClass} resize-none`} />
+            <label className={lbl}>{t.form.description} <span className="text-gray-300 font-normal">{t.form.optional}</span></label>
+            <textarea value={form.description} onChange={e => set("description", e.target.value)} rows={3} className={`${inp} resize-none`} />
           </div>
         </div>
-
-        {/* Footer */}
         <div className="px-6 py-4 border-t border-[#cae4f2] flex gap-3 justify-end">
           <button onClick={onClose} className="text-sm font-medium text-gray-400 hover:text-[#2e435e] px-4 py-2 rounded-lg border border-[#cae4f2] transition-colors">
-            Cancelar
+            {t.modal.cancel}
           </button>
           <button onClick={handleSave} disabled={saving || !form.name.trim()}
             className="text-sm font-semibold text-white bg-[#009fe1] hover:bg-[#007cb5] disabled:opacity-50 px-5 py-2 rounded-lg transition-colors">
-            {saving ? "Guardando..." : "Guardar cambios"}
+            {saving ? t.modal.saving : t.modal.save}
           </button>
         </div>
       </div>
