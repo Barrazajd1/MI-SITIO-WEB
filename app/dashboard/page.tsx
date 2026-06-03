@@ -12,13 +12,15 @@ export default async function DashboardPage() {
   const firstName = user.firstName ?? user.emailAddresses[0]?.emailAddress ?? "Usuario";
   const email     = user.emailAddresses[0]?.emailAddress ?? "";
 
-  const { data: projects, error } = await supabaseAdmin
+  const { data: allProjects, error } = await supabaseAdmin
     .from("projects")
     .select("*")
     .eq("user_id", user.id)
     .order("created_at", { ascending: false });
 
-  const projectCount = projects?.length ?? 0;
+  const projects = allProjects?.filter((p) => !p.trashed_at) ?? [];
+  const trashed  = allProjects?.filter((p) =>  p.trashed_at) ?? [];
+  const projectCount = projects.length;
 
   return (
     <div className="min-h-screen bg-[#f4f8fb]">
@@ -120,6 +122,30 @@ export default async function DashboardPage() {
             <NewProjectForm userId={user.id} />
           </div>
         </div>
+
+        {/* ── Papelera ── */}
+        {trashed.length > 0 && (
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2.5" strokeLinecap="round">
+                <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                <path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
+              </svg>
+              <h2 className="text-base font-bold text-gray-400">Papelera</h2>
+              <span className="text-xs text-gray-300 bg-gray-100 px-2 py-0.5 rounded-full">{trashed.length}</span>
+            </div>
+            <div className="flex flex-col gap-3">
+              {trashed.map((p) => (
+                <ProjectCard
+                  key={p.id} id={p.id} name={p.name} description={p.description}
+                  client_name={p.client_name} client_email={p.client_email}
+                  phone={p.phone} budget={p.budget} deadline={p.deadline}
+                  status={p.status} createdAt={p.created_at} trashed
+                />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* ── Info cards (BOTTOM) ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

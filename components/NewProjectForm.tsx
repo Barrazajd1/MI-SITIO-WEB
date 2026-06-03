@@ -8,6 +8,7 @@ interface Props {
 }
 
 const STATUS_OPTIONS = [
+  { value: "draft",       label: "Borrador" },
   { value: "pending",     label: "Pendiente" },
   { value: "in_progress", label: "En progreso" },
   { value: "review",      label: "En revisión" },
