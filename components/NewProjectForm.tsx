@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { track } from "@vercel/analytics";
 import type { DashT } from "@/lib/dashboard-i18n";
 
 interface Props { userId: string; t: DashT }
@@ -31,6 +32,7 @@ export default function NewProjectForm({ userId, t }: Props) {
       body: JSON.stringify({ userId, ...form }),
     });
     if (res.ok) {
+      track("project_created", { status: form.status });
       setForm({ name: "", description: "", client_name: "", client_email: "", phone: "", budget: "", deadline: "", status: "pending" });
       router.refresh();
     } else {

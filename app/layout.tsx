@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { enUS, esES, frFR, ptBR, itIT, deDE, idID } from "@clerk/localizations";
 import { headers } from "next/headers";
@@ -52,6 +53,7 @@ export default async function RootLayout({
         <body className="min-h-full flex flex-col">
           {children}
           <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ClerkProvider>

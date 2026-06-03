@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 
 interface FormStrings {
   namePlaceholder: string;
@@ -31,6 +32,9 @@ export default function ContactForm({ form }: { form: FormStrings }) {
       }),
     });
 
+    if (res.ok) {
+      track("contact_form_submitted");
+    }
     setStatus(res.ok ? "success" : "error");
   }
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 type Feature = { text: string; included: boolean };
 
@@ -180,6 +181,7 @@ export default function PricingCards({
             {/* CTA Button */}
             <Link
               href={`/${locale}/contact`}
+              onClick={() => track("pricing_cta_clicked", { plan: plan.name, billing: yearly ? "yearly" : "monthly" })}
               className={`block text-center py-3.5 px-6 rounded-xl font-semibold text-sm transition-all duration-200 ${
                 plan.highlight
                   ? "bg-white text-[#009fe1] hover:bg-[#e8f4fb] shadow-md"
