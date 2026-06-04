@@ -21,6 +21,10 @@
     {
       "label": "Contato",
       "href": "/contact"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
     }
   ],
   "footer": {

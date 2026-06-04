@@ -40,6 +40,7 @@ import idServices from "../data/id/services.json";
 import idAbout from "../data/id/about.json";
 import idContact from "../data/id/contact.json";
 import idPricing from "../data/id/pricing.json";
+import EnBlog from "../data/en/blog.json";
 
 export const locales = ["en", "es", "fr", "pt", "it", "de", "id"] as const;
 export type Locale = (typeof locales)[number];
@@ -48,8 +49,8 @@ export function isValidLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
 
-const content = {
-  en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact, pricing: enPricing },
+export const content = {
+  en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact, pricing: enPricing, blog: EnBlog },
   es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing },
   fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing },
   pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing },
@@ -61,5 +62,5 @@ const content = {
 type Page = keyof typeof content.en;
 
 export function getContent<P extends Page>(locale: Locale, page: P): typeof content.en[P] {
-  return content[locale][page] as typeof content.en[P];
+  return (content[locale] as typeof content.en)[page];
 }
