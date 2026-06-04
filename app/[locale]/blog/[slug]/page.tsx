@@ -8,10 +8,10 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const blog = (content["en"] as any).blog;
-  return locales.flatMap((locale) =>
-    blog.posts.map((post: any) => ({ locale, slug: post.slug }))
-  );
+  return locales.flatMap((locale) => {
+    const blog = (content[locale] as typeof content.en).blog;
+    return blog.posts.map((post: any) => ({ locale, slug: post.slug }));
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -20,7 +20,7 @@ export default async function BlogPostPage({ params }: Props) {
   const l = locale as Locale;
 
   const nav = content[l].nav;
-  const blog = (content["en"] as any).blog;
+  const blog = (content[l] as typeof content.en).blog;
   const post = blog.posts.find((p: any) => p.slug === slug);
 
   if (!post) notFound();
@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: Props) {
           href={`/${l}/blog`}
           className="text-sm text-[#009fe1] hover:underline mb-8 inline-block"
         >
-          ← Back to blog
+          {blog.backLink}
         </Link>
 
         <div className="relative h-72 w-full rounded-2xl overflow-hidden mb-8">

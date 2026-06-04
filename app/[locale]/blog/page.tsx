@@ -17,14 +17,14 @@ export default async function BlogPage({ params }: Props) {
   const l = locale as Locale;
 
   const nav = content[l].nav;
-  const blog = (content["en"] as any).blog;
+  const blog = (content[l] as typeof content.en).blog;
 
   return (
     <main className="min-h-screen bg-gray-50">
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="mb-12">
-          <p className="text-sm font-semibold text-[#009fe1] uppercase tracking-widest mb-2">Blog</p>
-          <h1 className="text-4xl font-bold text-[#2e435e]">Latest posts</h1>
+          <p className="text-sm font-semibold text-[#009fe1] uppercase tracking-widest mb-2">{blog.badge}</p>
+          <h1 className="text-4xl font-bold text-[#2e435e]">{blog.pageTitle}</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

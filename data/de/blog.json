@@ -1,0 +1,25 @@
+{
+  "pageTitle": "Neueste Beiträge",
+  "badge": "Blog",
+  "backLink": "← Zurück zum Blog",
+  "posts": [
+    {
+      "slug": "building-fast-websites-with-nextjs",
+      "title": "Schnelle Websites mit Next.js erstellen",
+      "date": "2026-06-01",
+      "author": "David Barraza",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+      "excerpt": "Erfahren Sie, wie die statische Generierung von Next.js Websites unglaublich schnell macht, indem jede Seite zum Build-Zeitpunkt vorgerendert wird.",
+      "content": "Next.js ist ein React-Framework, das Ihnen die beste Entwicklererfahrung mit allen Funktionen bietet, die Sie für die Produktion benötigen. Statische Generierung bedeutet, dass Ihre Seiten einmal erstellt und sofort an jeden Benutzer ausgeliefert werden, ohne Server erforderlich.\n\nWenn Sie dies mit JSON-Dateien als Inhaltsquelle kombinieren, erhalten Sie eine vollständig statische Website, die schnell, günstig zu hosten und einfach zu aktualisieren ist.\n\nDer Hauptvorteil ist die Performance: Seiten laden in Millisekunden, da zum Anfragezeitpunkt keine Datenbankabfragen oder serverseitiges Rendering stattfinden."
+    },
+    {
+      "slug": "why-json-is-great-for-content",
+      "title": "Warum JSON ideal für die Verwaltung von Website-Inhalten ist",
+      "date": "2026-06-03",
+      "author": "David Barraza",
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "excerpt": "JSON-Dateien sind einfach, versionierbar und eignen sich perfekt als Inhaltsquelle für mehrsprachige statische Websites.",
+      "content": "Die Verwaltung von Inhalten in JSON-Dateien bietet gegenüber einem traditionellen CMS mehrere Vorteile. Die Dateien liegen in Ihrem Git-Repository neben Ihrem Code, sodass jede Inhaltsänderung nachvollziehbar und rückgängig zu machen ist.\n\nFür mehrsprachige Websites erstellen Sie einfach eine JSON-Datei pro Sprache. Die Struktur bleibt in allen Sprachen identisch — nur die Textwerte ändern sich. Das macht Übersetzungen unkompliziert und die Validierung leicht automatisierbar.\n\nJSON ist zudem menschenlesbar, was bedeutet, dass Nicht-Entwickler Inhalte direkt bearbeiten können, ohne eine komplexe Administrationsoberfläche zu benötigen."
+    }
+  ]
+}

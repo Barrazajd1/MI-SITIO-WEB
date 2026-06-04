@@ -1,4 +1,7 @@
 {
+  "pageTitle": "Latest posts",
+  "badge": "Blog",
+  "backLink": "← Back to blog",
   "posts": [
     {
       "slug": "building-fast-websites-with-nextjs",

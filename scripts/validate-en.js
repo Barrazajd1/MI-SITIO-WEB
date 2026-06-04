@@ -9,6 +9,7 @@ const EN_DIR = path.join(__dirname, "..", "data", "en");
 const ALLOWED_EMPTY = new Set([
   "pricing.json → plans[].currency",
   "pricing.json → plans[].period",
+  "guides.json → categories",  // pendiente de contenido
 ]);
 
 /**

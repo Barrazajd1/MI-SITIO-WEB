@@ -41,6 +41,12 @@ import idAbout from "../data/id/about.json";
 import idContact from "../data/id/contact.json";
 import idPricing from "../data/id/pricing.json";
 import EnBlog from "../data/en/blog.json";
+import EsBlog from "../data/es/blog.json";
+import FrBlog from "../data/fr/blog.json";
+import PtBlog from "../data/pt/blog.json";
+import ItBlog from "../data/it/blog.json";
+import DeBlog from "../data/de/blog.json";
+import IdBlog from "../data/id/blog.json";
 
 export const locales = ["en", "es", "fr", "pt", "it", "de", "id"] as const;
 export type Locale = (typeof locales)[number];
@@ -51,12 +57,12 @@ export function isValidLocale(value: string): value is Locale {
 
 export const content = {
   en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact, pricing: enPricing, blog: EnBlog },
-  es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing },
-  fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing },
-  pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing },
-  it: { home: itHome, nav: itNav, services: itServices, about: itAbout, contact: itContact, pricing: itPricing },
-  de: { home: deHome, nav: deNav, services: deServices, about: deAbout, contact: deContact, pricing: dePricing },
-  id: { home: idHome, nav: idNav, services: idServices, about: idAbout, contact: idContact, pricing: idPricing },
+  es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing, blog: EsBlog },
+  fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing, blog: FrBlog },
+  pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing, blog: PtBlog },
+  it: { home: itHome, nav: itNav, services: itServices, about: itAbout, contact: itContact, pricing: itPricing, blog: ItBlog },
+  de: { home: deHome, nav: deNav, services: deServices, about: deAbout, contact: deContact, pricing: dePricing, blog: DeBlog },
+  id: { home: idHome, nav: idNav, services: idServices, about: idAbout, contact: idContact, pricing: idPricing, blog: IdBlog },
 };
 
 type Page = keyof typeof content.en;

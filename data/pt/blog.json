@@ -1,0 +1,25 @@
+{
+  "pageTitle": "Últimas publicações",
+  "badge": "Blog",
+  "backLink": "← Voltar ao blog",
+  "posts": [
+    {
+      "slug": "building-fast-websites-with-nextjs",
+      "title": "Como criar sites rápidos com Next.js",
+      "date": "2026-06-01",
+      "author": "David Barraza",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+      "excerpt": "Aprenda como a geração estática do Next.js torna os sites incrivelmente rápidos ao pré-renderizar cada página no momento do build.",
+      "content": "Next.js é um framework React que oferece a melhor experiência de desenvolvimento com todos os recursos necessários para produção. A geração estática significa que suas páginas são construídas uma única vez e entregues instantaneamente a cada usuário, sem necessidade de servidor.\n\nAo combinar isso com arquivos JSON como fonte de conteúdo, você obtém um site completamente estático que é rápido, barato de hospedar e fácil de atualizar.\n\nO principal benefício é a performance: as páginas carregam em milissegundos porque não há consultas ao banco de dados nem renderização no lado do servidor no momento da requisição."
+    },
+    {
+      "slug": "why-json-is-great-for-content",
+      "title": "Por que JSON é ótimo para gerenciar o conteúdo de um site",
+      "date": "2026-06-03",
+      "author": "David Barraza",
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "excerpt": "Os arquivos JSON são simples, versionados e funcionam perfeitamente como fonte de conteúdo para sites estáticos multilíngues.",
+      "content": "Gerenciar conteúdo em arquivos JSON tem várias vantagens sobre um CMS tradicional. Os arquivos ficam no seu repositório Git junto com o código, então cada alteração de conteúdo é rastreada e reversível.\n\nPara sites multilíngues, basta criar um arquivo JSON por idioma. A estrutura permanece idêntica em todos os idiomas; apenas os valores de texto mudam. Isso torna as traduções simples e a validação fácil de automatizar.\n\nJSON também é legível por humanos, o que significa que pessoas sem conhecimento técnico podem editar o conteúdo diretamente sem precisar de uma interface administrativa complexa."
+    }
+  ]
+}

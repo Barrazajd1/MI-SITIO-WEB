@@ -1,0 +1,25 @@
+{
+  "pageTitle": "Últimas publicaciones",
+  "badge": "Blog",
+  "backLink": "← Volver al blog",
+  "posts": [
+    {
+      "slug": "building-fast-websites-with-nextjs",
+      "title": "Cómo crear sitios web rápidos con Next.js",
+      "date": "2026-06-01",
+      "author": "David Barraza",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+      "excerpt": "Aprende cómo la generación estática de Next.js hace que los sitios web sean increíblemente rápidos al pre-renderizar cada página en el momento del build.",
+      "content": "Next.js es un framework de React que te ofrece la mejor experiencia de desarrollo con todas las funcionalidades que necesitas para producción. La generación estática significa que tus páginas se construyen una sola vez y se sirven al instante a cada usuario, sin necesidad de servidor.\n\nCuando combinas esto con archivos JSON como fuente de contenido, obtienes un sitio completamente estático que es rápido, económico de alojar y fácil de actualizar.\n\nEl beneficio clave es el rendimiento: las páginas cargan en milisegundos porque no hay consultas a bases de datos ni renderizado del lado del servidor en el momento de la solicitud."
+    },
+    {
+      "slug": "why-json-is-great-for-content",
+      "title": "Por qué JSON es ideal para gestionar el contenido de un sitio web",
+      "date": "2026-06-03",
+      "author": "David Barraza",
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "excerpt": "Los archivos JSON son simples, están bajo control de versiones y funcionan perfectamente como fuente de contenido para sitios web estáticos multilingües.",
+      "content": "Gestionar el contenido en archivos JSON tiene varias ventajas sobre un CMS tradicional. Los archivos viven en tu repositorio de Git junto con tu código, por lo que cada cambio de contenido queda registrado y es reversible.\n\nPara sitios web multilingües, simplemente creas un archivo JSON por idioma. La estructura se mantiene idéntica en todos los idiomas; solo cambian los valores de texto. Esto hace que las traducciones sean sencillas y la validación fácil de automatizar.\n\nJSON también es legible por humanos, lo que significa que personas sin conocimientos técnicos pueden editar el contenido directamente sin necesitar una interfaz de administración compleja."
+    }
+  ]
+}
