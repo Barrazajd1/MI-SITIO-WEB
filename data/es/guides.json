@@ -1,3 +1,37 @@
 {
-  "categories": []
+  "categories": [
+    {
+      "slug": "getting-started",
+      "title": "Primeros pasos",
+      "guides": [
+        {
+          "slug": "how-to-add-a-project",
+          "title": "Cómo agregar un proyecto",
+          "description": "Aprende a crear y configurar un nuevo proyecto en tu dashboard.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Ve a tu dashboard",
+              "body": "Inicia sesión en tu cuenta y navega al dashboard desde la barra de navegación superior."
+            },
+            {
+              "step": 2,
+              "title": "Haz clic en Nuevo Proyecto",
+              "body": "Presiona el botón 'Nuevo Proyecto' en la esquina superior derecha de la lista de proyectos."
+            },
+            {
+              "step": 3,
+              "title": "Completa los detalles del proyecto",
+              "body": "Ingresa el nombre del proyecto, nombre del cliente, presupuesto y fecha límite. Todos los campos excepto el nombre son opcionales."
+            },
+            {
+              "step": 4,
+              "title": "Guarda el proyecto",
+              "body": "Haz clic en 'Crear Proyecto' para guardar. El proyecto aparecerá en tu dashboard de inmediato."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

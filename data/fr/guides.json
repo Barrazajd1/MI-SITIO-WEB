@@ -1,3 +1,37 @@
 {
-  "categories": []
+  "categories": [
+    {
+      "slug": "getting-started",
+      "title": "Premiers pas",
+      "guides": [
+        {
+          "slug": "how-to-add-a-project",
+          "title": "Comment ajouter un projet",
+          "description": "Apprenez à créer et configurer un nouveau projet dans votre tableau de bord.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Accédez à votre tableau de bord",
+              "body": "Connectez-vous à votre compte et accédez au tableau de bord depuis la barre de navigation supérieure."
+            },
+            {
+              "step": 2,
+              "title": "Cliquez sur Nouveau Projet",
+              "body": "Appuyez sur le bouton 'Nouveau Projet' dans le coin supérieur droit de la liste des projets."
+            },
+            {
+              "step": 3,
+              "title": "Remplissez les détails du projet",
+              "body": "Saisissez le nom du projet, le nom du client, le budget et la date limite. Tous les champs sauf le nom sont facultatifs."
+            },
+            {
+              "step": 4,
+              "title": "Enregistrez le projet",
+              "body": "Cliquez sur 'Créer le projet' pour enregistrer. Le projet apparaîtra immédiatement dans votre tableau de bord."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,3 +1,37 @@
 {
-  "categories": []
+  "categories": [
+    {
+      "slug": "getting-started",
+      "title": "Memulai",
+      "guides": [
+        {
+          "slug": "how-to-add-a-project",
+          "title": "Cara menambahkan proyek",
+          "description": "Pelajari cara membuat dan mengonfigurasi proyek baru di dashboard Anda.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Buka dashboard Anda",
+              "body": "Masuk ke akun Anda dan navigasikan ke dashboard dari bilah navigasi atas."
+            },
+            {
+              "step": 2,
+              "title": "Klik Proyek Baru",
+              "body": "Tekan tombol 'Proyek Baru' di sudut kanan atas daftar proyek."
+            },
+            {
+              "step": 3,
+              "title": "Isi detail proyek",
+              "body": "Masukkan nama proyek, nama klien, anggaran, dan tenggat waktu. Semua kolom kecuali nama bersifat opsional."
+            },
+            {
+              "step": 4,
+              "title": "Simpan proyek",
+              "body": "Klik 'Buat Proyek' untuk menyimpan. Proyek akan langsung muncul di dashboard Anda."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

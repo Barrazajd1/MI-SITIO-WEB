@@ -25,6 +25,10 @@
     {
       "label": "Blog",
       "href": "/blog"
+    },
+    {
+      "label": "Guias",
+      "href": "/guides"
     }
   ],
   "footer": {
