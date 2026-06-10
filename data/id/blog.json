@@ -8,7 +8,7 @@
       "title": "Cara membuat website cepat dengan Next.js",
       "date": "2026-06-01",
       "author": "David Barraza",
-      "coverImage": "",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
       "excerpt": "Pelajari bagaimana static generation Next.js membuat website sangat cepat dengan melakukan pre-rendering setiap halaman saat build.",
       "content": "Next.js adalah framework React yang memberikan pengalaman pengembangan terbaik dengan semua fitur yang dibutuhkan untuk produksi. Static generation berarti halaman Anda dibangun sekali dan langsung disajikan kepada setiap pengguna, tanpa memerlukan server. Ketika dikombinasikan dengan file JSON sebagai sumber konten, Anda mendapatkan situs yang sepenuhnya statis — cepat, murah untuk di-hosting, dan mudah diperbarui. Keuntungan utamanya adalah performa: halaman dimuat dalam milidetik karena tidak ada query database maupun rendering sisi server yang terjadi saat permintaan."
     },
@@ -17,7 +17,7 @@
       "title": "Mengapa JSON sangat baik untuk mengelola konten website",
       "date": "2026-06-03",
       "author": "David Barraza",
-      "coverImage": "",
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
       "excerpt": "File JSON sederhana, terkontrol versinya, dan bekerja sempurna sebagai sumber konten untuk website statis multibahasa.",
       "content": "Mengelola konten dalam file JSON memiliki beberapa keunggulan dibandingkan CMS tradisional. File-file tersebut berada di repositori Git bersama kode Anda, sehingga setiap perubahan konten tercatat dan dapat dikembalikan. Untuk website multibahasa, cukup buat satu file JSON per bahasa. Strukturnya tetap identik di semua bahasa — hanya nilai teksnya yang berubah. Ini membuat penerjemahan menjadi mudah dan validasi mudah diotomatisasi. JSON juga dapat dibaca oleh manusia, yang berarti orang yang bukan pengembang dapat mengedit konten secara langsung tanpa memerlukan antarmuka admin yang rumit."
     }

@@ -8,7 +8,7 @@
       "title": "Come creare siti web veloci con Next.js",
       "date": "2026-06-01",
       "author": "David Barraza",
-      "coverImage": "",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
       "excerpt": "Scopri come la generazione statica di Next.js rende i siti web incredibilmente veloci eseguendo il pre-rendering di ogni pagina al momento del build.",
       "content": "Next.js è un framework React che offre la migliore esperienza di sviluppo con tutte le funzionalità necessarie per la produzione. La generazione statica significa che le pagine vengono costruite una sola volta e servite istantaneamente a ogni utente, senza bisogno di un server. Combinando questo con file JSON come fonte di contenuto, si ottiene un sito completamente statico che è veloce, economico da ospitare e facile da aggiornare. Il principale vantaggio è la performance: le pagine si caricano in millisecondi perché al momento della richiesta non avvengono query al database né rendering lato server."
     },
@@ -17,7 +17,7 @@
       "title": "Perché JSON è ideale per gestire i contenuti di un sito web",
       "date": "2026-06-03",
       "author": "David Barraza",
-      "coverImage": "",
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
       "excerpt": "I file JSON sono semplici, versionati e funzionano perfettamente come fonte di contenuto per siti web statici multilingue.",
       "content": "Gestire i contenuti in file JSON presenta diversi vantaggi rispetto a un CMS tradizionale. I file risiedono nel repository Git insieme al codice, quindi ogni modifica ai contenuti è tracciata e reversibile. Per i siti multilingue, si crea semplicemente un file JSON per lingua. La struttura rimane identica in tutte le lingue; cambiano solo i valori testuali. Questo rende le traduzioni semplici e la validazione facile da automatizzare. JSON è anche leggibile dagli esseri umani, il che significa che i non sviluppatori possono modificare i contenuti direttamente senza bisogno di una complessa interfaccia di amministrazione."
     }
