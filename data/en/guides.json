@@ -30,6 +30,105 @@
               "body": "Click 'Create Project' to save. The project will appear in your dashboard immediately."
             }
           ]
+        },
+        {
+          "slug": "how-to-edit-a-project",
+          "title": "How to edit a project",
+          "description": "Update the details of an existing project at any time.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Open the project",
+              "body": "From your dashboard, click on the project you want to edit."
+            },
+            {
+              "step": 2,
+              "title": "Click Edit ",
+              "body": "Press the Edit button in the top right corner of the project detail view.\n"
+            },
+            {
+              "step": 3,
+              "title": "Update the fields",
+              "body": "Change any fields you need — name, client, budget, deadline, or status."
+            },
+            {
+              "step": 4,
+              "title": "Save your changes",
+              "body": "Click 'Save Changes'. The project updates immediately."
+            }
+          ]
+        },
+        {
+          "slug": "how-to-delete-a-project",
+          "title": "How to delete a project",
+          "description": "Permanently remove a project from your dashboard.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Open the project",
+              "body": "From your dashboard, click on the project you want to delete."
+            },
+            {
+              "step": 2,
+              "title": "Click Delete",
+              "body": "Press the Delete button. A confirmation dialog will appear."
+            },
+            {
+              "step": 3,
+              "title": "Confirm deletion",
+              "body": "Click 'Confirm' to permanently delete the project. This action cannot be undone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "managing-clients",
+      "title": "Managing Clients",
+      "guides": [
+        {
+          "slug": "how-to-add-client-info",
+          "title": "How to add client information",
+          "description": "Store your client's contact details directly in a project.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Open or create a project ",
+              "body": "Navigate to the project where you want to add client information."
+            },
+            {
+              "step": 2,
+              "title": "Fill in the client fields /",
+              "body": "Enter the client name, email, and phone number in the corresponding fields."
+            },
+            {
+              "step": 3,
+              "title": "Save the project",
+              "body": "Click 'Save' to store the client details. You can update them at any time."
+            }
+          ]
+        },
+        {
+          "slug": "how-to-track-project-status",
+          "title": "How to track project status",
+          "description": "Keep your projects organized by updating their status as work progresses.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Open the project ",
+              "body": "Click on any project in your dashboard to open it."
+            },
+            {
+              "step": 2,
+              "title": "Change the status ",
+              "body": "Use the status dropdown to select the current stage: Pending, In Progress, Review, or Done."
+            },
+            {
+              "step": 3,
+              "title": "Save",
+              "body": "The status updates immediately and is reflected in your dashboard list."
+            }
+          ]
         }
       ]
     }

@@ -2,32 +2,131 @@
   "categories": [
     {
       "slug": "getting-started",
-      "title": "Per iniziare",
+      "title": "TODO: Getting Started",
       "guides": [
         {
           "slug": "how-to-add-a-project",
-          "title": "Come aggiungere un progetto",
-          "description": "Scopri come creare e configurare un nuovo progetto nel tuo dashboard.",
+          "title": "TODO: How to add a project",
+          "description": "TODO: Learn how to create and configure a new project in your dashboard.",
           "steps": [
             {
               "step": 1,
-              "title": "Vai al tuo dashboard",
-              "body": "Accedi al tuo account e naviga al dashboard dalla barra di navigazione superiore."
+              "title": "TODO: Go to your dashboard",
+              "body": "TODO: Log in to your account and navigate to the dashboard from the top navigation bar."
             },
             {
               "step": 2,
-              "title": "Clicca su Nuovo Progetto",
-              "body": "Premi il pulsante 'Nuovo Progetto' nell'angolo in alto a destra dell'elenco dei progetti."
+              "title": "TODO: Click New Project",
+              "body": "TODO: Press the 'New Project' button in the top right corner of the projects list."
             },
             {
               "step": 3,
-              "title": "Compila i dettagli del progetto",
-              "body": "Inserisci il nome del progetto, il nome del cliente, il budget e la scadenza. Tutti i campi tranne il nome sono facoltativi."
+              "title": "TODO: Fill in the project details",
+              "body": "TODO: Enter the project name, client name, budget, and deadline. All fields except the name are optional."
             },
             {
               "step": 4,
-              "title": "Salva il progetto",
-              "body": "Clicca su 'Crea Progetto' per salvare. Il progetto apparirà immediatamente nel tuo dashboard."
+              "title": "TODO: Save the project",
+              "body": "TODO: Click 'Create Project' to save. The project will appear in your dashboard immediately."
+            }
+          ]
+        },
+        {
+          "slug": "how-to-edit-a-project",
+          "title": "TODO: How to edit a project",
+          "description": "TODO: Update the details of an existing project at any time.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "TODO: Open the project",
+              "body": "TODO: From your dashboard, click on the project you want to edit."
+            },
+            {
+              "step": 2,
+              "title": "TODO: Click Edit ",
+              "body": "TODO: Press the Edit button in the top right corner of the project detail view.\n"
+            },
+            {
+              "step": 3,
+              "title": "TODO: Update the fields",
+              "body": "TODO: Change any fields you need — name, client, budget, deadline, or status."
+            },
+            {
+              "step": 4,
+              "title": "TODO: Save your changes",
+              "body": "TODO: Click 'Save Changes'. The project updates immediately."
+            }
+          ]
+        },
+        {
+          "slug": "how-to-delete-a-project",
+          "title": "TODO: How to delete a project",
+          "description": "TODO: Permanently remove a project from your dashboard.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "TODO: Open the project",
+              "body": "TODO: From your dashboard, click on the project you want to delete."
+            },
+            {
+              "step": 2,
+              "title": "TODO: Click Delete",
+              "body": "TODO: Press the Delete button. A confirmation dialog will appear."
+            },
+            {
+              "step": 3,
+              "title": "TODO: Confirm deletion",
+              "body": "TODO: Click 'Confirm' to permanently delete the project. This action cannot be undone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "managing-clients",
+      "title": "TODO: Managing Clients",
+      "guides": [
+        {
+          "slug": "how-to-add-client-info",
+          "title": "TODO: How to add client information",
+          "description": "TODO: Store your client's contact details directly in a project.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "TODO: Open or create a project ",
+              "body": "TODO: Navigate to the project where you want to add client information."
+            },
+            {
+              "step": 2,
+              "title": "TODO: Fill in the client fields /",
+              "body": "TODO: Enter the client name, email, and phone number in the corresponding fields."
+            },
+            {
+              "step": 3,
+              "title": "TODO: Save the project",
+              "body": "TODO: Click 'Save' to store the client details. You can update them at any time."
+            }
+          ]
+        },
+        {
+          "slug": "how-to-track-project-status",
+          "title": "TODO: How to track project status",
+          "description": "TODO: Keep your projects organized by updating their status as work progresses.",
+          "steps": [
+            {
+              "step": 1,
+              "title": "TODO: Open the project ",
+              "body": "TODO: Click on any project in your dashboard to open it."
+            },
+            {
+              "step": 2,
+              "title": "TODO: Change the status ",
+              "body": "TODO: Use the status dropdown to select the current stage: Pending, In Progress, Review, or Done."
+            },
+            {
+              "step": 3,
+              "title": "TODO: Save",
+              "body": "TODO: The status updates immediately and is reflected in your dashboard list."
             }
           ]
         }

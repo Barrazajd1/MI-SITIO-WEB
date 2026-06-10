@@ -14,7 +14,7 @@ Este es un proyecto de aprendizaje de Next.js bajo supervisión. La referencia d
 - **Lenguaje:** TypeScript
 - **Editor de contenido:** Strapi v5 (solo inglés, solo uso interno, nunca en producción)
 - **Deploy:** Vercel (auto-deploy desde GitHub)
-- **Traducción automatizada:** `scripts/translate.js` usando Google Gemini API (`gemini-1.5-flash`)
+- **Traducción:** Manual — se pide a Claude en conversación que traduzca los JSON. **No se usa ninguna API key de IA para traducciones.**
 
 ## Idiomas soportados
 
@@ -33,7 +33,7 @@ npm run dev                        # servidor de desarrollo en http://localhost:
 npm run build                      # build de producción
 npm run export-content             # exporta Strapi → data/en/*.json
 npm run validate-en                # valida que EN no tenga campos vacíos
-npm run translate -- --lang=es     # genera traducciones para un idioma con Gemini
+npm run scaffold-locale <tipo>      # genera archivos con TODO: listos para traducir manualmente
 npm run validate                   # verifica consistencia de claves entre todos los idiomas
 ```
 
@@ -42,13 +42,9 @@ Para exportar desde Strapi (requiere `.env.local` con `STRAPI_URL` y `STRAPI_TOK
 npm run export-content
 ```
 
-Para traducir con Gemini (requiere `GEMINI_API_KEY` en `.env.local`):
-```bash
-npm run translate -- --lang=es
-npm run translate -- --lang=fr
-npm run translate -- --lang=pt
-npm run translate -- --lang=it
-```
+Para traducir: pedir a Claude en conversación que traduzca `data/en/<archivo>.json`
+al idioma destino y copiar el resultado a `data/<locale>/<archivo>.json`.
+No se requiere ninguna API key de IA.
 
 ## Variables de entorno (.env.local)
 
@@ -56,7 +52,7 @@ npm run translate -- --lang=it
 NEXT_PUBLIC_BASE_URL=https://mi-sitio-web-tau.vercel.app
 STRAPI_URL=http://localhost:1337
 STRAPI_TOKEN=<token de Strapi>
-GEMINI_API_KEY=<token de Google AI Studio>
+# No se usa API key de IA para traducciones — se hacen manualmente con Claude
 ```
 
 ## Filosofía de contenido — MUY IMPORTANTE
@@ -96,8 +92,7 @@ Vercel → sitio estático en vivo
 ```
 1. npm run export-content          → descarga EN fresco de Strapi
 2. npm run validate-en             → valida que EN no tenga campos vacíos ✅
-3. npm run translate -- --lang=xx  → Gemini genera traducciones con contexto ✅
-   (o pedir a la IA manualmente si no hay crédito en Gemini)
+3. Pedir a Claude en conversación que traduzca los archivos con TODO: ✅
 4. npm run validate                → verifica consistencia de keys entre todos los idiomas ✅
 5. git add -A && git commit && git push → Vercel despliega automáticamente
 ```
@@ -138,7 +133,7 @@ scripts/
   export-from-strapi.js       # Exporta Strapi v5 → data/en/*.json (solo EN)
   validate-en.js              # Valida que EN no tenga campos vacíos ✅
   validate-content.js         # Valida consistencia de keys entre todos los idiomas ✅
-  translate.js                # Genera traducciones con Gemini API ✅
+  translate.js                # Script de traducción (no se usa — traducciones manuales con Claude)
   translation-markers.js      # 77 reglas de contexto por campo (seo_title, feature_term, etc.)
 ```
 
@@ -169,7 +164,7 @@ Las credenciales están en `.env.local` (nunca en el repo).
 1. Crear el Single Type en Strapi con los campos en inglés
 2. Agregar el slug al mapa `ENDPOINTS` en `scripts/export-from-strapi.js`
 3. Correr `npm run export-content` → genera `data/en/{page}.json`
-4. Correr `npm run translate -- --lang=es` (y fr, pt, it) o pedir a la IA
+4. Pedir a Claude en conversación que traduzca los archivos con TODO: a cada idioma
 5. En `lib/content.ts`, importar los JSON y agregarlos al mapa `content`
 6. Crear `app/[locale]/{page}/page.tsx` usando `getContent(locale, "{page}")`
 7. Agregar la ruta al nav en todos los `data/{locale}/nav.json`
@@ -178,7 +173,7 @@ Las credenciales están en `.env.local` (nunca en el repo).
 
 ## Flujo para agregar un nuevo idioma
 
-1. Correr `npm run translate -- --lang=xx` (Gemini) o pedir a la IA los JSON traducidos
+1. Pedir a Claude en conversación que traduzca todos los JSON de `data/en/` al nuevo idioma
 2. En `lib/content.ts`, agregar `"xx"` al array `locales` e importar todos los JSON
 3. Correr `npm run validate` → confirmar consistencia
 4. `git add -A && git commit && git push`

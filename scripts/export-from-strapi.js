@@ -80,6 +80,17 @@ const ENDPOINTS = /** @type {Record<string, { slug: string; populate: string }>}
       "&populate[Plan][populate][PlanFeature]=*" +
       "&populate[cta]=*",
   },
+  "blog.json": {
+    slug: "blog-post",
+    // posts is a repeatable component — populate all fields inside it
+    populate: "populate[posts]=*",
+  },
+  "guides.json": {
+    slug: "guide-category",
+    // categories → guides → steps (3 levels deep)
+    populate:
+      "populate[categories][populate][guides][populate][steps]=*",
+  },
 });
 
 // ---------------------------------------------------------------------------
@@ -167,6 +178,26 @@ async function main() {
         if (filename === "home.json" && raw.worflow !== undefined) {
           raw = { ...raw, workflow: raw.worflow };
           delete raw.worflow;
+        }
+        // blog.json: remap field names to match data/en/blog.json structure.
+        // Strapi uses "description" and "body" but the site expects "excerpt" and "content".
+        // Page-level UI strings (pageTitle, badge, backLink) are not stored in Strapi —
+        // they are hardcoded here so the scaffold-locale script can still translate them.
+        if (filename === "blog.json" && raw.posts !== undefined) {
+          raw = {
+            pageTitle: "Latest posts",
+            badge: "Blog",
+            backLink: "← Back to blog",
+            posts: /** @type {any[]} */ (raw.posts).map((post) => ({
+              slug:        post.slug        ?? "",
+              title:       post.title       ?? "",
+              date:        post.date        ?? "",
+              author:      post.author      ?? "",
+              coverImage:  post.coverImage  ?? "",
+              excerpt:     post.description ?? "",
+              content:     post.body        ?? "",
+            })),
+          };
         }
         // Rename Strapi capitalized component names → lowercase to match data/en/pricing.json:
         //   Plan       → plans
