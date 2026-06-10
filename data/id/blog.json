@@ -1,25 +1,25 @@
 {
-  "pageTitle": "TODO: Latest posts",
-  "badge": "TODO: Blog",
-  "backLink": "TODO: ← Back to blog",
+  "pageTitle": "Postingan terbaru",
+  "badge": "Blog",
+  "backLink": "← Kembali ke blog",
   "posts": [
     {
       "slug": "building-fast-websites-with-nextjs",
-      "title": "TODO: Building fast websites with Next.js",
+      "title": "Cara membuat website cepat dengan Next.js",
       "date": "2026-06-01",
       "author": "David Barraza",
       "coverImage": "",
-      "excerpt": "TODO: Learn how Next.js static generation makes websites incredibly fast by pre-rendering every page at build time.",
-      "content": "TODO: Next.js is a React framework that gives you the best developer experience with all the features you need for production. Static generation means your pages are built once and served instantly to every user, no server required. When you combine this with JSON files as your content source, you get a fully static site that is fast, cheap to host, and easy to update. The key benefit is performance — pages load in milliseconds because there is no database query or server-side rendering happening at request time."
+      "excerpt": "Pelajari bagaimana static generation Next.js membuat website sangat cepat dengan melakukan pre-rendering setiap halaman saat build.",
+      "content": "Next.js adalah framework React yang memberikan pengalaman pengembangan terbaik dengan semua fitur yang dibutuhkan untuk produksi. Static generation berarti halaman Anda dibangun sekali dan langsung disajikan kepada setiap pengguna, tanpa memerlukan server. Ketika dikombinasikan dengan file JSON sebagai sumber konten, Anda mendapatkan situs yang sepenuhnya statis — cepat, murah untuk di-hosting, dan mudah diperbarui. Keuntungan utamanya adalah performa: halaman dimuat dalam milidetik karena tidak ada query database maupun rendering sisi server yang terjadi saat permintaan."
     },
     {
       "slug": "why-json-is-great-for-content",
-      "title": "TODO: Why JSON is great for managing website content",
+      "title": "Mengapa JSON sangat baik untuk mengelola konten website",
       "date": "2026-06-03",
       "author": "David Barraza",
       "coverImage": "",
-      "excerpt": "TODO: JSON files are simple, version-controlled, and work perfectly as a content source for multilingual static websites.",
-      "content": "TODO: Managing content in JSON files has several advantages over a traditional CMS. The files live in your Git repository alongside your code, so every content change is tracked and reversible. For multilingual websites, you simply create one JSON file per language. The structure stays identical across all languages — only the text values change. This makes translations straightforward and validation easy to automate. JSON is also human-readable, which means non-developers can edit content directly without needing a complex admin interface."
+      "excerpt": "File JSON sederhana, terkontrol versinya, dan bekerja sempurna sebagai sumber konten untuk website statis multibahasa.",
+      "content": "Mengelola konten dalam file JSON memiliki beberapa keunggulan dibandingkan CMS tradisional. File-file tersebut berada di repositori Git bersama kode Anda, sehingga setiap perubahan konten tercatat dan dapat dikembalikan. Untuk website multibahasa, cukup buat satu file JSON per bahasa. Strukturnya tetap identik di semua bahasa — hanya nilai teksnya yang berubah. Ini membuat penerjemahan menjadi mudah dan validasi mudah diotomatisasi. JSON juga dapat dibaca oleh manusia, yang berarti orang yang bukan pengembang dapat mengedit konten secara langsung tanpa memerlukan antarmuka admin yang rumit."
     }
   ]
 }

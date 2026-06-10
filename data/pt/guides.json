@@ -2,81 +2,81 @@
   "categories": [
     {
       "slug": "getting-started",
-      "title": "TODO: Getting Started",
+      "title": "Primeiros passos",
       "guides": [
         {
           "slug": "how-to-add-a-project",
-          "title": "TODO: How to add a project",
-          "description": "TODO: Learn how to create and configure a new project in your dashboard.",
+          "title": "Como adicionar um projeto",
+          "description": "Aprenda a criar e configurar um novo projeto no seu painel.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Go to your dashboard",
-              "body": "TODO: Log in to your account and navigate to the dashboard from the top navigation bar."
+              "title": "Acesse seu painel",
+              "body": "Faça login na sua conta e navegue até o painel pela barra de navegação superior."
             },
             {
               "step": 2,
-              "title": "TODO: Click New Project",
-              "body": "TODO: Press the 'New Project' button in the top right corner of the projects list."
+              "title": "Clique em Novo projeto",
+              "body": "Pressione o botão 'Novo projeto' no canto superior direito da lista de projetos."
             },
             {
               "step": 3,
-              "title": "TODO: Fill in the project details",
-              "body": "TODO: Enter the project name, client name, budget, and deadline. All fields except the name are optional."
+              "title": "Preencha os detalhes do projeto",
+              "body": "Insira o nome do projeto, nome do cliente, orçamento e prazo. Todos os campos, exceto o nome, são opcionais."
             },
             {
               "step": 4,
-              "title": "TODO: Save the project",
-              "body": "TODO: Click 'Create Project' to save. The project will appear in your dashboard immediately."
+              "title": "Salve o projeto",
+              "body": "Clique em 'Criar projeto' para salvar. O projeto aparecerá no seu painel imediatamente."
             }
           ]
         },
         {
           "slug": "how-to-edit-a-project",
-          "title": "TODO: How to edit a project",
-          "description": "TODO: Update the details of an existing project at any time.",
+          "title": "Como editar um projeto",
+          "description": "Atualize os detalhes de um projeto existente a qualquer momento.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open the project",
-              "body": "TODO: From your dashboard, click on the project you want to edit."
+              "title": "Abra o projeto",
+              "body": "No seu painel, clique no projeto que deseja editar."
             },
             {
               "step": 2,
-              "title": "TODO: Click Edit ",
-              "body": "TODO: Press the Edit button in the top right corner of the project detail view.\n"
+              "title": "Clique em Editar",
+              "body": "Pressione o botão Editar no canto superior direito da visualização de detalhes do projeto."
             },
             {
               "step": 3,
-              "title": "TODO: Update the fields",
-              "body": "TODO: Change any fields you need — name, client, budget, deadline, or status."
+              "title": "Atualize os campos",
+              "body": "Altere os campos necessários — nome, cliente, orçamento, prazo ou status."
             },
             {
               "step": 4,
-              "title": "TODO: Save your changes",
-              "body": "TODO: Click 'Save Changes'. The project updates immediately."
+              "title": "Salve as alterações",
+              "body": "Clique em 'Salvar alterações'. O projeto é atualizado imediatamente."
             }
           ]
         },
         {
           "slug": "how-to-delete-a-project",
-          "title": "TODO: How to delete a project",
-          "description": "TODO: Permanently remove a project from your dashboard.",
+          "title": "Como excluir um projeto",
+          "description": "Remova permanentemente um projeto do seu painel.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open the project",
-              "body": "TODO: From your dashboard, click on the project you want to delete."
+              "title": "Abra o projeto",
+              "body": "No seu painel, clique no projeto que deseja excluir."
             },
             {
               "step": 2,
-              "title": "TODO: Click Delete",
-              "body": "TODO: Press the Delete button. A confirmation dialog will appear."
+              "title": "Clique em Excluir",
+              "body": "Pressione o botão Excluir. Uma caixa de confirmação aparecerá."
             },
             {
               "step": 3,
-              "title": "TODO: Confirm deletion",
-              "body": "TODO: Click 'Confirm' to permanently delete the project. This action cannot be undone."
+              "title": "Confirme a exclusão",
+              "body": "Clique em 'Confirmar' para excluir o projeto permanentemente. Esta ação não pode ser desfeita."
             }
           ]
         }
@@ -84,49 +84,49 @@
     },
     {
       "slug": "managing-clients",
-      "title": "TODO: Managing Clients",
+      "title": "Gerenciamento de clientes",
       "guides": [
         {
           "slug": "how-to-add-client-info",
-          "title": "TODO: How to add client information",
-          "description": "TODO: Store your client's contact details directly in a project.",
+          "title": "Como adicionar informações do cliente",
+          "description": "Armazene os dados de contato do seu cliente diretamente em um projeto.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open or create a project ",
-              "body": "TODO: Navigate to the project where you want to add client information."
+              "title": "Abra ou crie um projeto",
+              "body": "Navegue até o projeto onde deseja adicionar as informações do cliente."
             },
             {
               "step": 2,
-              "title": "TODO: Fill in the client fields /",
-              "body": "TODO: Enter the client name, email, and phone number in the corresponding fields."
+              "title": "Preencha os campos do cliente",
+              "body": "Insira o nome, e-mail e número de telefone do cliente nos campos correspondentes."
             },
             {
               "step": 3,
-              "title": "TODO: Save the project",
-              "body": "TODO: Click 'Save' to store the client details. You can update them at any time."
+              "title": "Salve o projeto",
+              "body": "Clique em 'Salvar' para armazenar os dados do cliente. Você pode atualizá-los a qualquer momento."
             }
           ]
         },
         {
           "slug": "how-to-track-project-status",
-          "title": "TODO: How to track project status",
-          "description": "TODO: Keep your projects organized by updating their status as work progresses.",
+          "title": "Como acompanhar o status do projeto",
+          "description": "Mantenha seus projetos organizados atualizando o status conforme o trabalho avança.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open the project ",
-              "body": "TODO: Click on any project in your dashboard to open it."
+              "title": "Abra o projeto",
+              "body": "Clique em qualquer projeto no seu painel para abri-lo."
             },
             {
               "step": 2,
-              "title": "TODO: Change the status ",
-              "body": "TODO: Use the status dropdown to select the current stage: Pending, In Progress, Review, or Done."
+              "title": "Altere o status",
+              "body": "Use o menu suspenso de status para selecionar a etapa atual: Pendente, Em andamento, Revisão ou Concluído."
             },
             {
               "step": 3,
-              "title": "TODO: Save",
-              "body": "TODO: The status updates immediately and is reflected in your dashboard list."
+              "title": "Salvar",
+              "body": "O status é atualizado imediatamente e refletido na lista do seu painel."
             }
           ]
         }

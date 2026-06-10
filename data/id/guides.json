@@ -2,81 +2,81 @@
   "categories": [
     {
       "slug": "getting-started",
-      "title": "TODO: Getting Started",
+      "title": "Memulai",
       "guides": [
         {
           "slug": "how-to-add-a-project",
-          "title": "TODO: How to add a project",
-          "description": "TODO: Learn how to create and configure a new project in your dashboard.",
+          "title": "Cara menambahkan proyek",
+          "description": "Pelajari cara membuat dan mengonfigurasi proyek baru di dashboard Anda.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Go to your dashboard",
-              "body": "TODO: Log in to your account and navigate to the dashboard from the top navigation bar."
+              "title": "Buka dashboard Anda",
+              "body": "Masuk ke akun Anda dan navigasikan ke dashboard dari bilah navigasi atas."
             },
             {
               "step": 2,
-              "title": "TODO: Click New Project",
-              "body": "TODO: Press the 'New Project' button in the top right corner of the projects list."
+              "title": "Klik Proyek Baru",
+              "body": "Tekan tombol 'Proyek Baru' di sudut kanan atas daftar proyek."
             },
             {
               "step": 3,
-              "title": "TODO: Fill in the project details",
-              "body": "TODO: Enter the project name, client name, budget, and deadline. All fields except the name are optional."
+              "title": "Isi detail proyek",
+              "body": "Masukkan nama proyek, nama klien, anggaran, dan tenggat waktu. Semua kolom kecuali nama bersifat opsional."
             },
             {
               "step": 4,
-              "title": "TODO: Save the project",
-              "body": "TODO: Click 'Create Project' to save. The project will appear in your dashboard immediately."
+              "title": "Simpan proyek",
+              "body": "Klik 'Buat Proyek' untuk menyimpan. Proyek akan muncul di dashboard Anda segera."
             }
           ]
         },
         {
           "slug": "how-to-edit-a-project",
-          "title": "TODO: How to edit a project",
-          "description": "TODO: Update the details of an existing project at any time.",
+          "title": "Cara mengedit proyek",
+          "description": "Perbarui detail proyek yang sudah ada kapan saja.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open the project",
-              "body": "TODO: From your dashboard, click on the project you want to edit."
+              "title": "Buka proyek",
+              "body": "Dari dashboard Anda, klik proyek yang ingin Anda edit."
             },
             {
               "step": 2,
-              "title": "TODO: Click Edit ",
-              "body": "TODO: Press the Edit button in the top right corner of the project detail view.\n"
+              "title": "Klik Edit",
+              "body": "Tekan tombol Edit di sudut kanan atas tampilan detail proyek."
             },
             {
               "step": 3,
-              "title": "TODO: Update the fields",
-              "body": "TODO: Change any fields you need — name, client, budget, deadline, or status."
+              "title": "Perbarui kolom",
+              "body": "Ubah kolom yang diperlukan — nama, klien, anggaran, tenggat waktu, atau status."
             },
             {
               "step": 4,
-              "title": "TODO: Save your changes",
-              "body": "TODO: Click 'Save Changes'. The project updates immediately."
+              "title": "Simpan perubahan",
+              "body": "Klik 'Simpan Perubahan'. Proyek diperbarui secara langsung."
             }
           ]
         },
         {
           "slug": "how-to-delete-a-project",
-          "title": "TODO: How to delete a project",
-          "description": "TODO: Permanently remove a project from your dashboard.",
+          "title": "Cara menghapus proyek",
+          "description": "Hapus proyek secara permanen dari dashboard Anda.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open the project",
-              "body": "TODO: From your dashboard, click on the project you want to delete."
+              "title": "Buka proyek",
+              "body": "Dari dashboard Anda, klik proyek yang ingin Anda hapus."
             },
             {
               "step": 2,
-              "title": "TODO: Click Delete",
-              "body": "TODO: Press the Delete button. A confirmation dialog will appear."
+              "title": "Klik Hapus",
+              "body": "Tekan tombol Hapus. Dialog konfirmasi akan muncul."
             },
             {
               "step": 3,
-              "title": "TODO: Confirm deletion",
-              "body": "TODO: Click 'Confirm' to permanently delete the project. This action cannot be undone."
+              "title": "Konfirmasi penghapusan",
+              "body": "Klik 'Konfirmasi' untuk menghapus proyek secara permanen. Tindakan ini tidak dapat dibatalkan."
             }
           ]
         }
@@ -84,49 +84,49 @@
     },
     {
       "slug": "managing-clients",
-      "title": "TODO: Managing Clients",
+      "title": "Mengelola Klien",
       "guides": [
         {
           "slug": "how-to-add-client-info",
-          "title": "TODO: How to add client information",
-          "description": "TODO: Store your client's contact details directly in a project.",
+          "title": "Cara menambahkan informasi klien",
+          "description": "Simpan detail kontak klien Anda langsung di dalam proyek.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open or create a project ",
-              "body": "TODO: Navigate to the project where you want to add client information."
+              "title": "Buka atau buat proyek",
+              "body": "Navigasikan ke proyek tempat Anda ingin menambahkan informasi klien."
             },
             {
               "step": 2,
-              "title": "TODO: Fill in the client fields /",
-              "body": "TODO: Enter the client name, email, and phone number in the corresponding fields."
+              "title": "Isi kolom klien",
+              "body": "Masukkan nama, email, dan nomor telepon klien di kolom yang sesuai."
             },
             {
               "step": 3,
-              "title": "TODO: Save the project",
-              "body": "TODO: Click 'Save' to store the client details. You can update them at any time."
+              "title": "Simpan proyek",
+              "body": "Klik 'Simpan' untuk menyimpan data klien. Anda dapat memperbaruinya kapan saja."
             }
           ]
         },
         {
           "slug": "how-to-track-project-status",
-          "title": "TODO: How to track project status",
-          "description": "TODO: Keep your projects organized by updating their status as work progresses.",
+          "title": "Cara melacak status proyek",
+          "description": "Jaga proyek Anda tetap terorganisir dengan memperbarui statusnya seiring pekerjaan berlangsung.",
           "steps": [
             {
               "step": 1,
-              "title": "TODO: Open the project ",
-              "body": "TODO: Click on any project in your dashboard to open it."
+              "title": "Buka proyek",
+              "body": "Klik proyek mana saja di dashboard Anda untuk membukanya."
             },
             {
               "step": 2,
-              "title": "TODO: Change the status ",
-              "body": "TODO: Use the status dropdown to select the current stage: Pending, In Progress, Review, or Done."
+              "title": "Ubah status",
+              "body": "Gunakan dropdown status untuk memilih tahap saat ini: Tertunda, Sedang Berlangsung, Tinjauan, atau Selesai."
             },
             {
               "step": 3,
-              "title": "TODO: Save",
-              "body": "TODO: The status updates immediately and is reflected in your dashboard list."
+              "title": "Simpan",
+              "body": "Status diperbarui secara langsung dan tercermin dalam daftar dashboard Anda."
             }
           ]
         }

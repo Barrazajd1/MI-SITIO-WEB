@@ -1,25 +1,25 @@
 {
-  "pageTitle": "TODO: Latest posts",
-  "badge": "TODO: Blog",
-  "backLink": "TODO: ← Back to blog",
+  "pageTitle": "Últimas publicações",
+  "badge": "Blog",
+  "backLink": "← Voltar ao blog",
   "posts": [
     {
       "slug": "building-fast-websites-with-nextjs",
-      "title": "TODO: Building fast websites with Next.js",
+      "title": "Como criar sites rápidos com Next.js",
       "date": "2026-06-01",
       "author": "David Barraza",
       "coverImage": "",
-      "excerpt": "TODO: Learn how Next.js static generation makes websites incredibly fast by pre-rendering every page at build time.",
-      "content": "TODO: Next.js is a React framework that gives you the best developer experience with all the features you need for production. Static generation means your pages are built once and served instantly to every user, no server required. When you combine this with JSON files as your content source, you get a fully static site that is fast, cheap to host, and easy to update. The key benefit is performance — pages load in milliseconds because there is no database query or server-side rendering happening at request time."
+      "excerpt": "Aprenda como a geração estática do Next.js torna os sites incrivelmente rápidos ao pré-renderizar cada página no momento do build.",
+      "content": "Next.js é um framework React que oferece a melhor experiência de desenvolvimento com todos os recursos necessários para produção. A geração estática significa que suas páginas são construídas uma única vez e entregues instantaneamente a cada usuário, sem necessidade de servidor. Ao combinar isso com arquivos JSON como fonte de conteúdo, você obtém um site completamente estático que é rápido, barato de hospedar e fácil de atualizar. O principal benefício é a performance: as páginas carregam em milissegundos porque não há consultas ao banco de dados nem renderização no lado do servidor no momento da requisição."
     },
     {
       "slug": "why-json-is-great-for-content",
-      "title": "TODO: Why JSON is great for managing website content",
+      "title": "Por que JSON é ótimo para gerenciar o conteúdo de um site",
       "date": "2026-06-03",
       "author": "David Barraza",
       "coverImage": "",
-      "excerpt": "TODO: JSON files are simple, version-controlled, and work perfectly as a content source for multilingual static websites.",
-      "content": "TODO: Managing content in JSON files has several advantages over a traditional CMS. The files live in your Git repository alongside your code, so every content change is tracked and reversible. For multilingual websites, you simply create one JSON file per language. The structure stays identical across all languages — only the text values change. This makes translations straightforward and validation easy to automate. JSON is also human-readable, which means non-developers can edit content directly without needing a complex admin interface."
+      "excerpt": "Os arquivos JSON são simples, versionados e funcionam perfeitamente como fonte de conteúdo para sites estáticos multilíngues.",
+      "content": "Gerenciar conteúdo em arquivos JSON tem várias vantagens sobre um CMS tradicional. Os arquivos ficam no seu repositório Git junto com o código, então cada alteração de conteúdo é rastreada e reversível. Para sites multilíngues, basta criar um arquivo JSON por idioma. A estrutura permanece idêntica em todos os idiomas; apenas os valores de texto mudam. Isso torna as traduções simples e a validação fácil de automatizar. JSON também é legível por humanos, o que significa que pessoas sem conhecimento técnico podem editar o conteúdo diretamente sem precisar de uma interface administrativa complexa."
     }
   ]
 }
