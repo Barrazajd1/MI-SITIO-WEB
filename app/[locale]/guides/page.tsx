@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { locales, type Locale } from "@/lib/content";
+import { locales, getContent, type Locale } from "@/lib/content";
 import { notFound } from "next/navigation";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -12,12 +12,12 @@ export default async function GuidesPage({ params }: Props) {
   const { locale } = await params;
   if (!locales.includes(locale as Locale)) notFound();
 
-  const guides = (await import(`@/data/${locale}/guides.json`)).default;
+  const guides = getContent(locale as Locale, "guides");
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Guides</h1>
-      <p className="text-gray-500 mb-12">Step-by-step guides to help you get started.</p>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4">{guides.title}</h1>
+      <p className="text-gray-500 mb-12">{guides.description}</p>
 
       {guides.categories.map((category: any) => (
         <div key={category.slug} className="mb-12">

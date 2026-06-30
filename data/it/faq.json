@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Domande frequenti",
+    "description": "Trova le risposte alle domande più comuni sui nostri servizi, prezzi e tecnologia"
+  },
+  "categories": [
+    {
+      "title": "Generale",
+      "questions": [
+        {
+          "question": "Quali servizi offrite?",
+          "answer": "Offriamo sviluppo web, design e servizi di consulenza su misura per le esigenze della tua azienda."
+        },
+        {
+          "question": "Quanto dura in genere un progetto?",
+          "answer": "La maggior parte dei progetti richiede dalle 4 alle 12 settimane, a seconda dell'ambito e della complessità."
+        }
+      ]
+    },
+    {
+      "title": "Prezzi",
+      "questions": [
+        {
+          "question": "Offrite prove gratuite?",
+          "answer": "Sì, offriamo una prova gratuita di 14 giorni su tutti i piani. Non è richiesta la carta di credito."
+        },
+        {
+          "question": "Posso cambiare piano in seguito?",
+          "answer": "Certo. Puoi passare a un piano superiore o inferiore in qualsiasi momento dalla tua dashboard."
+        }
+      ]
+    },
+    {
+      "title": "Tecnico",
+      "questions": [
+        {
+          "question": "Quali tecnologie utilizzate?",
+          "answer": "Sviluppiamo con Next.js, React, TypeScript e Tailwind CSS per siti veloci e scalabili."
+        },
+        {
+          "question": "I miei dati sono al sicuro?",
+          "answer": "Sì. Utilizziamo crittografia standard del settore e seguiamo le best practice per la sicurezza dei dati."
+        }
+      ]
+    }
+  ]
+}

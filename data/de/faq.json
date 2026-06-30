@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Häufig gestellte Fragen",
+    "description": "Finden Sie Antworten auf die häufigsten Fragen zu unseren Leistungen, Preisen und unserer Technologie"
+  },
+  "categories": [
+    {
+      "title": "Allgemein",
+      "questions": [
+        {
+          "question": "Welche Leistungen bieten Sie an?",
+          "answer": "Wir bieten Webentwicklung, Design und Beratungsleistungen, die auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind."
+        },
+        {
+          "question": "Wie lange dauert ein typisches Projekt?",
+          "answer": "Die meisten Projekte dauern je nach Umfang und Komplexität zwischen 4 und 12 Wochen."
+        }
+      ]
+    },
+    {
+      "title": "Preise",
+      "questions": [
+        {
+          "question": "Bieten Sie kostenlose Testversionen an?",
+          "answer": "Ja, wir bieten eine 14-tägige kostenlose Testversion für alle Pläne an. Keine Kreditkarte erforderlich."
+        },
+        {
+          "question": "Kann ich meinen Plan später ändern?",
+          "answer": "Natürlich. Sie können Ihren Plan jederzeit über Ihr Dashboard upgraden oder downgraden."
+        }
+      ]
+    },
+    {
+      "title": "Technisch",
+      "questions": [
+        {
+          "question": "Welche Technologien verwenden Sie?",
+          "answer": "Wir entwickeln mit Next.js, React, TypeScript und Tailwind CSS für schnelle und skalierbare Websites."
+        },
+        {
+          "question": "Sind meine Daten sicher?",
+          "answer": "Ja. Wir verwenden branchenübliche Verschlüsselung und befolgen bewährte Verfahren zur Datensicherheit."
+        }
+      ]
+    }
+  ]
+}

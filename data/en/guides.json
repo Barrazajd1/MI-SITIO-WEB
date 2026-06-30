@@ -1,4 +1,6 @@
 {
+  "title": "Guides",
+  "description": "Step-by-step guides to help you get started.",
   "categories": [
     {
       "slug": "getting-started",

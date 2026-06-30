@@ -62,9 +62,9 @@ export default async function ContactPage({
           {/* Contact info panel */}
           <AnimatedSection className="md:col-span-2 flex flex-col gap-6" variant="slideLeft" delay={0.1}>
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">Get in touch</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">{data.info.infoTitle}</h2>
               <p className="text-sm text-gray-500 leading-relaxed">
-                We typically respond within one business day.
+                {data.info.infoDescription}
               </p>
             </div>
 
@@ -74,7 +74,7 @@ export default async function ContactPage({
                   📧
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Email</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">{data.info.emailLabel}</p>
                   <p className="text-sm text-gray-700">{data.info.email}</p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export default async function ContactPage({
                   📍
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Location</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">{data.info.locationLabel}</p>
                   <p className="text-sm text-gray-700">{data.info.location}</p>
                 </div>
               </div>

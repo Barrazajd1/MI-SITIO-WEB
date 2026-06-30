@@ -1,3 +1,17 @@
+import enGuides from "../data/en/guides.json";
+import esGuides from "../data/es/guides.json";
+import frGuides from "../data/fr/guides.json";
+import ptGuides from "../data/pt/guides.json";
+import itGuides from "../data/it/guides.json";
+import deGuides from "../data/de/guides.json";
+import idGuides from "../data/id/guides.json";
+import enFaq from "../data/en/faq.json";
+import esFaq from "../data/es/faq.json";
+import frFaq from "../data/fr/faq.json";
+import ptFaq from "../data/pt/faq.json";
+import itFaq from "../data/it/faq.json";
+import deFaq from "../data/de/faq.json";
+import idFaq from "../data/id/faq.json";
 import enHome from "../data/en/home.json";
 import esHome from "../data/es/home.json";
 import frHome from "../data/fr/home.json";
@@ -56,13 +70,13 @@ export function isValidLocale(value: string): value is Locale {
 }
 
 export const content = {
-  en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact, pricing: enPricing, blog: EnBlog },
-  es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing, blog: EsBlog },
-  fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing, blog: FrBlog },
-  pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing, blog: PtBlog },
-  it: { home: itHome, nav: itNav, services: itServices, about: itAbout, contact: itContact, pricing: itPricing, blog: ItBlog },
-  de: { home: deHome, nav: deNav, services: deServices, about: deAbout, contact: deContact, pricing: dePricing, blog: DeBlog },
-  id: { home: idHome, nav: idNav, services: idServices, about: idAbout, contact: idContact, pricing: idPricing, blog: IdBlog },
+  en: { home: enHome, nav: enNav, services: enServices, about: enAbout, contact: enContact, pricing: enPricing, blog: EnBlog, guides: enGuides, faq: enFaq },
+  es: { home: esHome, nav: esNav, services: esServices, about: esAbout, contact: esContact, pricing: esPricing, blog: EsBlog, guides: esGuides, faq: esFaq },
+  fr: { home: frHome, nav: frNav, services: frServices, about: frAbout, contact: frContact, pricing: frPricing, blog: FrBlog, guides: frGuides, faq: frFaq },
+  pt: { home: ptHome, nav: ptNav, services: ptServices, about: ptAbout, contact: ptContact, pricing: ptPricing, blog: PtBlog, guides: ptGuides, faq: ptFaq },
+  it: { home: itHome, nav: itNav, services: itServices, about: itAbout, contact: itContact, pricing: itPricing, blog: ItBlog, guides: itGuides, faq: itFaq },
+  de: { home: deHome, nav: deNav, services: deServices, about: deAbout, contact: deContact, pricing: dePricing, blog: DeBlog, guides: deGuides, faq: deFaq },
+  id: { home: idHome, nav: idNav, services: idServices, about: idAbout, contact: idContact, pricing: idPricing, blog: IdBlog, guides: idGuides, faq: idFaq },
 };
 
 type Page = keyof typeof content.en;

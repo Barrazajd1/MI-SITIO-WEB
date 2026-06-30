@@ -14,6 +14,10 @@
     "errorMessage": "Algo deu errado. Por favor, tente novamente."
   },
   "info": {
+    "infoTitle": "Entre em contato",
+    "infoDescription": "Normalmente respondemos em até um dia útil.",
+    "emailLabel": "E-mail",
+    "locationLabel": "Localização",
     "email": "hello@mysite.com",
     "location": "Remoto — Em todo o mundo",
     "Telephone": "+1 234567890"

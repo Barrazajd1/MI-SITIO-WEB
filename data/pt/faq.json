@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Perguntas frequentes",
+    "description": "Encontre respostas para as perguntas mais comuns sobre nossos serviços, preços e tecnologia"
+  },
+  "categories": [
+    {
+      "title": "Geral",
+      "questions": [
+        {
+          "question": "Quais serviços vocês oferecem?",
+          "answer": "Oferecemos desenvolvimento web, design e serviços de consultoria adaptados às necessidades do seu negócio."
+        },
+        {
+          "question": "Quanto tempo leva um projeto típico?",
+          "answer": "A maioria dos projetos leva entre 4 e 12 semanas, dependendo do escopo e da complexidade."
+        }
+      ]
+    },
+    {
+      "title": "Preços",
+      "questions": [
+        {
+          "question": "Vocês oferecem testes gratuitos?",
+          "answer": "Sim, oferecemos um teste gratuito de 14 dias em todos os planos. Não é necessário cartão de crédito."
+        },
+        {
+          "question": "Posso mudar meu plano depois?",
+          "answer": "Claro. Você pode fazer upgrade ou downgrade do seu plano a qualquer momento pelo painel."
+        }
+      ]
+    },
+    {
+      "title": "Técnico",
+      "questions": [
+        {
+          "question": "Quais tecnologias vocês usam?",
+          "answer": "Desenvolvemos com Next.js, React, TypeScript e Tailwind CSS para sites rápidos e escaláveis."
+        },
+        {
+          "question": "Meus dados estão seguros?",
+          "answer": "Sim. Usamos criptografia padrão do setor e seguimos as melhores práticas de segurança de dados."
+        }
+      ]
+    }
+  ]
+}

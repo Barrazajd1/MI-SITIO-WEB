@@ -29,6 +29,10 @@
     {
       "label": "Guias",
       "href": "/guides"
+    },
+    {
+      "label": "Perguntas frequentes",
+      "href": "/faq"
     }
   ],
   "footer": {

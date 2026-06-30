@@ -14,6 +14,10 @@
     "errorMessage": "Something went wrong. Please try again."
   },
   "info": {
+    "infoTitle": "Get in touch",
+    "infoDescription": "We typically respond within one business day.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
     "email": "hello@mysite.com",
     "location": "Remote — Worldwide",
     "Telephone": "+1 234567890"

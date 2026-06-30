@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "description": "Temukan jawaban atas pertanyaan paling umum tentang layanan, harga, dan teknologi kami"
+  },
+  "categories": [
+    {
+      "title": "Umum",
+      "questions": [
+        {
+          "question": "Layanan apa saja yang Anda tawarkan?",
+          "answer": "Kami menawarkan pengembangan web, desain, dan layanan konsultasi yang disesuaikan dengan kebutuhan bisnis Anda."
+        },
+        {
+          "question": "Berapa lama proyek biasanya berlangsung?",
+          "answer": "Sebagian besar proyek memakan waktu antara 4 hingga 12 minggu tergantung pada cakupan dan kompleksitasnya."
+        }
+      ]
+    },
+    {
+      "title": "Harga",
+      "questions": [
+        {
+          "question": "Apakah Anda menawarkan uji coba gratis?",
+          "answer": "Ya, kami menawarkan uji coba gratis 14 hari untuk semua paket. Tidak perlu kartu kredit."
+        },
+        {
+          "question": "Bisakah saya mengubah paket saya nanti?",
+          "answer": "Tentu saja. Anda dapat meningkatkan atau menurunkan paket kapan saja dari dasbor Anda."
+        }
+      ]
+    },
+    {
+      "title": "Teknis",
+      "questions": [
+        {
+          "question": "Teknologi apa yang Anda gunakan?",
+          "answer": "Kami membangun dengan Next.js, React, TypeScript, dan Tailwind CSS untuk situs web yang cepat dan skalabel."
+        },
+        {
+          "question": "Apakah data saya aman?",
+          "answer": "Ya. Kami menggunakan enkripsi standar industri dan mengikuti praktik terbaik untuk keamanan data."
+        }
+      ]
+    }
+  ]
+}

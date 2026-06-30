@@ -14,6 +14,10 @@
     "errorMessage": "Terjadi kesalahan. Silakan coba lagi."
   },
   "info": {
+    "infoTitle": "Hubungi kami",
+    "infoDescription": "Kami biasanya merespons dalam satu hari kerja.",
+    "emailLabel": "Email",
+    "locationLabel": "Lokasi",
     "email": "hello@mysite.com",
     "location": "Remote — Di seluruh dunia",
     "Telephone": "+1 234567890"

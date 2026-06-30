@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Kenali Tim Kami",
+    "description": "Orang-orang penuh semangat di balik produk ini."
+  },
+  "memberS": [
+    {
+      "slug": "david-barraza",
+      "name": "David Barraza",
+      "role": "Pendiri & Pengembang",
+      "bio": "Bersemangat membangun pengalaman web yang cepat dan indah untuk usaha kecil.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    {
+      "slug": "ana-garcia",
+      "name": "Ana García",
+      "role": "Desainer UI/UX",
+      "bio": "Menciptakan antarmuka yang intuitif dan elegan yang disukai pengguna.",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+    },
+    {
+      "slug": "carlos-mendez",
+      "name": "Carlos Méndez",
+      "role": "Insinyur Backend",
+      "bio": "Membangun sistem yang andal dan skalabel yang menjadi tenaga penggerak produk kami.",
+      "image": " https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+    }
+  ]
+}

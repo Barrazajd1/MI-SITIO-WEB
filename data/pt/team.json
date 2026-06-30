@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "title": "Conheça a equipe",
+    "description": "As pessoas apaixonadas por trás do produto."
+  },
+  "memberS": [
+    {
+      "slug": "david-barraza",
+      "name": "David Barraza",
+      "role": "Fundador e desenvolvedor",
+      "bio": "Apaixonado por criar experiências web rápidas e bonitas para pequenas empresas.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    {
+      "slug": "ana-garcia",
+      "name": "Ana García",
+      "role": "Designer UI/UX",
+      "bio": "Cria interfaces intuitivas e elegantes que os usuários adoram.",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+    },
+    {
+      "slug": "carlos-mendez",
+      "name": "Carlos Méndez",
+      "role": "Engenheiro backend",
+      "bio": "Constrói sistemas robustos e escaláveis que impulsionam nossos produtos.",
+      "image": " https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+    }
+  ]
+}

@@ -14,6 +14,10 @@
     "errorMessage": "Algo salió mal. Por favor intenta de nuevo."
   },
   "info": {
+    "infoTitle": "Ponte en contacto",
+    "infoDescription": "Normalmente respondemos en un día hábil.",
+    "emailLabel": "Correo",
+    "locationLabel": "Ubicación",
     "email": "hola@misitio.com",
     "location": "Remoto — En todo el mundo",
     "Telephone": "+1 234567890"

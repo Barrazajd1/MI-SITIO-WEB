@@ -14,6 +14,10 @@
     "errorMessage": "Qualcosa è andato storto. Riprova."
   },
   "info": {
+    "infoTitle": "Mettiti in contatto",
+    "infoDescription": "Di solito rispondiamo entro un giorno lavorativo.",
+    "emailLabel": "Email",
+    "locationLabel": "Posizione",
     "email": "hello@mysite.com",
     "location": "Da remoto — In tutto il mondo",
     "Telephone": "+1 234567890"

@@ -29,6 +29,10 @@
     {
       "label": "Guides",
       "href": "/guides"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
     }
   ],
   "footer": {

@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Questions fréquentes",
+    "description": "Trouvez des réponses aux questions les plus courantes sur nos services, nos tarifs et notre technologie"
+  },
+  "categories": [
+    {
+      "title": "Général",
+      "questions": [
+        {
+          "question": "Quels services proposez-vous ?",
+          "answer": "Nous proposons des services de développement web, de design et de conseil adaptés aux besoins de votre entreprise."
+        },
+        {
+          "question": "Combien de temps dure un projet type ?",
+          "answer": "La plupart des projets durent entre 4 et 12 semaines selon l'ampleur et la complexité."
+        }
+      ]
+    },
+    {
+      "title": "Tarifs",
+      "questions": [
+        {
+          "question": "Proposez-vous des essais gratuits ?",
+          "answer": "Oui, nous proposons un essai gratuit de 14 jours sur tous les forfaits. Aucune carte bancaire requise."
+        },
+        {
+          "question": "Puis-je changer de forfait plus tard ?",
+          "answer": "Bien sûr. Vous pouvez passer à un forfait supérieur ou inférieur à tout moment depuis votre tableau de bord."
+        }
+      ]
+    },
+    {
+      "title": "Technique",
+      "questions": [
+        {
+          "question": "Quelles technologies utilisez-vous ?",
+          "answer": "Nous développons avec Next.js, React, TypeScript et Tailwind CSS pour des sites rapides et évolutifs."
+        },
+        {
+          "question": "Mes données sont-elles sécurisées ?",
+          "answer": "Oui. Nous utilisons un chiffrement conforme aux normes du secteur et suivons les meilleures pratiques de sécurité des données."
+        }
+      ]
+    }
+  ]
+}

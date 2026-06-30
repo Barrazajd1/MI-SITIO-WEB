@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to the most common questions about our services, pricing, and technology"
+  },
+  "categories": [
+    {
+      "title": "General",
+      "questions": [
+        {
+          "question": "What services do you offer? ",
+          "answer": "We offer web development, design, and consulting services tailored to your business needs."
+        },
+        {
+          "question": "How long does a typical project take?",
+          "answer": "Most projects take between 4 and 12 weeks depending on scope and complexity."
+        }
+      ]
+    },
+    {
+      "title": "Pricing",
+      "questions": [
+        {
+          "question": "Do you offer free trials?",
+          "answer": "Yes, we offer a 14-day free trial on all plans. No credit card required."
+        },
+        {
+          "question": "Can I change my plan later?",
+          "answer": "Absolutely. You can upgrade or downgrade your plan at any time from your dashboard."
+        }
+      ]
+    },
+    {
+      "title": "Technical",
+      "questions": [
+        {
+          "question": "What technologies do you use?",
+          "answer": "We build with Next.js, React, TypeScript, and Tailwind CSS for fast and scalable websites."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Yes. We use industry-standard encryption and follow best practices for data security."
+        }
+      ]
+    }
+  ]
+}

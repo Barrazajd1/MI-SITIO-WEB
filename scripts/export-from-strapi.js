@@ -91,6 +91,17 @@ const ENDPOINTS = /** @type {Record<string, { slug: string; populate: string }>}
     populate:
       "populate[categories][populate][guides][populate][steps]=*",
   },
+  "team.json": {
+    slug: "team-page",
+    populate: "populate=*",
+  },
+  "faq.json": {
+    slug: "faq-page",
+    // hero (single) + categories → questions (2 levels deep)
+    populate:
+      "populate[hero]=*" +
+      "&populate[categories][populate][questions]=*",
+  },
 });
 
 // ---------------------------------------------------------------------------

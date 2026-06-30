@@ -14,6 +14,10 @@
     "errorMessage": "Une erreur s'est produite. Veuillez réessayer."
   },
   "info": {
+    "infoTitle": "Contactez-nous",
+    "infoDescription": "Nous répondons généralement sous un jour ouvré.",
+    "emailLabel": "E-mail",
+    "locationLabel": "Localisation",
     "email": "hello@mysite.com",
     "location": "À distance — Dans le monde entier",
     "Telephone": "+1 234567890"

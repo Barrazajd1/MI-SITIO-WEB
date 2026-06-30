@@ -1,4 +1,6 @@
 {
+  "title": "Anleitungen",
+  "description": "Schritt-für-Schritt-Anleitungen, die Ihnen den Einstieg erleichtern.",
   "categories": [
     {
       "slug": "getting-started",
