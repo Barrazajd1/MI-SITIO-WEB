@@ -33,6 +33,10 @@
     {
       "label": "FAQ",
       "href": "/faq"
+    },
+    {
+      "label": "Tim",
+      "href": "/team"
     }
   ],
   "footer": {

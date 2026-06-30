@@ -33,6 +33,10 @@
     {
       "label": "Perguntas frequentes",
       "href": "/faq"
+    },
+    {
+      "label": "Equipe",
+      "href": "/team"
     }
   ],
   "footer": {
