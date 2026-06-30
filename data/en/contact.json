@@ -7,19 +7,19 @@
   "form": {
     "namePlaceholder": "Your Name",
     "emailPlaceholder": "Your Email",
-    "phonePlaceholder": "Your Phone Number",
     "messagePlaceholder": "Tell us about your project...",
     "submitButton": "Send message",
     "successMessage": "Thanks! We'll get back to you shortly.",
-    "errorMessage": "Something went wrong. Please try again."
+    "errorMessage": "Something went wrong. Please try again.",
+    "phonePlaceholder": "Your phone number"
   },
   "info": {
-    "infoTitle": "Get in touch",
-    "infoDescription": "We typically respond within one business day.",
-    "emailLabel": "Email",
-    "locationLabel": "Location",
     "email": "hello@mysite.com",
     "location": "Remote — Worldwide",
-    "Telephone": "+1 234567890"
+    "Telephone": "+1 234567890",
+    "infoTitle": "Contact Information",
+    "infoDescription": "Reach out to us through any of the following channels.",
+    "emailLabel": "Email",
+    "locationLabel": "Location"
   }
 }

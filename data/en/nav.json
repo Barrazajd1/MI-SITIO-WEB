@@ -21,22 +21,6 @@
     {
       "label": "Contact",
       "href": "/contact"
-    },
-    {
-      "label": "Blog",
-      "href": "/blog"
-    },
-    {
-      "label": "Guides",
-      "href": "/guides"
-    },
-    {
-      "label": "FAQ",
-      "href": "/faq"
-    },
-    {
-      "label": "Team",
-      "href": "/team"
     }
   ],
   "footer": {

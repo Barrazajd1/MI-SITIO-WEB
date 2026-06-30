@@ -210,6 +210,19 @@ async function main() {
             })),
           };
         }
+        // team.json: rename Strapi field "memberS" (capital S) → "members"
+        if (filename === "team.json" && raw.memberS !== undefined) {
+          raw = { ...raw, members: raw.memberS };
+          delete raw.memberS;
+        }
+        // guides.json: add root-level title and description so EN matches other locales
+        if (filename === "guides.json" && raw.title === undefined) {
+          raw = {
+            title: "Guides",
+            description: "Step-by-step guides to help you get started.",
+            ...raw,
+          };
+        }
         // Rename Strapi capitalized component names → lowercase to match data/en/pricing.json:
         //   Plan       → plans
         //   PlanFeature → features  (nested inside each plan)

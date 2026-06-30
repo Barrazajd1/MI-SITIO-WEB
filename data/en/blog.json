@@ -8,7 +8,7 @@
       "title": "Building fast websites with Next.js",
       "date": "2026-06-01",
       "author": "David Barraza",
-      "coverImage": "",
+      "coverImage": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
       "excerpt": "Learn how Next.js static generation makes websites incredibly fast by pre-rendering every page at build time.",
       "content": "Next.js is a React framework that gives you the best developer experience with all the features you need for production. Static generation means your pages are built once and served instantly to every user, no server required. When you combine this with JSON files as your content source, you get a fully static site that is fast, cheap to host, and easy to update. The key benefit is performance — pages load in milliseconds because there is no database query or server-side rendering happening at request time."
     },
@@ -17,7 +17,7 @@
       "title": "Why JSON is great for managing website content",
       "date": "2026-06-03",
       "author": "David Barraza",
-      "coverImage": "",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
       "excerpt": "JSON files are simple, version-controlled, and work perfectly as a content source for multilingual static websites.",
       "content": "Managing content in JSON files has several advantages over a traditional CMS. The files live in your Git repository alongside your code, so every content change is tracked and reversible. For multilingual websites, you simply create one JSON file per language. The structure stays identical across all languages — only the text values change. This makes translations straightforward and validation easy to automate. JSON is also human-readable, which means non-developers can edit content directly without needing a complex admin interface."
     }
