@@ -34,14 +34,20 @@ export default async function BlogPage({ params }: Props) {
               href={`/${l}/blog/${post.slug}`}
               className="bg-white border border-[#cae4f2] rounded-2xl overflow-hidden hover:border-[#009fe1] transition-colors group"
             >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={post.coverImage}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {post.coverImage ? (
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={post.coverImage}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="h-48 w-full bg-[#e8f4fb] flex items-center justify-center">
+                  <span className="text-4xl text-[#009fe1] opacity-30">✦</span>
+                </div>
+              )}
               <div className="p-6">
                 <p className="text-xs text-gray-400 mb-2">{post.date} · {post.author}</p>
                 <h2 className="text-lg font-semibold text-[#2e435e] mb-2 group-hover:text-[#009fe1] transition-colors">

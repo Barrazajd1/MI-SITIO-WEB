@@ -37,14 +37,16 @@ export default async function BlogPostPage({ params }: Props) {
           {blog.backLink}
         </Link>
 
-        <div className="relative h-72 w-full rounded-2xl overflow-hidden mb-8">
-          <Image
-            src={post.coverImage}
-            alt={post.title}
-            fill
-            className="object-cover"
-          />
-        </div>
+        {post.coverImage && (
+          <div className="relative h-72 w-full rounded-2xl overflow-hidden mb-8">
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
 
         <p className="text-xs text-gray-400 mb-3">{post.date} · {post.author}</p>
         <h1 className="text-4xl font-bold text-[#2e435e] mb-8">{post.title}</h1>
